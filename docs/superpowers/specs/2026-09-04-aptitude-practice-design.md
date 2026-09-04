@@ -1,8 +1,8 @@
 # Aptitude Practice Website — Design Spec
 
 **Date:** 2026-09-04  
-**Status:** Draft for review  
-**Product:** A local website for taking timed multiple-choice aptitude mock tests. New papers are added by dropping JSON files into the project.
+**Status:** Implemented  
+**Product:** A Next.js website for taking timed multiple-choice aptitude mock tests. New papers are added by dropping JSON files into the project.
 
 ## Goal
 
@@ -28,10 +28,11 @@ The author can add a new paper later without changing application code: create o
 
 ## Architecture
 
-Single-page app with no backend.
+Next.js App Router app with no custom backend.
 
-- **Next.js (App Router) + React + TypeScript** serves the UI.
-- Papers live as static JSON under `public/tests/`. The app fetches them at runtime, so a new file is visible after a refresh (dev server) or after copying files into `public/tests/` and reloading (preview/production).
+- **Next.js (App Router) + React + TypeScript** serves the UI. Client components handle the exam timer and `sessionStorage`.
+- `./run.sh` always runs `npm install`, then `npm run dev`. Dev and production (`npm start`) bind to **0.0.0.0:3000**.
+- Papers live as static JSON under `public/tests/`. The app fetches them at runtime, so a new file is visible after a refresh. Next.js serves that folder as static files in both dev and production.
 - Scoring, timer, and review run entirely in the browser.
 - In-progress session state is stored in `sessionStorage` so a tab refresh does not wipe answers or the remaining time. Closing the tab ends the session.
 
@@ -41,7 +42,8 @@ public/tests/<id>.json           → one complete paper
 src/lib/tests.ts                 → fetch + validate
 src/lib/scoring.ts               → score a submitted attempt
 src/lib/session.ts               → sessionStorage read/write
-src/pages                        → Home, Exam, Results
+src/app                          → routes: /, /exam/[id], /results/[id]
+src/components                   → Home, Exam, Results UI
 ```
 
 No database, no API routes, no build-time glob of test files. Discovery is only through `index.json`.
@@ -178,7 +180,7 @@ Visual direction: focused exam tool — light background, strong typography, a s
 1. Copy `public/tests/_template.json` (checked in) to `public/tests/my-paper.json`.
 2. Fill `id`, `title`, `durationMinutes`, and `questions`.
 3. Add a matching object to `public/tests/index.json`.
-4. Refresh the browser. If using a production build, rebuild or copy the new files into the served `dist/` folder.
+4. Refresh the browser. Papers are served from `public/tests/`; no copy into `dist/` is required.
 
 A README documents this and the schema. Shipped papers are unofficial **Google / hackathon interview-style** MCQ mocks (logical, quantitative, CS fundamentals, puzzles, algorithms, and hackathon practical). They are practice material, not affiliated with Google.
 
@@ -191,7 +193,8 @@ A README documents this and the schema. Shipped papers are unofficial **Google /
 | Invalid JSON / schema | Paper-load error; other papers unaffected |
 | Results URL with no completed session | Redirect to home |
 | Exam URL with completed session for that id | Redirect to results |
-| Unknown `:id` | Not-found message + home link |
+| Unknown catalog `:id` | Exam page error + back to papers |
+| Unknown URL (no matching App Router page) | Redirect to home |
 
 ## Testing
 
@@ -207,6 +210,8 @@ A README documents this and the schema. Shipped papers are unofficial **Google /
 | `src/lib/scoring.ts` | Pure score from paper + answers | Types |
 | `src/lib/session.ts` | Persist/resume session | Types |
 | `src/lib/tests.ts` | Fetch catalog and papers | schema |
-| Home / Exam / Results views | UI + routing | libs above |
+| `src/lib/route.ts` | Read a Next.js `useParams` id | Nothing |
+| `src/components/*` | Home / Exam / Results UI | libs above |
+| `src/app/*` | App Router pages | components |
 
 Each lib is independently testable. Views do not fetch JSON themselves; they call `tests.ts`.

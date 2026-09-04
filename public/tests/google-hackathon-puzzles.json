@@ -1,0 +1,187 @@
+{
+  "id": "google-hackathon-puzzles",
+  "title": "Google Interview \u2014 Problem Solving Puzzles",
+  "durationMinutes": 20,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Monty Hall: three doors, one car. You pick one. Host opens a goat door. Switching wins with probability:",
+      "options": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "Your first pick is right 1/3 of the time; the other unopened door then holds the car 2/3 of the time."
+    },
+    {
+      "id": "q2",
+      "prompt": "About how many people do you need so that P(shared birthday) is about 50% (365 days, ignore leap years)?",
+      "options": [
+        "12",
+        "23",
+        "183",
+        "365"
+      ],
+      "correctIndex": 1,
+      "explanation": "The birthday paradox: 23 people is about 50%."
+    },
+    {
+      "id": "q3",
+      "prompt": "1000 bottles, one poisoned. A test strip shows a result after a delay and can be reused only as a bit in one round. Minimum testers for one round of tests?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "explanation": "2\u00b9\u2070 = 1024 \u2265 1000, so 10 binary tests."
+    },
+    {
+      "id": "q4",
+      "prompt": "Why are manhole covers typically round?",
+      "options": [
+        "They are cheaper to paint",
+        "A round cover cannot fall through its opening",
+        "Only circles fit city blocks",
+        "They weigh less than any other shape"
+      ],
+      "correctIndex": 1,
+      "explanation": "The circle's width is constant; a square cover can be tilted through the diagonal."
+    },
+    {
+      "id": "q5",
+      "prompt": "Two ropes each burn in 60 minutes, unevenly. You can light ends. How can you measure 45 minutes?",
+      "options": [
+        "Impossible",
+        "Light both ends of both ropes",
+        "Light both ends of rope A and one end of B; when A dies, light B's other end",
+        "Cut both ropes in half"
+      ],
+      "correctIndex": 2,
+      "explanation": "A finishes at 30 minutes. Lighting B's other end then burns the remaining 30-minute length in 15 minutes. Total 45."
+    },
+    {
+      "id": "q6",
+      "prompt": "With jugs of 3 L and 5 L, can you measure exactly 4 L?",
+      "options": [
+        "No",
+        "Yes",
+        "Only with a 4 L jug",
+        "Only using a scale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic water-jug problem; 4 is a multiple of gcd(3,5)=1 and \u2264 5."
+    },
+    {
+      "id": "q7",
+      "prompt": "Farmer, fox, chicken, grain: boat holds farmer plus one. First trip should take:",
+      "options": [
+        "The fox",
+        "The chicken",
+        "The grain",
+        "Nothing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Otherwise fox eats chicken or chicken eats grain."
+    },
+    {
+      "id": "q8",
+      "prompt": "Hilbert's hotel is full. To free room 1 for one new guest, move occupant of room n to:",
+      "options": [
+        "Room 1",
+        "Room n\u22121",
+        "Room n+1",
+        "Room 2n only"
+      ],
+      "correctIndex": 2,
+      "explanation": "Everyone shifts up one room; infinitely many rooms remain."
+    },
+    {
+      "id": "q9",
+      "prompt": "12 balls, one different weight (heavier or lighter). A balance scale. Minimum weighings in the worst case?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each weighing has 3 outcomes; 3\u00b3 = 27 > 24 possibilities."
+    },
+    {
+      "id": "q10",
+      "prompt": "How many times do the hour and minute hands overlap in 12 hours?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctIndex": 1,
+      "explanation": "They overlap 11 times every 12 hours (they almost-meet around 11 and 12 as one event)."
+    },
+    {
+      "id": "q11",
+      "prompt": "100 closed doors, 100 people. Person k toggles multiples of k. How many doors are open at the end?",
+      "options": [
+        "1",
+        "10",
+        "50",
+        "100"
+      ],
+      "correctIndex": 1,
+      "explanation": "Door n is toggled d(n) times and ends open iff n is a square. There are 10 squares \u2264 100."
+    },
+    {
+      "id": "q12",
+      "prompt": "2 eggs, 100 floors, minimize worst-case drops. The optimal worst-case count is:",
+      "options": [
+        "10",
+        "14",
+        "50",
+        "100"
+      ],
+      "correctIndex": 1,
+      "explanation": "Need k+(k\u22121)+\u2026+1 \u2265 100 \u21d2 k(k+1)/2 \u2265 100 \u21d2 k = 14."
+    },
+    {
+      "id": "q13",
+      "prompt": "5 rational pirates, 100 indivisible coins. Most senior proposes a take-it-or-leave-it split; ties reject. How many coins does the most senior keep in the standard solution?",
+      "options": [
+        "0",
+        "20",
+        "98",
+        "100"
+      ],
+      "correctIndex": 2,
+      "explanation": "A offers 98 to self, 0, 1, 0, 1 so two others still prefer A over the next game."
+    },
+    {
+      "id": "q14",
+      "prompt": "A plane mirror appears to reverse left and right, not up and down, because it actually reverses:",
+      "options": [
+        "Gravity",
+        "The front\u2013back axis",
+        "Color",
+        "Time"
+      ],
+      "correctIndex": 1,
+      "explanation": "The mirror maps each point to the point opposite along the normal."
+    },
+    {
+      "id": "q15",
+      "prompt": "3 switches, 3 bulbs in another room. You may enter the bulb room once. A working strategy uses heat. After waiting, a bulb that is off but warm means:",
+      "options": [
+        "Its switch was never on",
+        "Its switch was on earlier then turned off",
+        "It is broken",
+        "All switches control it"
+      ],
+      "correctIndex": 1,
+      "explanation": "On for a while then off: warm and dark. Currently on: lit. Never on: cold and dark."
+    }
+  ]
+}

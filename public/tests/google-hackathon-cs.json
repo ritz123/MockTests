@@ -1,0 +1,307 @@
+{
+  "id": "google-hackathon-cs",
+  "title": "Google Interview \u2014 Computer Science Fundamentals",
+  "durationMinutes": 30,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Worst-case time complexity of binary search on a sorted array of n items?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each step halves the search space."
+    },
+    {
+      "id": "q2",
+      "prompt": "A stack is:",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "Random access only",
+        "Priority-ordered"
+      ],
+      "correctIndex": 1,
+      "explanation": "Last in, first out."
+    },
+    {
+      "id": "q3",
+      "prompt": "Average-case time for lookup in a well-dimensioned hash table?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n\u00b2)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Expected constant time with a good hash and load factor."
+    },
+    {
+      "id": "q4",
+      "prompt": "A queue is:",
+      "options": [
+        "LIFO",
+        "FIFO",
+        "Sorted always",
+        "A binary tree"
+      ],
+      "correctIndex": 1,
+      "explanation": "First in, first out."
+    },
+    {
+      "id": "q5",
+      "prompt": "Which protocol provides reliable, ordered byte streams?",
+      "options": [
+        "UDP",
+        "IP",
+        "TCP",
+        "ICMP"
+      ],
+      "correctIndex": 2,
+      "explanation": "TCP is connection-oriented and reliable. UDP is not."
+    },
+    {
+      "id": "q6",
+      "prompt": "HTTP status 404 means:",
+      "options": [
+        "Unauthorized",
+        "Forbidden",
+        "Not Found",
+        "Server error"
+      ],
+      "correctIndex": 2,
+      "explanation": "404 is Not Found."
+    },
+    {
+      "id": "q7",
+      "prompt": "Random access to index i in a dynamic array vs a singly linked list is typically:",
+      "options": [
+        "O(1) vs O(n)",
+        "O(n) vs O(1)",
+        "O(1) vs O(1)",
+        "O(log n) vs O(log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Arrays index in constant time; lists must walk i nodes."
+    },
+    {
+      "id": "q8",
+      "prompt": "A recursive function's pending calls are stored on the:",
+      "options": [
+        "Heap only",
+        "Call stack",
+        "Instruction cache only",
+        "GPU"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each nested call pushes a stack frame."
+    },
+    {
+      "id": "q9",
+      "prompt": "for i in 1..n: for j in 1..n: work()  has complexity:",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(2\u207f)"
+      ],
+      "correctIndex": 2,
+      "explanation": "n \u00d7 n constant-time iterations."
+    },
+    {
+      "id": "q10",
+      "prompt": "BFS on a graph typically uses a:",
+      "options": [
+        "Stack",
+        "Queue",
+        "Max-heap only",
+        "Union-find only"
+      ],
+      "correctIndex": 1,
+      "explanation": "A queue expands nodes in level order."
+    },
+    {
+      "id": "q11",
+      "prompt": "DFS is naturally implemented with a:",
+      "options": [
+        "Queue",
+        "Stack (or the call stack)",
+        "Bloom filter",
+        "Priority queue only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Depth-first search is stack-based."
+    },
+    {
+      "id": "q12",
+      "prompt": "Threads of one process typically share:",
+      "options": [
+        "Nothing",
+        "The same address space",
+        "Separate kernels",
+        "Separate PIDs always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Threads share the process memory; processes do not."
+    },
+    {
+      "id": "q13",
+      "prompt": "HTTPS encrypts HTTP using:",
+      "options": [
+        "FTP",
+        "TLS",
+        "SSH only",
+        "SMTP"
+      ],
+      "correctIndex": 1,
+      "explanation": "HTTPS is HTTP over TLS."
+    },
+    {
+      "id": "q14",
+      "prompt": "DNS primarily maps:",
+      "options": [
+        "MAC to IP",
+        "Domain names to IP addresses",
+        "Ports to processes",
+        "Users to passwords"
+      ],
+      "correctIndex": 1,
+      "explanation": "Name resolution."
+    },
+    {
+      "id": "q15",
+      "prompt": "The safest common way to avoid SQL injection is:",
+      "options": [
+        "String-concatenating queries",
+        "Parameterized queries / bound parameters",
+        "Disabling indexes",
+        "Using GET only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Keep user data out of the SQL parse tree."
+    },
+    {
+      "id": "q16",
+      "prompt": "In Git, a commit records:",
+      "options": [
+        "Only a diff with no parent",
+        "A snapshot plus metadata and parent(s)",
+        "The working tree only",
+        "Remote config only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Commits point at a tree and parent commits."
+    },
+    {
+      "id": "q17",
+      "prompt": "A well-behaved HTTP GET is expected to be:",
+      "options": [
+        "Unsafe and non-idempotent",
+        "Safe and idempotent",
+        "Always stateful",
+        "A write method"
+      ],
+      "correctIndex": 1,
+      "explanation": "GET should not change server state and repeating it should not change the result."
+    },
+    {
+      "id": "q18",
+      "prompt": "In ACID, the 'A' stands for:",
+      "options": [
+        "Availability",
+        "Atomicity",
+        "Authentication",
+        "Aggregation"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transactions are all-or-nothing."
+    },
+    {
+      "id": "q19",
+      "prompt": "Circular wait is a necessary condition for:",
+      "options": [
+        "Paging",
+        "Deadlock",
+        "DNS lookup",
+        "Hashing"
+      ],
+      "correctIndex": 1,
+      "explanation": "One of Coffman's deadlock conditions."
+    },
+    {
+      "id": "q20",
+      "prompt": "In IEEE-754 floating point, 0.1 + 0.2 == 0.3 is:",
+      "options": [
+        "Always true",
+        "Often false because of binary rounding",
+        "A compiler bug only",
+        "Undefined in every language"
+      ],
+      "correctIndex": 1,
+      "explanation": "Those decimals are not exact binary fractions."
+    },
+    {
+      "id": "q21",
+      "prompt": "Garbage collection's job is to:",
+      "options": [
+        "Compile source",
+        "Reclaim memory that is no longer reachable",
+        "Schedule CPU cores",
+        "Encrypt disks"
+      ],
+      "correctIndex": 1,
+      "explanation": "It frees unused heap objects."
+    },
+    {
+      "id": "q22",
+      "prompt": "CORS is enforced by:",
+      "options": [
+        "The database",
+        "The browser, using response headers from the server",
+        "DNSSEC only",
+        "The OS kernel always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Browsers block cross-origin reads unless the server opts in."
+    },
+    {
+      "id": "q23",
+      "prompt": "A perfect binary tree with 3 levels (root is level 1) has how many nodes?",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "correctIndex": 3,
+      "explanation": "1 + 2 + 4 = 7."
+    },
+    {
+      "id": "q24",
+      "prompt": "In languages with wrapping unsigned integers, 255 + 1 in 8-bit unsigned is typically:",
+      "options": [
+        "256",
+        "0",
+        "255",
+        "Error always"
+      ],
+      "correctIndex": 1,
+      "explanation": "It wraps modulo 256."
+    },
+    {
+      "id": "q25",
+      "prompt": "CAP theorem says that in a partition, a distributed store cannot simultaneously guarantee:",
+      "options": [
+        "Cache and compression",
+        "Consistency and availability",
+        "CPU and RAM",
+        "IPv4 and IPv6"
+      ],
+      "correctIndex": 1,
+      "explanation": "You pick C or A when P happens."
+    }
+  ]
+}

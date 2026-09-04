@@ -1,0 +1,19 @@
+{
+  "id": "my-paper-id",
+  "title": "Paper title",
+  "durationMinutes": 20,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Question text",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctIndex": 0,
+      "explanation": "Why A is correct."
+    }
+  ]
+}

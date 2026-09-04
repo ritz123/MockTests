@@ -1,0 +1,247 @@
+{
+  "id": "google-hackathon-quant",
+  "title": "Google Hackathon Screen \u2014 Quantitative Aptitude",
+  "durationMinutes": 25,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "What is 15% of 240?",
+      "options": [
+        "24",
+        "30",
+        "36",
+        "40"
+      ],
+      "correctIndex": 2,
+      "explanation": "0.15 \u00d7 240 = 36."
+    },
+    {
+      "id": "q2",
+      "prompt": "If x + y = 10 and xy = 21, what is x\u00b2 + y\u00b2?",
+      "options": [
+        "58",
+        "79",
+        "100",
+        "121"
+      ],
+      "correctIndex": 0,
+      "explanation": "x\u00b2 + y\u00b2 = (x + y)\u00b2 \u2212 2xy = 100 \u2212 42 = 58."
+    },
+    {
+      "id": "q3",
+      "prompt": "A car covers 60 km in 45 minutes. What is its speed in km/h?",
+      "options": [
+        "45",
+        "60",
+        "75",
+        "80"
+      ],
+      "correctIndex": 3,
+      "explanation": "45 minutes = 0.75 h. 60 / 0.75 = 80 km/h."
+    },
+    {
+      "id": "q4",
+      "prompt": "A can finish a job in 10 days and B in 15 days. Working together, how many days do they need?",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "1/10 + 1/15 = 1/6, so 6 days."
+    },
+    {
+      "id": "q5",
+      "prompt": "Two fair dice are rolled. Probability that the sum is 7?",
+      "options": [
+        "1/12",
+        "1/8",
+        "1/6",
+        "1/4"
+      ],
+      "correctIndex": 2,
+      "explanation": "Six outcomes (1,6)\u2026(6,1) out of 36, so 6/36 = 1/6."
+    },
+    {
+      "id": "q6",
+      "prompt": "In how many distinct ways can 5 people stand in a line?",
+      "options": [
+        "25",
+        "60",
+        "120",
+        "125"
+      ],
+      "correctIndex": 2,
+      "explanation": "5! = 120."
+    },
+    {
+      "id": "q7",
+      "prompt": "What is log\u2082(8)?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "2\u00b3 = 8."
+    },
+    {
+      "id": "q8",
+      "prompt": "A score rises from 50 to 75. What is the percent increase?",
+      "options": [
+        "25%",
+        "33%",
+        "50%",
+        "150%"
+      ],
+      "correctIndex": 2,
+      "explanation": "(75 \u2212 50)/50 = 50%."
+    },
+    {
+      "id": "q9",
+      "prompt": "GCD of 48 and 18?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "9"
+      ],
+      "correctIndex": 1,
+      "explanation": "48 = 2\u00d718 + 12, 18 = 1\u00d712 + 6, 12 = 2\u00d76."
+    },
+    {
+      "id": "q10",
+      "prompt": "LCM of 4, 6, and 8?",
+      "options": [
+        "12",
+        "24",
+        "36",
+        "48"
+      ],
+      "correctIndex": 1,
+      "explanation": "2\u00b3 \u00d7 3 = 24."
+    },
+    {
+      "id": "q11",
+      "prompt": "12\u00b2 \u2212 8\u00b2 = ?",
+      "options": [
+        "16",
+        "40",
+        "80",
+        "208"
+      ],
+      "correctIndex": 2,
+      "explanation": "Difference of squares: (12 \u2212 8)(12 + 8) = 4 \u00d7 20 = 80."
+    },
+    {
+      "id": "q12",
+      "prompt": "The binary number 1101 is what in decimal?",
+      "options": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctIndex": 2,
+      "explanation": "8 + 4 + 0 + 1 = 13."
+    },
+    {
+      "id": "q13",
+      "prompt": "What is 2\u00b9\u2070 modulo 3?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "1024"
+      ],
+      "correctIndex": 1,
+      "explanation": "2 \u2261 \u22121 (mod 3), so 2\u00b9\u2070 \u2261 (\u22121)\u00b9\u2070 \u2261 1. Also 1024 = 341\u00d73 + 1."
+    },
+    {
+      "id": "q14",
+      "prompt": "An item costs 250. Sold at 20% profit, the selling price is?",
+      "options": [
+        "270",
+        "280",
+        "300",
+        "320"
+      ],
+      "correctIndex": 2,
+      "explanation": "1.2 \u00d7 250 = 300."
+    },
+    {
+      "id": "q15",
+      "prompt": "Two numbers are in ratio 3:5. If the first is 24, the second is?",
+      "options": [
+        "30",
+        "36",
+        "40",
+        "48"
+      ],
+      "correctIndex": 2,
+      "explanation": "24/3 \u00d7 5 = 40."
+    },
+    {
+      "id": "q16",
+      "prompt": "Average of 10, 20, 30, 40, 50?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctIndex": 1,
+      "explanation": "150 / 5 = 30."
+    },
+    {
+      "id": "q17",
+      "prompt": "Compound interest on 1000 at 10% per year for 2 years (annual compounding) is?",
+      "options": [
+        "200",
+        "210",
+        "220",
+        "1210"
+      ],
+      "correctIndex": 1,
+      "explanation": "Amount = 1000 \u00d7 1.1\u00b2 = 1210. Interest = 210."
+    },
+    {
+      "id": "q18",
+      "prompt": "0.25 as a percentage is?",
+      "options": [
+        "0.25%",
+        "2.5%",
+        "25%",
+        "250%"
+      ],
+      "correctIndex": 2,
+      "explanation": "0.25 = 25/100 = 25%."
+    },
+    {
+      "id": "q19",
+      "prompt": "3/4 + 1/6 = ?",
+      "options": [
+        "2/5",
+        "4/10",
+        "5/12",
+        "11/12"
+      ],
+      "correctIndex": 3,
+      "explanation": "9/12 + 2/12 = 11/12."
+    },
+    {
+      "id": "q20",
+      "prompt": "If 30% of x is 90, then x is?",
+      "options": [
+        "120",
+        "180",
+        "270",
+        "300"
+      ],
+      "correctIndex": 3,
+      "explanation": "0.3x = 90 \u21d2 x = 300."
+    }
+  ]
+}

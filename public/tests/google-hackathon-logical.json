@@ -1,0 +1,247 @@
+{
+  "id": "google-hackathon-logical",
+  "title": "Google Hackathon Screen \u2014 Logical Reasoning",
+  "durationMinutes": 25,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Find the next number: 2, 6, 12, 20, 30, ?",
+      "options": [
+        "36",
+        "40",
+        "42",
+        "48"
+      ],
+      "correctIndex": 2,
+      "explanation": "The terms are n(n+1): 1\u00d72, 2\u00d73, 3\u00d74, 4\u00d75, 5\u00d76, so next is 6\u00d77 = 42."
+    },
+    {
+      "id": "q2",
+      "prompt": "Odd one out: HTTP, FTP, SMTP, HTML",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "HTML"
+      ],
+      "correctIndex": 3,
+      "explanation": "HTTP, FTP, and SMTP are network protocols. HTML is a markup language."
+    },
+    {
+      "id": "q3",
+      "prompt": "If TEAM is written as VGCO (each letter shifted +2), how is CODE written?",
+      "options": [
+        "EQEG",
+        "EQFG",
+        "DPFF",
+        "FQFG"
+      ],
+      "correctIndex": 1,
+      "explanation": "C\u2192E, O\u2192Q, D\u2192F, E\u2192G, so CODE \u2192 EQFG."
+    },
+    {
+      "id": "q4",
+      "prompt": "A is B's sister. C is B's mother. D is C's father. How is D related to A?",
+      "options": [
+        "Uncle",
+        "Brother",
+        "Maternal grandfather",
+        "Father"
+      ],
+      "correctIndex": 2,
+      "explanation": "C is A's mother, so C's father D is A's maternal grandfather."
+    },
+    {
+      "id": "q5",
+      "prompt": "What is the angle between the hour and minute hands at 3:00?",
+      "options": [
+        "0\u00b0",
+        "75\u00b0",
+        "90\u00b0",
+        "180\u00b0"
+      ],
+      "correctIndex": 2,
+      "explanation": "At 3:00 the hands sit on 3 and 12, which are a right angle."
+    },
+    {
+      "id": "q6",
+      "prompt": "If today is Wednesday, what day of the week is it 61 days from now?",
+      "options": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Thursday"
+      ],
+      "correctIndex": 1,
+      "explanation": "61 = 8\u00d77 + 5, so add 5 weekdays to Wednesday: Monday."
+    },
+    {
+      "id": "q7",
+      "prompt": "A team of 40 people: 25 know Python, 20 know Java, and 10 know both. How many know neither?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correctIndex": 0,
+      "explanation": "25 + 20 \u2212 10 = 35 know at least one language. 40 \u2212 35 = 5 know neither."
+    },
+    {
+      "id": "q8",
+      "prompt": "A 3\u00d73\u00d73 cube is painted on all outer faces, then cut into 27 unit cubes. How many unit cubes have paint on exactly two faces?",
+      "options": [
+        "6",
+        "8",
+        "12",
+        "24"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each of the 12 edges contributes one edge-center cube with two painted faces (corners have three)."
+    },
+    {
+      "id": "q9",
+      "prompt": "Find the next group: ACE, BDF, CEG, ?",
+      "options": [
+        "DFH",
+        "DEH",
+        "DFI",
+        "CFH"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each letter advances by 1 from the previous group: D, F, H."
+    },
+    {
+      "id": "q10",
+      "prompt": "In a queue of 20 people, A is 7th from the left. How many people are behind A?",
+      "options": [
+        "7",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctIndex": 2,
+      "explanation": "20 \u2212 7 = 13 people behind A."
+    },
+    {
+      "id": "q11",
+      "prompt": "You walk 5 km north, 5 km east, then 5 km south. How far are you from the start?",
+      "options": [
+        "0 km",
+        "5 km",
+        "10 km",
+        "15 km"
+      ],
+      "correctIndex": 1,
+      "explanation": "North and south cancel, leaving 5 km east of the start."
+    },
+    {
+      "id": "q12",
+      "prompt": "All roses are flowers. Some flowers fade quickly. Which conclusion must follow?",
+      "options": [
+        "Some roses fade quickly",
+        "All flowers are roses",
+        "No rose fades quickly",
+        "None of these must follow"
+      ],
+      "correctIndex": 3,
+      "explanation": "The roses may all lie in the part of 'flowers' that do not fade quickly."
+    },
+    {
+      "id": "q13",
+      "prompt": "8 workers finish a job in 10 days at a constant rate. How many days do 4 workers need for the same job?",
+      "options": [
+        "5",
+        "10",
+        "16",
+        "20"
+      ],
+      "correctIndex": 3,
+      "explanation": "Work is 80 worker-days. 4 workers need 80/4 = 20 days."
+    },
+    {
+      "id": "q14",
+      "prompt": "What is the angle between the hour and minute hands at 3:15?",
+      "options": [
+        "0\u00b0",
+        "7.5\u00b0",
+        "15\u00b0",
+        "30\u00b0"
+      ],
+      "correctIndex": 1,
+      "explanation": "Minute hand at 90\u00b0. Hour hand at 3\u00d730 + 15\u00d70.5 = 97.5\u00b0. Difference 7.5\u00b0."
+    },
+    {
+      "id": "q15",
+      "prompt": "If the day before yesterday was Thursday, what day is tomorrow?",
+      "options": [
+        "Sunday",
+        "Monday",
+        "Friday",
+        "Saturday"
+      ],
+      "correctIndex": 0,
+      "explanation": "Day before yesterday = Thursday \u21d2 today = Saturday \u21d2 tomorrow = Sunday."
+    },
+    {
+      "id": "q16",
+      "prompt": "Find the next number: 3, 8, 15, 24, 35, ?",
+      "options": [
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "correctIndex": 2,
+      "explanation": "These are n\u00b2 \u2212 1 for n = 2,3,4,5,6, so next is 7\u00b2 \u2212 1 = 48."
+    },
+    {
+      "id": "q17",
+      "prompt": "A is taller than B. B is taller than C. Who is the shortest?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "Cannot be determined"
+      ],
+      "correctIndex": 2,
+      "explanation": "A > B > C, so C is shortest."
+    },
+    {
+      "id": "q18",
+      "prompt": "All APIs are endpoints. Some endpoints are cached. Therefore some APIs are cached. The inference is:",
+      "options": [
+        "Always true",
+        "Always false",
+        "Does not necessarily follow",
+        "True only if no cache exists"
+      ],
+      "correctIndex": 2,
+      "explanation": "The cached endpoints might be ones that are not APIs."
+    },
+    {
+      "id": "q19",
+      "prompt": "A number is coded by the count of letters in its English name: 1\u21923 (ONE), 2\u21923 (TWO), 4\u21924 (FOUR). What is 11 coded as?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "ELEVEN has 6 letters."
+    },
+    {
+      "id": "q20",
+      "prompt": "From a point you go 5 km north, 3 km east, 2 km south, then 3 km west. Distance from the start?",
+      "options": [
+        "0 km",
+        "3 km",
+        "5 km",
+        "8 km"
+      ],
+      "correctIndex": 1,
+      "explanation": "Net movement is 3 km north and 0 km east, so 3 km from the start."
+    }
+  ]
+}

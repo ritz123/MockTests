@@ -1,0 +1,46 @@
+{
+  "tests": [
+    {
+      "id": "google-hackathon-logical",
+      "title": "Google Hackathon Screen \u2014 Logical Reasoning",
+      "durationMinutes": 25,
+      "questionCount": 20,
+      "file": "google-hackathon-logical.json"
+    },
+    {
+      "id": "google-hackathon-quant",
+      "title": "Google Hackathon Screen \u2014 Quantitative Aptitude",
+      "durationMinutes": 25,
+      "questionCount": 20,
+      "file": "google-hackathon-quant.json"
+    },
+    {
+      "id": "google-hackathon-cs",
+      "title": "Google Interview \u2014 Computer Science Fundamentals",
+      "durationMinutes": 30,
+      "questionCount": 25,
+      "file": "google-hackathon-cs.json"
+    },
+    {
+      "id": "google-hackathon-puzzles",
+      "title": "Google Interview \u2014 Problem Solving Puzzles",
+      "durationMinutes": 20,
+      "questionCount": 15,
+      "file": "google-hackathon-puzzles.json"
+    },
+    {
+      "id": "google-hackathon-algorithms",
+      "title": "Google Interview \u2014 Algorithms and Complexity",
+      "durationMinutes": 25,
+      "questionCount": 20,
+      "file": "google-hackathon-algorithms.json"
+    },
+    {
+      "id": "google-hackathon-practical",
+      "title": "Hackathon Practical \u2014 Web, Security, and Systems",
+      "durationMinutes": 25,
+      "questionCount": 20,
+      "file": "google-hackathon-practical.json"
+    }
+  ]
+}

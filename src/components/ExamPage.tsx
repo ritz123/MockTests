@@ -1,20 +1,22 @@
 "use client";
 
-import { AlertTriangle, ChevronLeft, ChevronRight, Clock3 } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ChevronLeft, ChevronRight, Clock3 } from "lucide-react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { routeParam } from "../lib/route";
 import type { CatalogEntry, Paper } from "../lib/schema";
 import {
+  clearSession,
   completeSession,
   loadSession,
   saveSession,
   startSession,
   type InProgressSession,
 } from "../lib/session";
-import { loadCatalog, loadPaper } from "../lib/tests";
+import { loadCatalog, loadTestPaper } from "../lib/tests";
 import { formatMmSs, isWarning, optionLabel, remainingMs } from "../lib/time";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function ExamPage() {
   const id = routeParam(useParams().id);
@@ -48,6 +50,15 @@ export function ExamPage() {
     [id, router],
   );
 
+  const discardAndLeave = useCallback(() => {
+    const ok = window.confirm("Leave this test? Your progress will be discarded.");
+    if (!ok) return;
+    submitting.current = true;
+    sessionRef.current = null;
+    clearSession();
+    router.push("/");
+  }, [router]);
+
   useEffect(() => {
     if (!id) return;
     let cancelled = false;
@@ -64,7 +75,7 @@ export function ExamPage() {
         setError("This paper is not in the catalog.");
         return;
       }
-      const paperResult = await loadPaper(entry.file);
+      const paperResult = await loadTestPaper(entry);
       if (cancelled) return;
       if (!paperResult.ok) {
         setError(paperResult.error);
@@ -89,10 +100,11 @@ export function ExamPage() {
           router.replace(`/results/${id}`);
           return;
         }
+        setPaper(existing.paper);
         persist(existing);
         return;
       }
-      persist(startSession(loaded.id, loaded.durationMinutes, Date.now()));
+      persist(startSession(loaded.id, loaded, Date.now()));
     }
 
     void boot();
@@ -169,16 +181,25 @@ export function ExamPage() {
   return (
     <div className="page exam-page">
       <header className="exam-header">
-        <div>
-          <p className="eyebrow">{paper.title}</p>
-          <p className="progress">
-            Answered {answeredCount} / {paper.questions.length}
-          </p>
+        <div className="exam-header-start">
+          <button type="button" className="button secondary" onClick={discardAndLeave}>
+            <ArrowLeft size={18} aria-hidden="true" />
+            Back to papers
+          </button>
+          <div>
+            <p className="eyebrow">{paper.title}</p>
+            <p className="progress">
+              Answered {answeredCount} / {paper.questions.length}
+            </p>
+          </div>
         </div>
-        <div className={warning ? "timer warning" : "timer"} aria-live="polite">
-          {warning ? <AlertTriangle size={18} aria-hidden="true" /> : <Clock3 size={18} aria-hidden="true" />}
-          <span className="timer-value">{formatMmSs(remaining)}</span>
-          {warning ? <span className="timer-label">Time running out</span> : <span className="timer-label">Time left</span>}
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className={warning ? "timer warning" : "timer"} aria-live="polite">
+            {warning ? <AlertTriangle size={18} aria-hidden="true" /> : <Clock3 size={18} aria-hidden="true" />}
+            <span className="timer-value">{formatMmSs(remaining)}</span>
+            {warning ? <span className="timer-label">Time running out</span> : <span className="timer-label">Time left</span>}
+          </div>
+          <ThemeToggle />
         </div>
       </header>
 
@@ -204,6 +225,9 @@ export function ExamPage() {
         <section className="question-panel">
           <p className="q-index">
             Question {session.currentIndex + 1} of {paper.questions.length}
+            {question.difficulty ? (
+              <span className={`difficulty-tag ${question.difficulty}`}> · {question.difficulty}</span>
+            ) : null}
           </p>
           <h1 className="prompt">{question.prompt}</h1>
           <div role="radiogroup" aria-label="Answer choices" className="options">

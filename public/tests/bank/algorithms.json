@@ -1,0 +1,265 @@
+{
+  "category": "algorithms",
+  "questions": [
+    {
+      "id": "algorithms-q1",
+      "difficulty": "easy",
+      "prompt": "Mergesort comparison complexity in the worst case is:",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(2\u207f)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Divide and merge: always \u0398(n log n) comparisons."
+    },
+    {
+      "id": "algorithms-q2",
+      "difficulty": "medium",
+      "prompt": "Quicksort worst-case time (bad pivots) is:",
+      "options": [
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Highly unbalanced partitions give quadratic time."
+    },
+    {
+      "id": "algorithms-q3",
+      "difficulty": "hard",
+      "prompt": "Building a binary heap from n items with Floyd's method is:",
+      "options": [
+        "\u0398(n)",
+        "\u0398(n log n) only",
+        "\u0398(n\u00b2)",
+        "\u0398(1)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Heapify runs in linear time."
+    },
+    {
+      "id": "algorithms-q4",
+      "difficulty": "easy",
+      "prompt": "Dijkstra's algorithm as commonly taught assumes:",
+      "options": [
+        "Negative cycles are required",
+        "No negative edge weights",
+        "The graph is a tree",
+        "Vertices have degree 2"
+      ],
+      "correctIndex": 1,
+      "explanation": "Negative edges can break the greedy distance finalization."
+    },
+    {
+      "id": "algorithms-q5",
+      "difficulty": "medium",
+      "prompt": "A topological order exists for a directed graph if and only if it is a:",
+      "options": [
+        "Complete graph",
+        "DAG",
+        "Bipartite graph",
+        "Connected undirected graph"
+      ],
+      "correctIndex": 1,
+      "explanation": "Directed acyclic graph."
+    },
+    {
+      "id": "algorithms-q6",
+      "difficulty": "hard",
+      "prompt": "Which sort is stable?",
+      "options": [
+        "Heapsort",
+        "Standard in-place quicksort",
+        "Mergesort",
+        "Selection sort"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mergesort can preserve equal-key order; classic heapsort and in-place quicksort do not."
+    },
+    {
+      "id": "algorithms-q7",
+      "difficulty": "easy",
+      "prompt": "A hash collision means:",
+      "options": [
+        "The table is empty",
+        "Two keys map to the same bucket",
+        "The computer crashed",
+        "n = 1"
+      ],
+      "correctIndex": 1,
+      "explanation": "Different keys, same hash index."
+    },
+    {
+      "id": "algorithms-q8",
+      "difficulty": "medium",
+      "prompt": "A common O(1) LRU cache uses:",
+      "options": [
+        "Only an array",
+        "Hash map + doubly linked list",
+        "Only a BST",
+        "Only a stack"
+      ],
+      "correctIndex": 1,
+      "explanation": "Map for lookup, list for recency order."
+    },
+    {
+      "id": "algorithms-q9",
+      "difficulty": "hard",
+      "prompt": "A trie is especially good for:",
+      "options": [
+        "Prefix queries on strings",
+        "Sorting integers in O(1)",
+        "Replacing all hash tables",
+        "Matrix multiply"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shared prefixes walk a path from the root."
+    },
+    {
+      "id": "algorithms-q10",
+      "difficulty": "easy",
+      "prompt": "Checking whether a string is a palindrome in linear time is often done with:",
+      "options": [
+        "Dijkstra",
+        "Two pointers from both ends",
+        "Bellman-Ford",
+        "Prim"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compare s[i] and s[n-1-i]."
+    },
+    {
+      "id": "algorithms-q11",
+      "difficulty": "medium",
+      "prompt": "Finding the longest substring with at most k distinct characters is a classic:",
+      "options": [
+        "NP-complete packing",
+        "Sliding-window problem",
+        "Min-cut problem",
+        "FFT problem"
+      ],
+      "correctIndex": 1,
+      "explanation": "Expand/shrink a window while maintaining counts."
+    },
+    {
+      "id": "algorithms-q12",
+      "difficulty": "hard",
+      "prompt": "Kadane's algorithm finds:",
+      "options": [
+        "Shortest path",
+        "Maximum subarray sum",
+        "MST",
+        "Bipartite matching"
+      ],
+      "correctIndex": 1,
+      "explanation": "Linear scan tracking the best ending here."
+    },
+    {
+      "id": "algorithms-q13",
+      "difficulty": "easy",
+      "prompt": "Binary search requires the sequence to be:",
+      "options": [
+        "A linked list",
+        "Sorted (under the search order)",
+        "Random",
+        "A graph"
+      ],
+      "correctIndex": 1,
+      "explanation": "The decision 'go left or right' needs order."
+    },
+    {
+      "id": "algorithms-q14",
+      "difficulty": "medium",
+      "prompt": "BFS from s on an unweighted graph yields:",
+      "options": [
+        "Longest path",
+        "Shortest path in number of edges",
+        "Minimum spanning tree",
+        "A topological order always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Level equals distance in edges."
+    },
+    {
+      "id": "algorithms-q15",
+      "difficulty": "hard",
+      "prompt": "Detecting a cycle in a directed graph can be done with:",
+      "options": [
+        "DFS colors / recursion stack",
+        "Binary search",
+        "Kadane",
+        "Two-sum only"
+      ],
+      "correctIndex": 0,
+      "explanation": "A back edge to an ancestor on the DFS stack means a cycle."
+    },
+    {
+      "id": "algorithms-q16",
+      "difficulty": "easy",
+      "prompt": "Union-find with path compression and union-by-rank is effectively:",
+      "options": [
+        "O(n) per op",
+        "Almost O(1) amortized (inverse Ackermann)",
+        "O(n\u00b2)",
+        "O(2\u207f)"
+      ],
+      "correctIndex": 1,
+      "explanation": "\u03b1(n) grows extremely slowly."
+    },
+    {
+      "id": "algorithms-q17",
+      "difficulty": "medium",
+      "prompt": "A Bloom filter may report:",
+      "options": [
+        "False positives, not false negatives (for membership as designed)",
+        "False negatives only",
+        "Neither",
+        "Sorted order"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bits can collide (false yes); a 'no' is certain if no bits were set."
+    },
+    {
+      "id": "algorithms-q18",
+      "difficulty": "hard",
+      "prompt": "Space for the call stack of a straightforward factorial(n) recursion is:",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n!)"
+      ],
+      "correctIndex": 2,
+      "explanation": "n stacked frames."
+    },
+    {
+      "id": "algorithms-q19",
+      "difficulty": "easy",
+      "prompt": "Appending to a geometric-resizing array is:",
+      "options": [
+        "O(n) worst every time",
+        "O(1) amortized",
+        "O(n\u00b2) amortized",
+        "O(log n) amortized always for each char"
+      ],
+      "correctIndex": 1,
+      "explanation": "Occasional copies are paid across many cheap appends."
+    },
+    {
+      "id": "algorithms-q20",
+      "difficulty": "medium",
+      "prompt": "Any comparison-based sorting algorithm needs",
+      "options": [
+        "O(n) comparisons in the worst case always",
+        "\u03a9(n log n) comparisons in the worst case",
+        "O(1) comparisons",
+        "No lower bound"
+      ],
+      "correctIndex": 1,
+      "explanation": "There are n! orders; a binary decision tree has height \u03a9(log n!)."
+    }
+  ]
+}

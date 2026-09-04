@@ -1,0 +1,265 @@
+{
+  "category": "practical",
+  "questions": [
+    {
+      "id": "practical-q1",
+      "difficulty": "easy",
+      "prompt": "Storing a session JWT in localStorage is mainly risky because of:",
+      "options": [
+        "CSS",
+        "XSS stealing the token",
+        "Slow DNS",
+        "Missing alt text"
+      ],
+      "correctIndex": 1,
+      "explanation": "Any script on the page can read localStorage."
+    },
+    {
+      "id": "practical-q2",
+      "difficulty": "medium",
+      "prompt": "To prevent SQL injection, prefer:",
+      "options": [
+        "Building SQL with string + user input",
+        "Parameterized queries",
+        "Disabling HTTPS",
+        "Client-side only checks"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bind values separately from the query string."
+    },
+    {
+      "id": "practical-q3",
+      "difficulty": "hard",
+      "prompt": "A browser CORS error on a fetch usually means:",
+      "options": [
+        "The JSON is invalid",
+        "The server did not allow that origin/method/header",
+        "TCP is disabled",
+        "The disk is full"
+      ],
+      "correctIndex": 1,
+      "explanation": "The browser enforces the server's Access-Control-* headers."
+    },
+    {
+      "id": "practical-q4",
+      "difficulty": "easy",
+      "prompt": "HTTP 429 typically means:",
+      "options": [
+        "OK",
+        "Redirect",
+        "Too Many Requests (rate limited)",
+        "Teapot only"
+      ],
+      "correctIndex": 2,
+      "explanation": "The client hit a rate limit."
+    },
+    {
+      "id": "practical-q5",
+      "difficulty": "medium",
+      "prompt": "Which method is expected to be idempotent?",
+      "options": [
+        "POST",
+        "PUT",
+        "PATCH always",
+        "CONNECT"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeating PUT with the same body should leave the same resource state."
+    },
+    {
+      "id": "practical-q6",
+      "difficulty": "hard",
+      "prompt": "Compared with short polling, WebSockets are better when you need:",
+      "options": [
+        "A single static file",
+        "Low-latency bidirectional updates",
+        "Only SEO HTML",
+        "DNSSEC"
+      ],
+      "correctIndex": 1,
+      "explanation": "A persistent channel, not repeated empty HTTP polls."
+    },
+    {
+      "id": "practical-q7",
+      "difficulty": "easy",
+      "prompt": "API keys and database passwords should live in:",
+      "options": [
+        "Git history on purpose",
+        "Environment / a secret manager, not the repo",
+        "Frontend bundle comments",
+        "Public Gists"
+      ],
+      "correctIndex": 1,
+      "explanation": "Keep secrets off source control."
+    },
+    {
+      "id": "practical-q8",
+      "difficulty": "medium",
+      "prompt": "An HTTPS page loading a script over HTTP is:",
+      "options": [
+        "Fine always",
+        "Mixed content and usually blocked",
+        "Faster",
+        "Required for CORS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Browsers block active mixed content."
+    },
+    {
+      "id": "practical-q9",
+      "difficulty": "hard",
+      "prompt": "Cursor-based pagination compared with large OFFSET is often:",
+      "options": [
+        "Slower on big skips",
+        "More stable as rows are inserted",
+        "Impossible in SQL",
+        "Only for graphs"
+      ],
+      "correctIndex": 1,
+      "explanation": "OFFSET skips cost grows; a cursor key seeks."
+    },
+    {
+      "id": "practical-q10",
+      "difficulty": "easy",
+      "prompt": "A container compared with a full VM typically:",
+      "options": [
+        "Emulates a whole hardware BIOS always",
+        "Shares the host kernel and is lighter",
+        "Cannot run Linux",
+        "Replaces TCP"
+      ],
+      "correctIndex": 1,
+      "explanation": "Containers isolate processes, not a full guest OS."
+    },
+    {
+      "id": "practical-q11",
+      "difficulty": "medium",
+      "prompt": "The primary defense against stored XSS in HTML is:",
+      "options": [
+        "Bigger fonts",
+        "Context-aware escaping / sanitizing output",
+        "Using tables",
+        "HTTP 204"
+      ],
+      "correctIndex": 1,
+      "explanation": "Do not treat untrusted data as HTML/JS."
+    },
+    {
+      "id": "practical-q12",
+      "difficulty": "hard",
+      "prompt": "A common CSRF defense for cookie-authenticated POST forms is:",
+      "options": [
+        "No Content-Type",
+        "Anti-CSRF token or SameSite cookies",
+        "Disabling JavaScript forever",
+        "Using GET for deletes"
+      ],
+      "correctIndex": 1,
+      "explanation": "The attacker site must not be able to forge the user's cookie-backed request."
+    },
+    {
+      "id": "practical-q13",
+      "difficulty": "easy",
+      "prompt": "HTTP 401 vs 403:",
+      "options": [
+        "401 not authenticated; 403 authenticated but not allowed",
+        "They are identical",
+        "403 means not found",
+        "401 means rate limit"
+      ],
+      "correctIndex": 0,
+      "explanation": "401: who are you? 403: I know you, no access."
+    },
+    {
+      "id": "practical-q14",
+      "difficulty": "medium",
+      "prompt": "A lockfile (package-lock.json / similar) is committed so that:",
+      "options": [
+        "npm becomes faster forever",
+        "Installs reproduce the same dependency versions",
+        "Tests never fail",
+        "Git can skip node_modules diffs"
+      ],
+      "correctIndex": 1,
+      "explanation": "It pins the resolved tree."
+    },
+    {
+      "id": "practical-q15",
+      "difficulty": "hard",
+      "prompt": "In a hackathon CI setup, the most valuable default is:",
+      "options": [
+        "Deploy broken main",
+        "Run tests (and lint) on every pull request",
+        "Skip reviews",
+        "Commit secrets to pass CI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Catch failures before merge."
+    },
+    {
+      "id": "practical-q16",
+      "difficulty": "easy",
+      "prompt": "Cache-Control: no-store on an HTML response tells caches to:",
+      "options": [
+        "Store forever",
+        "Not store the response",
+        "Gzip twice",
+        "Use IPv6"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensitive pages should not be cached."
+    },
+    {
+      "id": "practical-q17",
+      "difficulty": "medium",
+      "prompt": "Optimistic UI means:",
+      "options": [
+        "Assume the write succeeded and update the UI, reconcile if it fails",
+        "Never call the server",
+        "Block the UI until timeout",
+        "Use only GET"
+      ],
+      "correctIndex": 0,
+      "explanation": "Snappy UI with a rollback path."
+    },
+    {
+      "id": "practical-q18",
+      "difficulty": "hard",
+      "prompt": "localStorage vs IndexedDB: IndexedDB is the better default when you need:",
+      "options": [
+        "A few flags only",
+        "Larger structured data and indexes",
+        "CSS variables",
+        "TLS certificates"
+      ],
+      "correctIndex": 1,
+      "explanation": "localStorage is a small synchronous string map."
+    },
+    {
+      "id": "practical-q19",
+      "difficulty": "easy",
+      "prompt": "The N+1 query problem is:",
+      "options": [
+        "One query too few",
+        "Fetching a list then querying once per item",
+        "Using too many indexes",
+        "A DNS loop"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fix with a join, IN-list, or dataloader batch."
+    },
+    {
+      "id": "practical-q20",
+      "difficulty": "medium",
+      "prompt": "Feature flags are used to:",
+      "options": [
+        "Replace version control",
+        "Turn features on/off without a full redeploy",
+        "Encrypt disks",
+        "Name CSS classes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Decouple release from deploy."
+    }
+  ]
+}

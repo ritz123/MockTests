@@ -27,10 +27,39 @@ npm run dev
 ```bash
 npm test
 npm run build
-npm start
 ```
 
-`npm start` also listens on `0.0.0.0:3000` after a production build.
+`npm run build` writes a static site to `out/` for GitHub Pages. `npm start` is only for running a Node server locally and is not used for Pages deployment.
+
+## Deploy to GitHub Pages
+
+This app exports static HTML/JS/CSS only. No server, database, or API keys at runtime.
+
+1. Push this repo to GitHub.
+2. Open **Settings → Pages → Build and deployment**.
+3. Set **Source** to **GitHub Actions**.
+4. Push to `main` or `master`. The workflow in `.github/workflows/deploy.yml` builds and publishes `out/`.
+
+**URL**
+
+- Project site (e.g. repo `MockTests`): `https://<user>.github.io/MockTests/`
+- User site (repo `<user>.github.io`): `https://<user>.github.io/`
+
+The workflow sets `NEXT_PUBLIC_BASE_PATH` from the repository name automatically.
+
+**Preview the static build locally**
+
+```bash
+npm run build
+npx serve out
+```
+
+For a project-site path:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/MockTests npm run build
+npx serve out
+```
 
 ## Take a paper
 
@@ -50,13 +79,19 @@ Shipped papers (under `public/tests/`):
 - Algorithms and complexity
 - Hackathon practical (web, security, systems)
 
+## Question bank
+
+Tests are assembled at runtime from `public/tests/bank/` by category and difficulty mix defined in `public/tests/index.json`.
+
+To rebuild bank files from the legacy static papers:
+
+```bash
+python3 scripts/build_bank.py
+```
+
 ## Add a paper later
 
-You do not need to change application code.
-
-1. Copy `public/tests/_template.json` to `public/tests/my-paper-id.json`.
-2. Fill in `id`, `title`, `durationMinutes`, and `questions`.
-3. Add an entry to `public/tests/index.json`:
+Register a new entry in `public/tests/index.json` with an `assembly` block:
 
 ```json
 {
@@ -64,11 +99,17 @@ You do not need to change application code.
   "title": "Paper title",
   "durationMinutes": 20,
   "questionCount": 10,
-  "file": "my-paper-id.json"
+  "assembly": {
+    "category": "logical",
+    "questionCount": 10,
+    "difficultyMix": { "easy": 3, "medium": 5, "hard": 2 }
+  }
 }
 ```
 
-4. Refresh the home page. Next.js serves `public/tests/` as static files.
+Add questions to the matching file under `public/tests/bank/`. Each question needs `id`, `difficulty`, `prompt`, `options`, `correctIndex`, and optionally `explanation`.
+
+Legacy static paper JSON (`file` field instead of `assembly`) is still supported.
 
 ### Question JSON
 

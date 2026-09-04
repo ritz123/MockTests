@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Lexend, Source_Sans_3 } from "next/font/google";
+import { Roboto } from "next/font/google";
 import type { ReactNode } from "react";
+import { ThemeProvider } from "../components/ThemeProvider";
 import "./globals.css";
 
-const lexend = Lexend({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -21,10 +17,18 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.svg" },
 };
 
+function RootLayoutContent({ children }: { children: ReactNode }) {
+  return (
+    <ThemeProvider>
+      <body className={roboto.variable}>{children}</body>
+    </ThemeProvider>
+  );
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${sourceSans.variable}`}>{children}</body>
+      <RootLayoutContent>{children}</RootLayoutContent>
     </html>
   );
 }

@@ -2,45 +2,69 @@
   "tests": [
     {
       "id": "google-hackathon-logical",
-      "title": "Google Hackathon Screen \u2014 Logical Reasoning",
+      "title": "Google Hackathon Screen — Logical Reasoning",
       "durationMinutes": 25,
       "questionCount": 20,
-      "file": "google-hackathon-logical.json"
+      "assembly": {
+        "category": "logical",
+        "questionCount": 20,
+        "difficultyMix": { "easy": 6, "medium": 10, "hard": 4 }
+      }
     },
     {
       "id": "google-hackathon-quant",
-      "title": "Google Hackathon Screen \u2014 Quantitative Aptitude",
+      "title": "Google Hackathon Screen — Quantitative Aptitude",
       "durationMinutes": 25,
       "questionCount": 20,
-      "file": "google-hackathon-quant.json"
+      "assembly": {
+        "category": "quant",
+        "questionCount": 20,
+        "difficultyMix": { "easy": 6, "medium": 10, "hard": 4 }
+      }
     },
     {
       "id": "google-hackathon-cs",
-      "title": "Google Interview \u2014 Computer Science Fundamentals",
+      "title": "Google Interview — Computer Science Fundamentals",
       "durationMinutes": 30,
       "questionCount": 25,
-      "file": "google-hackathon-cs.json"
+      "assembly": {
+        "category": "cs",
+        "questionCount": 25,
+        "difficultyMix": { "easy": 8, "medium": 12, "hard": 5 }
+      }
     },
     {
       "id": "google-hackathon-puzzles",
-      "title": "Google Interview \u2014 Problem Solving Puzzles",
+      "title": "Google Interview — Problem Solving Puzzles",
       "durationMinutes": 20,
       "questionCount": 15,
-      "file": "google-hackathon-puzzles.json"
+      "assembly": {
+        "category": "puzzles",
+        "questionCount": 15,
+        "difficultyMix": { "easy": 5, "medium": 6, "hard": 4 }
+      }
     },
     {
       "id": "google-hackathon-algorithms",
-      "title": "Google Interview \u2014 Algorithms and Complexity",
+      "title": "Google Interview — Algorithms and Complexity",
       "durationMinutes": 25,
       "questionCount": 20,
-      "file": "google-hackathon-algorithms.json"
+      "assembly": {
+        "category": "algorithms",
+        "questionCount": 20,
+        "difficultyMix": { "easy": 6, "medium": 10, "hard": 4 }
+      }
     },
     {
       "id": "google-hackathon-practical",
-      "title": "Hackathon Practical \u2014 Web, Security, and Systems",
+      "title": "Hackathon Practical — Web, Security, and Systems",
       "durationMinutes": 25,
       "questionCount": 20,
-      "file": "google-hackathon-practical.json"
+      "assembly": {
+        "category": "practical",
+        "questionCount": 20,
+        "difficultyMix": { "easy": 6, "medium": 10, "hard": 4 }
+      }
     }
   ]
 }

@@ -1,8 +1,12 @@
+import type { Paper } from "./schema";
+import { parsePaper } from "./schema";
+
 export const SESSION_KEY = "aptitude-session";
 
 export type InProgressSession = {
   status: "in-progress";
   testId: string;
+  paper: Paper;
   startedAt: number;
   endsAt: number;
   answers: Record<string, number>;
@@ -12,6 +16,7 @@ export type InProgressSession = {
 export type CompletedSession = {
   status: "completed";
   testId: string;
+  paper: Paper;
   startedAt: number;
   submittedAt: number;
   autoSubmitted: boolean;
@@ -20,16 +25,13 @@ export type CompletedSession = {
 
 export type Session = InProgressSession | CompletedSession;
 
-export function startSession(
-  testId: string,
-  durationMinutes: number,
-  now: number,
-): InProgressSession {
+export function startSession(testId: string, paper: Paper, now: number): InProgressSession {
   return {
     status: "in-progress",
     testId,
+    paper,
     startedAt: now,
-    endsAt: now + durationMinutes * 60 * 1000,
+    endsAt: now + paper.durationMinutes * 60 * 1000,
     answers: {},
     currentIndex: 0,
   };
@@ -43,6 +45,7 @@ export function completeSession(
   return {
     status: "completed",
     testId: session.testId,
+    paper: session.paper,
     startedAt: session.startedAt,
     submittedAt: now,
     autoSubmitted,
@@ -60,6 +63,9 @@ function isAnswers(value: unknown): value is Record<string, number> {
 function parseSession(value: unknown): Session | null {
   if (typeof value !== "object" || value === null) return null;
   const record = value as Record<string, unknown>;
+  const paperResult = parsePaper(record.paper);
+  if (!paperResult.ok) return null;
+
   if (record.status === "in-progress") {
     if (
       typeof record.testId === "string" &&
@@ -71,6 +77,7 @@ function parseSession(value: unknown): Session | null {
       return {
         status: "in-progress",
         testId: record.testId,
+        paper: paperResult.value,
         startedAt: record.startedAt,
         endsAt: record.endsAt,
         answers: record.answers,
@@ -90,6 +97,7 @@ function parseSession(value: unknown): Session | null {
       return {
         status: "completed",
         testId: record.testId,
+        paper: paperResult.value,
         startedAt: record.startedAt,
         submittedAt: record.submittedAt,
         autoSubmitted: record.autoSubmitted,

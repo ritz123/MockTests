@@ -9,12 +9,10 @@ import type { Paper } from "../lib/schema";
 import { scoreAttempt } from "../lib/scoring";
 import {
   loadSession,
-  saveSession,
-  startSession,
   type CompletedSession,
 } from "../lib/session";
-import { loadCatalog, loadPaper } from "../lib/tests";
 import { formatMmSs, optionLabel } from "../lib/time";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function ResultsPage() {
   const id = routeParam(useParams().id);
@@ -22,7 +20,6 @@ export function ResultsPage() {
   const [paper, setPaper] = useState<Paper | null>(null);
   const [session, setSession] = useState<CompletedSession | null>(null);
   const [missing, setMissing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -33,48 +30,13 @@ export function ResultsPage() {
       return;
     }
     setSession(stored);
-
-    async function load() {
-      const catalogResult = await loadCatalog();
-      if (!catalogResult.ok) {
-        setError(catalogResult.error);
-        return;
-      }
-      const entry = catalogResult.value.tests.find((item) => item.id === id);
-      if (!entry) {
-        setError("This paper is not in the catalog.");
-        return;
-      }
-      const paperResult = await loadPaper(entry.file);
-      if (!paperResult.ok) {
-        setError(paperResult.error);
-        return;
-      }
-      setPaper(paperResult.value);
-    }
-
-    void load();
+    setPaper(stored.paper);
   }, [id, router]);
 
   if (missing) {
     return (
       <div className="page">
         <p className="status">Returning to papers…</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="page">
-        <main className="narrow">
-          <div className="banner error" role="alert">
-            <p>{error}</p>
-            <Link href="/" className="button secondary">
-              Back to papers
-            </Link>
-          </div>
-        </main>
       </div>
     );
   }
@@ -91,9 +53,7 @@ export function ResultsPage() {
   const used = Math.max(0, session.submittedAt - session.startedAt);
 
   function retake() {
-    if (!paper) return;
-    saveSession(startSession(paper.id, paper.durationMinutes, Date.now()));
-    router.push(`/exam/${paper.id}`);
+    router.push(`/exam/${id}`);
   }
 
   return (
@@ -118,6 +78,7 @@ export function ResultsPage() {
               <RotateCcw size={18} aria-hidden="true" />
               Retake this paper
             </button>
+            <ThemeToggle />
           </div>
         </header>
 

@@ -25,6 +25,17 @@ const validCatalog = {
       questionCount: 10,
       file: "quant-basics-01.json",
     },
+    {
+      id: "logical-bank",
+      title: "Logical Reasoning — Mixed",
+      durationMinutes: 25,
+      questionCount: 3,
+      assembly: {
+        category: "logical",
+        questionCount: 3,
+        difficultyMix: { easy: 1, medium: 1, hard: 1 },
+      },
+    },
   ],
 };
 

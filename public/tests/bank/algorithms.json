@@ -8,11 +8,11 @@
       "options": [
         "O(n)",
         "O(n log n)",
-        "O(n\u00b2)",
-        "O(2\u207f)"
+        "O(n²)",
+        "O(2ⁿ)"
       ],
       "correctIndex": 1,
-      "explanation": "Divide and merge: always \u0398(n log n) comparisons."
+      "explanation": "Divide and merge: always Θ(n log n) comparisons."
     },
     {
       "id": "algorithms-q2",
@@ -20,7 +20,7 @@
       "prompt": "Quicksort worst-case time (bad pivots) is:",
       "options": [
         "O(n log n)",
-        "O(n\u00b2)",
+        "O(n²)",
         "O(n)",
         "O(log n)"
       ],
@@ -32,10 +32,10 @@
       "difficulty": "hard",
       "prompt": "Building a binary heap from n items with Floyd's method is:",
       "options": [
-        "\u0398(n)",
-        "\u0398(n log n) only",
-        "\u0398(n\u00b2)",
-        "\u0398(1)"
+        "Θ(n)",
+        "Θ(n log n) only",
+        "Θ(n²)",
+        "Θ(1)"
       ],
       "correctIndex": 0,
       "explanation": "Heapify runs in linear time."
@@ -203,11 +203,11 @@
       "options": [
         "O(n) per op",
         "Almost O(1) amortized (inverse Ackermann)",
-        "O(n\u00b2)",
-        "O(2\u207f)"
+        "O(n²)",
+        "O(2ⁿ)"
       ],
       "correctIndex": 1,
-      "explanation": "\u03b1(n) grows extremely slowly."
+      "explanation": "α(n) grows extremely slowly."
     },
     {
       "id": "algorithms-q17",
@@ -242,7 +242,7 @@
       "options": [
         "O(n) worst every time",
         "O(1) amortized",
-        "O(n\u00b2) amortized",
+        "O(n²) amortized",
         "O(log n) amortized always for each char"
       ],
       "correctIndex": 1,
@@ -254,12 +254,1312 @@
       "prompt": "Any comparison-based sorting algorithm needs",
       "options": [
         "O(n) comparisons in the worst case always",
-        "\u03a9(n log n) comparisons in the worst case",
+        "Ω(n log n) comparisons in the worst case",
         "O(1) comparisons",
         "No lower bound"
       ],
       "correctIndex": 1,
-      "explanation": "There are n! orders; a binary decision tree has height \u03a9(log n!)."
+      "explanation": "There are n! orders; a binary decision tree has height Ω(log n!)."
+    },
+    {
+      "id": "algorithms-q21",
+      "difficulty": "easy",
+      "prompt": "Mergesort worst-case comparisons?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Always Θ(n log n) comparisons."
+    },
+    {
+      "id": "algorithms-q22",
+      "difficulty": "easy",
+      "prompt": "Quicksort average-case time?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Good pivots give n log n average."
+    },
+    {
+      "id": "algorithms-q23",
+      "difficulty": "easy",
+      "prompt": "Heapsort worst-case time?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(1)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Extract-max n times: O(n log n)."
+    },
+    {
+      "id": "algorithms-q24",
+      "difficulty": "easy",
+      "prompt": "Insertion sort best case (sorted input)?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(1)"
+      ],
+      "correctIndex": 0,
+      "explanation": "O(n) comparisons when already sorted."
+    },
+    {
+      "id": "algorithms-q25",
+      "difficulty": "easy",
+      "prompt": "Selection sort comparisons always?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Always Θ(n²) comparisons."
+    },
+    {
+      "id": "algorithms-q26",
+      "difficulty": "easy",
+      "prompt": "Binary search requires input to be:",
+      "options": [
+        "Random",
+        "Sorted",
+        "Unique only",
+        "A tree"
+      ],
+      "correctIndex": 1,
+      "explanation": "Needs sorted order."
+    },
+    {
+      "id": "algorithms-q27",
+      "difficulty": "easy",
+      "prompt": "BFS shortest path on unweighted graph?",
+      "options": [
+        "No",
+        "Yes",
+        "Only trees",
+        "Only DAGs"
+      ],
+      "correctIndex": 1,
+      "explanation": "First visit is shortest in unweighted graphs."
+    },
+    {
+      "id": "algorithms-q28",
+      "difficulty": "easy",
+      "prompt": "DFS useful for detecting cycles in?",
+      "options": [
+        "Undirected only",
+        "Directed graphs (with back edges)",
+        "Sorted arrays",
+        "Heaps only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Back edges indicate cycles in directed graphs."
+    },
+    {
+      "id": "algorithms-q29",
+      "difficulty": "easy",
+      "prompt": "Topological sort exists iff graph is:",
+      "options": [
+        "Complete",
+        "DAG",
+        "Bipartite",
+        "Connected undirected"
+      ],
+      "correctIndex": 1,
+      "explanation": "Directed acyclic graph."
+    },
+    {
+      "id": "algorithms-q30",
+      "difficulty": "easy",
+      "prompt": "Dijkstra time with binary heap?",
+      "options": [
+        "O(V+E)",
+        "O((V+E) log V)",
+        "O(V²)",
+        "O(E log E) only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard binary-heap implementation."
+    },
+    {
+      "id": "algorithms-q31",
+      "difficulty": "easy",
+      "prompt": "Bellman-Ford time complexity?",
+      "options": [
+        "O(V+E)",
+        "O(VE)",
+        "O(V log E)",
+        "O(E log V)"
+      ],
+      "correctIndex": 1,
+      "explanation": "V−1 relax rounds over all edges."
+    },
+    {
+      "id": "algorithms-q32",
+      "difficulty": "easy",
+      "prompt": "Floyd-Warshall time?",
+      "options": [
+        "O(V³)",
+        "O(V² log V)",
+        "O(VE)",
+        "O(V+E)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Triple loop over vertices."
+    },
+    {
+      "id": "algorithms-q33",
+      "difficulty": "easy",
+      "prompt": "Kruskal dominated step?",
+      "options": [
+        "BFS",
+        "Sorting edges",
+        "DFS from root",
+        "Heapify all nodes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sort edges then union-find."
+    },
+    {
+      "id": "algorithms-q34",
+      "difficulty": "easy",
+      "prompt": "Prim with min-heap time?",
+      "options": [
+        "O(V+E)",
+        "O(E log V)",
+        "O(V²)",
+        "O(E²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Similar to Dijkstra with heap."
+    },
+    {
+      "id": "algorithms-q35",
+      "difficulty": "easy",
+      "prompt": "Union-find without optimizations?",
+      "options": [
+        "O(1)",
+        "O(log n) amortized",
+        "O(n) per op worst",
+        "O(1) always"
+      ],
+      "correctIndex": 2,
+      "explanation": "Can degrade to linear per operation."
+    },
+    {
+      "id": "algorithms-q36",
+      "difficulty": "easy",
+      "prompt": "Dynamic programming needs:",
+      "options": [
+        "Greedy choice always",
+        "Optimal substructure and overlapping subproblems",
+        "No recursion",
+        "Sorted input"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic DP prerequisites."
+    },
+    {
+      "id": "algorithms-q37",
+      "difficulty": "easy",
+      "prompt": "0/1 knapsack with DP time?",
+      "options": [
+        "O(n)",
+        "O(nW)",
+        "O(W)",
+        "O(n²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pseudo-polynomial O(nW)."
+    },
+    {
+      "id": "algorithms-q38",
+      "difficulty": "easy",
+      "prompt": "Longest common subsequence of strings length m,n?",
+      "options": [
+        "O(m+n)",
+        "O(mn)",
+        "O(m log n)",
+        "O(n²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic 2D DP table."
+    },
+    {
+      "id": "algorithms-q39",
+      "difficulty": "easy",
+      "prompt": "Edit distance (Levenshtein) DP space can be reduced to:",
+      "options": [
+        "O(1)",
+        "O(min(m,n))",
+        "O(mn) only",
+        "O(n²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Only previous row needed."
+    },
+    {
+      "id": "algorithms-q40",
+      "difficulty": "easy",
+      "prompt": "Coin change counting ways DP base?",
+      "options": [
+        "ways[0]=1",
+        "ways[0]=0",
+        "ways[1]=1 always",
+        "No base"
+      ],
+      "correctIndex": 0,
+      "explanation": "One way to make sum 0."
+    },
+    {
+      "id": "algorithms-q41",
+      "difficulty": "easy",
+      "prompt": "Greedy fails for which classic problem?",
+      "options": [
+        "Huffman coding",
+        "0/1 knapsack",
+        "Activity selection",
+        "Minimum spanning tree"
+      ],
+      "correctIndex": 1,
+      "explanation": "0/1 knapsack needs DP."
+    },
+    {
+      "id": "algorithms-q42",
+      "difficulty": "easy",
+      "prompt": "Huffman coding is optimal for?",
+      "options": [
+        "External merge sort",
+        "Prefix-free lossless compression",
+        "Hashing",
+        "Graph coloring"
+      ],
+      "correctIndex": 1,
+      "explanation": "Minimizes expected code length."
+    },
+    {
+      "id": "algorithms-q43",
+      "difficulty": "easy",
+      "prompt": "Activity selection greedy picks:",
+      "options": [
+        "Longest activity",
+        "Earliest finishing next",
+        "Random",
+        "Latest start"
+      ],
+      "correctIndex": 1,
+      "explanation": "Earliest finish time first."
+    },
+    {
+      "id": "algorithms-q44",
+      "difficulty": "easy",
+      "prompt": "Binary search tree search worst-case?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Skewed tree is linear."
+    },
+    {
+      "id": "algorithms-q45",
+      "difficulty": "easy",
+      "prompt": "AVL insert worst-case rotations?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Height is O(log n)."
+    },
+    {
+      "id": "algorithms-q46",
+      "difficulty": "easy",
+      "prompt": "Red-black insert fixup is:",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Constant work per level."
+    },
+    {
+      "id": "algorithms-q47",
+      "difficulty": "easy",
+      "prompt": "B-tree designed for:",
+      "options": [
+        "CPU L1 cache",
+        "Minimizing disk seeks",
+        "GPU threads",
+        "Sorting networks"
+      ],
+      "correctIndex": 1,
+      "explanation": "High branching factor for disk blocks."
+    },
+    {
+      "id": "algorithms-q48",
+      "difficulty": "easy",
+      "prompt": "Heap extract-max time?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Down-heapify root."
+    },
+    {
+      "id": "algorithms-q49",
+      "difficulty": "easy",
+      "prompt": "Build heap with Floyd's heapify?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Linear-time bottom-up heapify."
+    },
+    {
+      "id": "algorithms-q50",
+      "difficulty": "easy",
+      "prompt": "Counting sort requires?",
+      "options": [
+        "Comparison only",
+        "Known integer range",
+        "Sorted input",
+        "Stable queue"
+      ],
+      "correctIndex": 1,
+      "explanation": "Range of key values bounded."
+    },
+    {
+      "id": "algorithms-q51",
+      "difficulty": "easy",
+      "prompt": "Radix sort complexity roughly?",
+      "options": [
+        "O(n)",
+        "O(d(n+k))",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "correctIndex": 1,
+      "explanation": "d passes over n digits with k range."
+    },
+    {
+      "id": "algorithms-q52",
+      "difficulty": "easy",
+      "prompt": "Bucket sort average case with uniform input?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Linear when buckets balanced."
+    },
+    {
+      "id": "algorithms-q53",
+      "difficulty": "easy",
+      "prompt": "Master theorem applies to:",
+      "options": [
+        "All recurrences",
+        "Divide-and-conquer recurrences of form T(n)=aT(n/b)+f(n)",
+        "Graph DFS only",
+        "Greedy proofs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard divide-and-conquer form."
+    },
+    {
+      "id": "algorithms-q54",
+      "difficulty": "easy",
+      "prompt": "T(n)=2T(n/2)+n gives?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Case 2: f(n)=Θ(n), log_b a=1."
+    },
+    {
+      "id": "algorithms-q55",
+      "difficulty": "easy",
+      "prompt": "T(n)=T(n-1)+1 gives?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Linear recursion depth."
+    },
+    {
+      "id": "algorithms-q56",
+      "difficulty": "medium",
+      "prompt": "Amortized dynamic array append?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Doubling strategy amortized constant."
+    },
+    {
+      "id": "algorithms-q57",
+      "difficulty": "medium",
+      "prompt": "Skip list expected search?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Probabilistic balanced levels."
+    },
+    {
+      "id": "algorithms-q58",
+      "difficulty": "medium",
+      "prompt": "Hash table worst-case lookup (no safeguards)?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2,
+      "explanation": "All keys collide into one bucket."
+    },
+    {
+      "id": "algorithms-q59",
+      "difficulty": "medium",
+      "prompt": "Open addressing load factor must stay:",
+      "options": [
+        "Above 1",
+        "Below 1",
+        "Exactly 0.5 always",
+        "Unbounded"
+      ],
+      "correctIndex": 1,
+      "explanation": "Need empty slots to probe."
+    },
+    {
+      "id": "algorithms-q60",
+      "difficulty": "medium",
+      "prompt": "Two-pointer technique common on:",
+      "options": [
+        "Unsorted arrays only",
+        "Sorted arrays for pair problems",
+        "Graph cycles",
+        "Heaps only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sorted input enables two pointers."
+    },
+    {
+      "id": "algorithms-q61",
+      "difficulty": "medium",
+      "prompt": "Sliding window typical complexity?",
+      "options": [
+        "O(n²)",
+        "O(n log n)",
+        "O(n)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each element enters/leaves once."
+    },
+    {
+      "id": "algorithms-q62",
+      "difficulty": "medium",
+      "prompt": "Kadane's algorithm finds:",
+      "options": [
+        "Shortest path",
+        "Maximum subarray sum",
+        "Minimum spanning tree",
+        "Topological order"
+      ],
+      "correctIndex": 1,
+      "explanation": "Linear-time max subarray."
+    },
+    {
+      "id": "algorithms-q63",
+      "difficulty": "medium",
+      "prompt": "Prefix sums enable range sum query after preprocess in:",
+      "options": [
+        "O(n) query",
+        "O(1) query",
+        "O(log n) query",
+        "O(n²) query"
+      ],
+      "correctIndex": 1,
+      "explanation": "prefix[r]-prefix[l-1] in O(1)."
+    },
+    {
+      "id": "algorithms-q64",
+      "difficulty": "medium",
+      "prompt": "Difference array helps with:",
+      "options": [
+        "Static queries only",
+        "Range update + point query",
+        "Sorting strings",
+        "Graph coloring"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficient range increment updates."
+    },
+    {
+      "id": "algorithms-q65",
+      "difficulty": "medium",
+      "prompt": "Monotonic stack often finds:",
+      "options": [
+        "Shortest path",
+        "Next greater element",
+        "Minimum spanning tree",
+        "Max flow"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic NGE in linear time."
+    },
+    {
+      "id": "algorithms-q66",
+      "difficulty": "medium",
+      "prompt": "Binary lifting on trees enables:",
+      "options": [
+        "O(1) LCA after O(n log n) prep",
+        "O(n) LCA always",
+        "Only BFS",
+        "Only heaps"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCA in O(log n) per query."
+    },
+    {
+      "id": "algorithms-q67",
+      "difficulty": "medium",
+      "prompt": "Euler tour technique useful for:",
+      "options": [
+        "Sorting",
+        "Subtree queries on trees",
+        "Hashing",
+        "Flow networks"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flattens subtree to array interval."
+    },
+    {
+      "id": "algorithms-q68",
+      "difficulty": "medium",
+      "prompt": "Heavy-light decomposition helps:",
+      "options": [
+        "Sorting",
+        "Path queries on trees",
+        "String matching only",
+        "Convex hull"
+      ],
+      "correctIndex": 1,
+      "explanation": "Decomposes paths into O(log n) chains."
+    },
+    {
+      "id": "algorithms-q69",
+      "difficulty": "medium",
+      "prompt": "Segment tree range query time?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Split query across O(log n) nodes."
+    },
+    {
+      "id": "algorithms-q70",
+      "difficulty": "medium",
+      "prompt": "Fenwick tree (BIT) supports?",
+      "options": [
+        "Only point updates",
+        "Point update and prefix sum in O(log n)",
+        "Only static arrays",
+        "O(1) range update always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficient prefix sums."
+    },
+    {
+      "id": "algorithms-q71",
+      "difficulty": "medium",
+      "prompt": "Trie search for word length L?",
+      "options": [
+        "O(L)",
+        "O(n)",
+        "O(log n)",
+        "O(nL)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Follow one edge per character."
+    },
+    {
+      "id": "algorithms-q72",
+      "difficulty": "medium",
+      "prompt": "A* search needs admissible heuristic to guarantee:",
+      "options": [
+        "Fastest runtime always",
+        "Optimal path",
+        "No memory use",
+        "Polynomial time always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Never overestimates cost to goal."
+    },
+    {
+      "id": "algorithms-q73",
+      "difficulty": "medium",
+      "prompt": "Branch and bound prunes when:",
+      "options": [
+        "Node is leaf",
+        "Lower bound exceeds best known solution",
+        "Graph is tree",
+        "Queue empty"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cannot beat incumbent."
+    },
+    {
+      "id": "algorithms-q74",
+      "difficulty": "medium",
+      "prompt": "Backtracking explores:",
+      "options": [
+        "Only greedy choices",
+        "All possibilities with pruning",
+        "Random paths only",
+        "Sorted arrays only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Systematic search with cuts."
+    },
+    {
+      "id": "algorithms-q75",
+      "difficulty": "medium",
+      "prompt": "NP-complete problem means:",
+      "options": [
+        "In P",
+        "In NP and every NP problem reduces to it",
+        "Undecidable always",
+        "O(n) solvable"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hardest problems in NP (assuming P≠NP)."
+    },
+    {
+      "id": "algorithms-q76",
+      "difficulty": "medium",
+      "prompt": "Approximation algorithm for vertex cover 2-approx:",
+      "options": [
+        "Pick random edge",
+        "Pick any edge and add both endpoints, repeat",
+        "Use DFS only",
+        "Sort vertices"
+      ],
+      "correctIndex": 1,
+      "explanation": "Maximal matching gives factor 2."
+    },
+    {
+      "id": "algorithms-q77",
+      "difficulty": "medium",
+      "prompt": "Stable matching Gale-Shapley is:",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each proposal potentially scans list."
+    },
+    {
+      "id": "algorithms-q78",
+      "difficulty": "medium",
+      "prompt": "Reservoir sampling of size k from stream uses:",
+      "options": [
+        "O(k) memory",
+        "O(n) memory always",
+        "O(1) memory only",
+        "O(n²) time"
+      ],
+      "correctIndex": 0,
+      "explanation": "Keep k samples with proper probabilities."
+    },
+    {
+      "id": "algorithms-q79",
+      "difficulty": "medium",
+      "prompt": "Boyce-Moore string search worst-case?",
+      "options": [
+        "O(n)",
+        "O(n+m)",
+        "O(nm)",
+        "O(n log m)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bad-character/heuristic worst cases exist."
+    },
+    {
+      "id": "algorithms-q80",
+      "difficulty": "medium",
+      "prompt": "KMP preprocessing failure function is:",
+      "options": [
+        "O(m)",
+        "O(m²)",
+        "O(n)",
+        "O(n+m)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Linear in pattern length m."
+    },
+    {
+      "id": "algorithms-q81",
+      "difficulty": "medium",
+      "prompt": "Rabin-Karp rolling hash average search?",
+      "options": [
+        "O(n+m)",
+        "O(nm)",
+        "O(n log m)",
+        "O(m)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Expected linear with good hash."
+    },
+    {
+      "id": "algorithms-q82",
+      "difficulty": "medium",
+      "prompt": "Convex hull Graham scan time?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sort points then scan."
+    },
+    {
+      "id": "algorithms-q83",
+      "difficulty": "medium",
+      "prompt": "Line sweep for intersection of segments?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sort events, active set."
+    },
+    {
+      "id": "algorithms-q84",
+      "difficulty": "medium",
+      "prompt": "Maximum subarray with divide and conquer?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cross-midpoint handled in O(n)."
+    },
+    {
+      "id": "algorithms-q85",
+      "difficulty": "medium",
+      "prompt": "Matrix chain multiplication DP states?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n³)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Interval DP over i..j."
+    },
+    {
+      "id": "algorithms-q86",
+      "difficulty": "medium",
+      "prompt": "Palindrome partitioning min cuts DP?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n³)",
+        "O(2ⁿ)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Check palindrome + DP O(n²)."
+    },
+    {
+      "id": "algorithms-q87",
+      "difficulty": "medium",
+      "prompt": "Longest increasing subsequence n log n uses:",
+      "options": [
+        "Sorting",
+        "Patience sorting / binary search on tails",
+        "Hash table only",
+        "BFS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Maintain pile tops."
+    },
+    {
+      "id": "algorithms-q88",
+      "difficulty": "medium",
+      "prompt": "Graph coloring is NP-hard for general graphs. Greedy order affects:",
+      "options": [
+        "Nothing",
+        "Number of colors used",
+        "Whether graph is connected",
+        "Edge count only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Order changes greedy color count."
+    },
+    {
+      "id": "algorithms-q89",
+      "difficulty": "medium",
+      "prompt": "Ford-Fulkerson with integer capacities terminates because:",
+      "options": [
+        "Flow is always 0",
+        "Augmenting path increases flow by ≥1 each time",
+        "Graph is a tree",
+        "Uses BFS only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Integer increments bound iterations."
+    },
+    {
+      "id": "algorithms-q90",
+      "difficulty": "medium",
+      "prompt": "Edmonds-Karp chooses augmenting paths by:",
+      "options": [
+        "Random DFS",
+        "BFS shortest path",
+        "Dijkstra",
+        "Greedy MST"
+      ],
+      "correctIndex": 1,
+      "explanation": "BFS on residual graph."
+    },
+    {
+      "id": "algorithms-q91",
+      "difficulty": "hard",
+      "prompt": "Min-cut max-flow theorem states:",
+      "options": [
+        "Cut equals path count",
+        "Max flow value equals min s-t cut capacity",
+        "Flow always integer",
+        "Graph must be tree"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic max-flow min-cut."
+    },
+    {
+      "id": "algorithms-q92",
+      "difficulty": "hard",
+      "prompt": "Bipartite matching can be solved via:",
+      "options": [
+        "Dijkstra",
+        "Max flow / Hopcroft-Karp",
+        "Quicksort",
+        "Kruskal only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reduce to flow or specialized matching."
+    },
+    {
+      "id": "algorithms-q93",
+      "difficulty": "hard",
+      "prompt": "Tarjan's SCC algorithm time?",
+      "options": [
+        "O(V+E)",
+        "O(V²)",
+        "O(VE)",
+        "O(V log V)"
+      ],
+      "correctIndex": 0,
+      "explanation": "One DFS pass with lowlink."
+    },
+    {
+      "id": "algorithms-q94",
+      "difficulty": "hard",
+      "prompt": "Kosaraju's SCC needs:",
+      "options": [
+        "One DFS",
+        "Two DFS passes",
+        "BFS only",
+        "Sorting edges"
+      ],
+      "correctIndex": 1,
+      "explanation": "Finish order then transpose DFS."
+    },
+    {
+      "id": "algorithms-q95",
+      "difficulty": "hard",
+      "prompt": "Johnson's all-pairs shortest paths good for?",
+      "options": [
+        "Dense graphs only",
+        "Sparse graphs with reweighting",
+        "Unweighted only",
+        "Negative cycles always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Potential reweighting + Dijkstra from each node."
+    },
+    {
+      "id": "algorithms-q96",
+      "difficulty": "hard",
+      "prompt": "A* with zero heuristic equals:",
+      "options": [
+        "BFS",
+        "Dijkstra-like best-first",
+        "Random walk",
+        "DFS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Degrades toward uniform-cost search."
+    },
+    {
+      "id": "algorithms-q97",
+      "difficulty": "hard",
+      "prompt": "Meet-in-the-middle splits problem into:",
+      "options": [
+        "Two halves searched separately then combined",
+        "Three thirds",
+        "Random halves",
+        "Sorted halves only"
+      ],
+      "correctIndex": 0,
+      "explanation": "Exponential to roughly sqrt exponential."
+    },
+    {
+      "id": "algorithms-q98",
+      "difficulty": "hard",
+      "prompt": "Mo's algorithm sorts queries by:",
+      "options": [
+        "Random",
+        "Block of left endpoint then right",
+        "Only right endpoint",
+        "Weight only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Offline sqrt decomposition on queries."
+    },
+    {
+      "id": "algorithms-q99",
+      "difficulty": "hard",
+      "prompt": "Persistent segment tree allows:",
+      "options": [
+        "Only point queries",
+        "Multiple versions with path copying",
+        "O(1) updates always",
+        "No extra memory"
+      ],
+      "correctIndex": 1,
+      "explanation": "Functional persistence via copied nodes."
+    },
+    {
+      "id": "algorithms-q100",
+      "difficulty": "hard",
+      "prompt": "Wavelet tree supports:",
+      "options": [
+        "Only sums",
+        "Rank/select on sequences",
+        "Sorting in O(n)",
+        "Max flow"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rank queries on alphabets."
+    },
+    {
+      "id": "algorithms-q101",
+      "difficulty": "hard",
+      "prompt": "Suffix array construction DC3/Skew is:",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n log² n)",
+        "O(n²)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Linear-time algorithms exist."
+    },
+    {
+      "id": "algorithms-q102",
+      "difficulty": "hard",
+      "prompt": "LCP array with suffix array helps:",
+      "options": [
+        "Sorting integers",
+        "Longest repeated substring problems",
+        "Minimum spanning tree",
+        "Convex hull"
+      ],
+      "correctIndex": 1,
+      "explanation": "Adjacent suffix LCP properties."
+    },
+    {
+      "id": "algorithms-q103",
+      "difficulty": "hard",
+      "prompt": "Treap expected height?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Random priorities balance tree."
+    },
+    {
+      "id": "algorithms-q104",
+      "difficulty": "hard",
+      "prompt": "Splay tree amortized access?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Amortized logarithmic."
+    },
+    {
+      "id": "algorithms-q105",
+      "difficulty": "hard",
+      "prompt": "Link-cut tree supports:",
+      "options": [
+        "Static trees only",
+        "Dynamic forest path queries/updates",
+        "Sorting only",
+        "Hashing only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dynamic trees with splay."
+    },
+    {
+      "id": "algorithms-q106",
+      "difficulty": "hard",
+      "prompt": "Centroid decomposition depth?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Centroid splits size at least half."
+    },
+    {
+      "id": "algorithms-q107",
+      "difficulty": "hard",
+      "prompt": "Mo's algorithm typical complexity?",
+      "options": [
+        "O(n√n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "O((n+q)√n) with sqrt block."
+    },
+    {
+      "id": "algorithms-q108",
+      "difficulty": "hard",
+      "prompt": "Bitset DP speedup comes from:",
+      "options": [
+        "More recursion",
+        "Word-level parallelism on subsets",
+        "Sorting",
+        "Heaps"
+      ],
+      "correctIndex": 1,
+      "explanation": "Process 64-bit chunks at once."
+    },
+    {
+      "id": "algorithms-q109",
+      "difficulty": "hard",
+      "prompt": "Dinic's algorithm on unit capacity networks?",
+      "options": [
+        "O(E)",
+        "O(E√V)",
+        "O(VE)",
+        "O(V³)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Better on many practical networks."
+    },
+    {
+      "id": "algorithms-q110",
+      "difficulty": "hard",
+      "prompt": "Hungarian algorithm solves:",
+      "options": [
+        "Maximum flow",
+        "Assignment problem in O(n³)",
+        "Traveling salesman exactly",
+        "Sorting"
+      ],
+      "correctIndex": 1,
+      "explanation": "Minimum cost bipartite matching."
+    },
+    {
+      "id": "algorithms-q111",
+      "difficulty": "hard",
+      "prompt": "Simplex is for:",
+      "options": [
+        "Graph BFS",
+        "Linear programming",
+        "String matching",
+        "Sorting"
+      ],
+      "correctIndex": 1,
+      "explanation": "LP optimization (worst-case exponential)."
+    },
+    {
+      "id": "algorithms-q112",
+      "difficulty": "hard",
+      "prompt": "Fast Fourier transform multiplies degree-n polynomials in:",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "O(n log n) convolution."
+    },
+    {
+      "id": "algorithms-q113",
+      "difficulty": "hard",
+      "prompt": "Karatsuba multiplication beats O(n²) at:",
+      "options": [
+        "Large n",
+        "Small n only",
+        "n=2 only",
+        "Never"
+      ],
+      "correctIndex": 0,
+      "explanation": "Divide-and-conquer for big integers."
+    },
+    {
+      "id": "algorithms-q114",
+      "difficulty": "hard",
+      "prompt": "Strassen matrix multiplication is:",
+      "options": [
+        "O(n²)",
+        "O(n^2.807)",
+        "O(n³)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sub-cubic matrix multiply."
+    },
+    {
+      "id": "algorithms-q115",
+      "difficulty": "hard",
+      "prompt": "Pollard rho factors integers expected:",
+      "options": [
+        "O(1)",
+        "O(n^1/4) for small factors",
+        "O(n)",
+        "O(log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Probabilistic factorization method."
+    },
+    {
+      "id": "algorithms-q116",
+      "difficulty": "hard",
+      "prompt": "Miller-Rabin tests primality in:",
+      "options": [
+        "O(log n) deterministic always",
+        "O(k log³ n) probabilistic",
+        "O(n)",
+        "O(√n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Polynomial time with error probability."
+    },
+    {
+      "id": "algorithms-q117",
+      "difficulty": "hard",
+      "prompt": "Sweep line convex hull (Andrew) is:",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sort by x then build upper/lower."
+    },
+    {
+      "id": "algorithms-q118",
+      "difficulty": "hard",
+      "prompt": "Rotating calipers on convex hull finds:",
+      "options": [
+        "Shortest path",
+        "Diameter in O(n)",
+        "Minimum spanning tree",
+        "Topological order"
+      ],
+      "correctIndex": 1,
+      "explanation": "Linear after hull construction."
+    },
+    {
+      "id": "algorithms-q119",
+      "difficulty": "hard",
+      "prompt": "Dancing links (Algorithm X) solves:",
+      "options": [
+        "Sorting",
+        "Exact cover problems",
+        "Max flow only",
+        "String hash"
+      ],
+      "correctIndex": 1,
+      "explanation": "Knuth's exact cover with DLX."
+    },
+    {
+      "id": "algorithms-q120",
+      "difficulty": "hard",
+      "prompt": "Simulated annealing is a:",
+      "options": [
+        "Exact DP",
+        "Probabilistic metaheuristic",
+        "Graph traversal",
+        "Stable sort"
+      ],
+      "correctIndex": 1,
+      "explanation": "Escapes local minima with temperature."
     }
   ]
 }

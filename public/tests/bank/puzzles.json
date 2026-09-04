@@ -38,7 +38,7 @@
         "1000"
       ],
       "correctIndex": 2,
-      "explanation": "2\u00b9\u2070 = 1024 \u2265 1000, so 10 binary tests."
+      "explanation": "2¹⁰ = 1024 ≥ 1000, so 10 binary tests."
     },
     {
       "id": "puzzles-q4",
@@ -77,7 +77,7 @@
         "Only using a scale"
       ],
       "correctIndex": 1,
-      "explanation": "Classic water-jug problem; 4 is a multiple of gcd(3,5)=1 and \u2264 5."
+      "explanation": "Classic water-jug problem; 4 is a multiple of gcd(3,5)=1 and ≤ 5."
     },
     {
       "id": "puzzles-q7",
@@ -98,7 +98,7 @@
       "prompt": "Hilbert's hotel is full. To free room 1 for one new guest, move occupant of room n to:",
       "options": [
         "Room 1",
-        "Room n\u22121",
+        "Room n−1",
         "Room n+1",
         "Room 2n only"
       ],
@@ -116,7 +116,7 @@
         "12"
       ],
       "correctIndex": 1,
-      "explanation": "Each weighing has 3 outcomes; 3\u00b3 = 27 > 24 possibilities."
+      "explanation": "Each weighing has 3 outcomes; 3³ = 27 > 24 possibilities."
     },
     {
       "id": "puzzles-q10",
@@ -142,7 +142,7 @@
         "100"
       ],
       "correctIndex": 1,
-      "explanation": "Door n is toggled d(n) times and ends open iff n is a square. There are 10 squares \u2264 100."
+      "explanation": "Door n is toggled d(n) times and ends open iff n is a square. There are 10 squares ≤ 100."
     },
     {
       "id": "puzzles-q12",
@@ -155,7 +155,7 @@
         "100"
       ],
       "correctIndex": 1,
-      "explanation": "Need k+(k\u22121)+\u2026+1 \u2265 100 \u21d2 k(k+1)/2 \u2265 100 \u21d2 k = 14."
+      "explanation": "Need k+(k−1)+…+1 ≥ 100 ⇒ k(k+1)/2 ≥ 100 ⇒ k = 14."
     },
     {
       "id": "puzzles-q13",
@@ -176,7 +176,7 @@
       "prompt": "A plane mirror appears to reverse left and right, not up and down, because it actually reverses:",
       "options": [
         "Gravity",
-        "The front\u2013back axis",
+        "The front–back axis",
         "Color",
         "Time"
       ],
@@ -195,6 +195,1306 @@
       ],
       "correctIndex": 1,
       "explanation": "On for a while then off: warm and dark. Currently on: lit. Never on: cold and dark."
+    },
+    {
+      "id": "puzzles-q16",
+      "difficulty": "easy",
+      "prompt": "Flip a fair coin three times. P(exactly two heads)?",
+      "options": [
+        "1/8",
+        "1/4",
+        "3/8",
+        "1/2"
+      ],
+      "correctIndex": 2,
+      "explanation": "C(3,2)/8 = 3/8."
+    },
+    {
+      "id": "puzzles-q17",
+      "difficulty": "easy",
+      "prompt": "Roll two dice. P(sum is 7)?",
+      "options": [
+        "1/12",
+        "1/6",
+        "1/4",
+        "5/36"
+      ],
+      "correctIndex": 1,
+      "explanation": "6 favorable outcomes out of 36."
+    },
+    {
+      "id": "puzzles-q18",
+      "difficulty": "easy",
+      "prompt": "Bag: 3 red, 2 blue. Draw two without replacement. P(both red)?",
+      "options": [
+        "3/10",
+        "6/20",
+        "3/20",
+        "1/5"
+      ],
+      "correctIndex": 0,
+      "explanation": "(3/5)×(2/4) = 3/10."
+    },
+    {
+      "id": "puzzles-q19",
+      "difficulty": "easy",
+      "prompt": "Expected value of a fair die roll?",
+      "options": [
+        "3",
+        "3.5",
+        "4",
+        "4.5"
+      ],
+      "correctIndex": 1,
+      "explanation": "(1+2+3+4+5+6)/6 = 3.5."
+    },
+    {
+      "id": "puzzles-q20",
+      "difficulty": "easy",
+      "prompt": "Three switches, one bulb in another room. Minimum trips inside?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use heat/on-off pattern; one entry suffices."
+    },
+    {
+      "id": "puzzles-q21",
+      "difficulty": "easy",
+      "prompt": "12 balls, one different weight. Minimum balance weighings?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 1,
+      "explanation": "Three weighings suffice."
+    },
+    {
+      "id": "puzzles-q22",
+      "difficulty": "easy",
+      "prompt": "Two guards: one lies, one tells truth. One question to find safe door?",
+      "options": [
+        "Impossible",
+        "Ask what other guard would say, then invert",
+        "Ask twice",
+        "Random"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic liar/truth-teller strategy."
+    },
+    {
+      "id": "puzzles-q23",
+      "difficulty": "easy",
+      "prompt": "Burn two 60-min ropes unevenly to measure 45 minutes?",
+      "options": [
+        "Impossible",
+        "Light both ends of A and one end of B; when A dies, light B's other end",
+        "Cut both in half",
+        "Light one end of both"
+      ],
+      "correctIndex": 1,
+      "explanation": "30 + 15 = 45 minutes."
+    },
+    {
+      "id": "puzzles-q24",
+      "difficulty": "easy",
+      "prompt": "Measure exactly 4 L with 3 L and 5 L jugs?",
+      "options": [
+        "No",
+        "Yes",
+        "Only with 4 L jug",
+        "Only with scale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic water-jug pour sequence."
+    },
+    {
+      "id": "puzzles-q25",
+      "difficulty": "easy",
+      "prompt": "Monty Hall after host opens goat: switch wins with probability?",
+      "options": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "Switch wins 2/3 of the time."
+    },
+    {
+      "id": "puzzles-q26",
+      "difficulty": "easy",
+      "prompt": "Birthday paradox: about how many people for ~50% shared birthday?",
+      "options": [
+        "12",
+        "23",
+        "50",
+        "100"
+      ],
+      "correctIndex": 1,
+      "explanation": "23 people gives about 50%."
+    },
+    {
+      "id": "puzzles-q27",
+      "difficulty": "easy",
+      "prompt": "1000 bottles, one poisoned, 10 testers, one round. Minimum testers?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "explanation": "2¹⁰ = 1024 ≥ 1000."
+    },
+    {
+      "id": "puzzles-q28",
+      "difficulty": "easy",
+      "prompt": "Why are manhole covers round?",
+      "options": [
+        "Cheaper",
+        "Cannot fall through its hole",
+        "Fit blocks only",
+        "Weigh less"
+      ],
+      "correctIndex": 1,
+      "explanation": "Constant width; square can fall through diagonal."
+    },
+    {
+      "id": "puzzles-q29",
+      "difficulty": "easy",
+      "prompt": "8 coins, one fake lighter. Minimum balance weighings?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two weighings: split 3-3-2."
+    },
+    {
+      "id": "puzzles-q30",
+      "difficulty": "easy",
+      "prompt": "Bridge crossing: 1,2,7,10 minutes, two at a time, one torch. Minimum total?",
+      "options": [
+        "17 min",
+        "18 min",
+        "19 min",
+        "21 min"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optimal strategy total 17 minutes."
+    },
+    {
+      "id": "puzzles-q31",
+      "difficulty": "easy",
+      "prompt": "100 prisoners, 100 boxes, each opens 50. Loop strategy success rate?",
+      "options": [
+        "0%",
+        "~31%",
+        "50%",
+        "100%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Loop method ≈31.4%."
+    },
+    {
+      "id": "puzzles-q32",
+      "difficulty": "easy",
+      "prompt": "Two children, at least one is a boy. P(both boys)?",
+      "options": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "correctIndex": 1,
+      "explanation": "BB, BG, GB given ≥1 boy → 1/3."
+    },
+    {
+      "id": "puzzles-q33",
+      "difficulty": "easy",
+      "prompt": "Three boxes gold-gold, silver-silver, gold-silver. Pick gold coin from random drawer. P(other side gold)?",
+      "options": [
+        "1/2",
+        "1/3",
+        "2/3",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bertrand's box paradox: 2/3."
+    },
+    {
+      "id": "puzzles-q34",
+      "difficulty": "easy",
+      "prompt": "100 lockers toggled every nth person. How many open at end?",
+      "options": [
+        "10",
+        "25",
+        "50",
+        "100"
+      ],
+      "correctIndex": 0,
+      "explanation": "Perfect squares only: 10 open."
+    },
+    {
+      "id": "puzzles-q35",
+      "difficulty": "easy",
+      "prompt": "River crossing wolf, goat, cabbage. Minimum safe trips?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic seven-crossing solution."
+    },
+    {
+      "id": "puzzles-q36",
+      "difficulty": "easy",
+      "prompt": "Mislabeled Apple/Orange/Mixed boxes. One fruit pick fixes all labels. Pick from?",
+      "options": [
+        "Apple-labeled",
+        "Orange-labeled",
+        "Mixed-labeled",
+        "Any"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mixed-labeled box has only one fruit type."
+    },
+    {
+      "id": "puzzles-q37",
+      "difficulty": "easy",
+      "prompt": "Break stick at two random points. P(three pieces form triangle)?",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/6"
+      ],
+      "correctIndex": 2,
+      "explanation": "Triangle inequality holds with probability 1/4."
+    },
+    {
+      "id": "puzzles-q38",
+      "difficulty": "easy",
+      "prompt": "Five pirates split 100 coins; rejected if ≥ half vote no. Pirate 5 proposes. Coins to pirate 4?",
+      "options": [
+        "0",
+        "1",
+        "20",
+        "50"
+      ],
+      "correctIndex": 1,
+      "explanation": "Backward induction: offer 1 to secure a vote."
+    },
+    {
+      "id": "puzzles-q39",
+      "difficulty": "easy",
+      "prompt": "Two trains 100 km apart at 50 km/h each. Fly at 100 km/h between them. Distance flown?",
+      "options": [
+        "50 km",
+        "75 km",
+        "100 km",
+        "200 km"
+      ],
+      "correctIndex": 2,
+      "explanation": "Meet in 1 hour; fly travels 100 km."
+    },
+    {
+      "id": "puzzles-q40",
+      "difficulty": "easy",
+      "prompt": "Guess 1-100 with higher/lower hints. Worst-case guesses (binary search)?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "correctIndex": 1,
+      "explanation": "⌈log₂(100)⌉ = 7."
+    },
+    {
+      "id": "puzzles-q41",
+      "difficulty": "easy",
+      "prompt": "Bag: 1 red, 2 green. Draw 2 without replacement. P(both green)?",
+      "options": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "1/6"
+      ],
+      "correctIndex": 0,
+      "explanation": "(2/3)(1/2) = 1/3."
+    },
+    {
+      "id": "puzzles-q42",
+      "difficulty": "easy",
+      "prompt": "Fair coin until first head. Expected flips?",
+      "options": [
+        "1",
+        "1.5",
+        "2",
+        "4"
+      ],
+      "correctIndex": 2,
+      "explanation": "Geometric mean 1/p = 2."
+    },
+    {
+      "id": "puzzles-q43",
+      "difficulty": "easy",
+      "prompt": "Party of 10, everyone shakes once. Handshakes?",
+      "options": [
+        "45",
+        "50",
+        "90",
+        "100"
+      ],
+      "correctIndex": 0,
+      "explanation": "C(10,2)=45."
+    },
+    {
+      "id": "puzzles-q44",
+      "difficulty": "easy",
+      "prompt": "9 balls, one heavy. Two weighings always enough?",
+      "options": [
+        "Yes",
+        "No",
+        "Need three",
+        "Impossible"
+      ],
+      "correctIndex": 0,
+      "explanation": "Split 3-3-3 on balance scale."
+    },
+    {
+      "id": "puzzles-q45",
+      "difficulty": "easy",
+      "prompt": "Rope around Earth +1 m slack. Can a mouse pass under?",
+      "options": [
+        "No",
+        "Yes easily",
+        "Only at poles",
+        "Need 1 km"
+      ],
+      "correctIndex": 1,
+      "explanation": "Extra slack ≈1/(2π) m height everywhere."
+    },
+    {
+      "id": "puzzles-q46",
+      "difficulty": "easy",
+      "prompt": "Host opens empty box in 3-box problem. Switching doubles win chance?",
+      "options": [
+        "No",
+        "Yes to 2/3",
+        "Stays 1/2",
+        "Becomes 1/3"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monty variant: switch wins 2/3."
+    },
+    {
+      "id": "puzzles-q47",
+      "difficulty": "easy",
+      "prompt": "Coin biased 2/3 heads. Two heads in two flips P?",
+      "options": [
+        "4/9",
+        "2/3",
+        "1/2",
+        "8/9"
+      ],
+      "correctIndex": 0,
+      "explanation": "(2/3)² = 4/9."
+    },
+    {
+      "id": "puzzles-q48",
+      "difficulty": "easy",
+      "prompt": "Pick integer 1-100 uniformly. Expected value?",
+      "options": [
+        "50",
+        "50.5",
+        "51",
+        "49.5"
+      ],
+      "correctIndex": 1,
+      "explanation": "(1+100)/2 = 50.5."
+    },
+    {
+      "id": "puzzles-q49",
+      "difficulty": "easy",
+      "prompt": "Wason cards E,K,4,7. Rule: vowel→even number. Minimum cards to flip?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flip E and 7."
+    },
+    {
+      "id": "puzzles-q50",
+      "difficulty": "easy",
+      "prompt": "5 machines make 5 widgets in 5 minutes. 100 machines make 100 widgets in?",
+      "options": [
+        "5 minutes",
+        "100 minutes",
+        "20 minutes",
+        "1 minute"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rate per machine unchanged: 5 minutes."
+    },
+    {
+      "id": "puzzles-q51",
+      "difficulty": "medium",
+      "prompt": "Bat and ball cost $1.10. Bat costs $1 more than ball. Ball cost?",
+      "options": [
+        "$0.10",
+        "$0.05",
+        "$0.15",
+        "$0.50"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ball $0.05, bat $1.05."
+    },
+    {
+      "id": "puzzles-q52",
+      "difficulty": "medium",
+      "prompt": "Lily pad doubles daily, covers lake in 48 days. Half covered on day?",
+      "options": [
+        "24",
+        "47",
+        "46",
+        "23"
+      ],
+      "correctIndex": 1,
+      "explanation": "One day before full: day 47."
+    },
+    {
+      "id": "puzzles-q53",
+      "difficulty": "medium",
+      "prompt": "Snail climbs 3 m/day, slips 2 m/night in 10 m well. Days to escape?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "7"
+      ],
+      "correctIndex": 0,
+      "explanation": "Day 8 reaches 10 m without slipping back."
+    },
+    {
+      "id": "puzzles-q54",
+      "difficulty": "medium",
+      "prompt": "Expected rolls to see all six faces on a die?",
+      "options": [
+        "6",
+        "12",
+        "21",
+        "36"
+      ],
+      "correctIndex": 2,
+      "explanation": "Coupon collector: 6(1/6+…+1/1)=21."
+    },
+    {
+      "id": "puzzles-q55",
+      "difficulty": "medium",
+      "prompt": "$30 room, $5 refund, $1 each kept, $2 bellhop. Missing dollar?",
+      "options": [
+        "Maid",
+        "No dollar missing; accounting trick",
+        "Manager",
+        "Room"
+      ],
+      "correctIndex": 1,
+      "explanation": "Misleading framing; totals balance."
+    },
+    {
+      "id": "puzzles-q56",
+      "difficulty": "medium",
+      "prompt": "25 horses, 5 tracks, no timer. Minimum races for top 3?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "7 races suffice."
+    },
+    {
+      "id": "puzzles-q57",
+      "difficulty": "medium",
+      "prompt": "Two coins total 30 cents, one is not a nickel. What coins?",
+      "options": [
+        "Two nickels",
+        "Quarter and nickel",
+        "Dime and quarter",
+        "Impossible"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quarter + nickel; one coin is not a nickel."
+    },
+    {
+      "id": "puzzles-q58",
+      "difficulty": "medium",
+      "prompt": "How many squares on a 4×4 grid?",
+      "options": [
+        "16",
+        "30",
+        "34",
+        "20"
+      ],
+      "correctIndex": 1,
+      "explanation": "1²+2²+3²+4²=30."
+    },
+    {
+      "id": "puzzles-q59",
+      "difficulty": "medium",
+      "prompt": "Three ants on triangle corners walk to next corner. Collide or escape?",
+      "options": [
+        "Always escape",
+        "Always collide at center",
+        "Random only",
+        "Impossible"
+      ],
+      "correctIndex": 1,
+      "explanation": "Symmetric paths meet at centroid unless all same direction."
+    },
+    {
+      "id": "puzzles-q60",
+      "difficulty": "medium",
+      "prompt": "Flip until HT sequence appears. Expected flips?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctIndex": 1,
+      "explanation": "Expected waiting time for HT is 4."
+    },
+    {
+      "id": "puzzles-q61",
+      "difficulty": "medium",
+      "prompt": "Flip until HH sequence appears. Expected flips?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctIndex": 3,
+      "explanation": "Expected waiting time for HH is 6."
+    },
+    {
+      "id": "puzzles-q62",
+      "difficulty": "medium",
+      "prompt": "Water jugs 5 L and 7 L: can you measure 1 L?",
+      "options": [
+        "Yes",
+        "No",
+        "Need 3 L jug",
+        "Need scale"
+      ],
+      "correctIndex": 0,
+      "explanation": "gcd(5,7)=1 → 1 L measurable."
+    },
+    {
+      "id": "puzzles-q63",
+      "difficulty": "medium",
+      "prompt": "256 bottles, one poison, 8 testers, one round. Enough?",
+      "options": [
+        "Yes",
+        "No",
+        "Need 9",
+        "Need 16"
+      ],
+      "correctIndex": 0,
+      "explanation": "2⁸=256."
+    },
+    {
+      "id": "puzzles-q64",
+      "difficulty": "medium",
+      "prompt": "Blue-eyed islanders: guru says someone has blue eyes. All leave on night?",
+      "options": [
+        "Never",
+        "Night 100",
+        "Night 1",
+        "Random"
+      ],
+      "correctIndex": 1,
+      "explanation": "Common knowledge triggers cascade on night 100."
+    },
+    {
+      "id": "puzzles-q65",
+      "difficulty": "medium",
+      "prompt": "Older child is a girl. P(both girls)?",
+      "options": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "correctIndex": 2,
+      "explanation": "Given older is girl: GG, GB → 1/2."
+    },
+    {
+      "id": "puzzles-q66",
+      "difficulty": "medium",
+      "prompt": "Three cards RR, RB, BB. See red face. P(other side red)?",
+      "options": [
+        "1/2",
+        "1/3",
+        "2/3",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "Two red faces out of three red-showing sides."
+    },
+    {
+      "id": "puzzles-q67",
+      "difficulty": "medium",
+      "prompt": "Prisoners box loop strategy overall success?",
+      "options": [
+        "0%",
+        "~31%",
+        "50%",
+        "100%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Success probability ≈31.4%."
+    },
+    {
+      "id": "puzzles-q68",
+      "difficulty": "medium",
+      "prompt": "Measure 45 min with 7-min and 11-min hourglasses?",
+      "options": [
+        "Yes",
+        "No",
+        "Only 18",
+        "Only 22"
+      ],
+      "correctIndex": 0,
+      "explanation": "Possible by flipping at right times."
+    },
+    {
+      "id": "puzzles-q69",
+      "difficulty": "medium",
+      "prompt": "Expected maximum of two fair dice?",
+      "options": [
+        "4.47",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctIndex": 0,
+      "explanation": "161/36 ≈ 4.47."
+    },
+    {
+      "id": "puzzles-q70",
+      "difficulty": "medium",
+      "prompt": "Draw card from deck. P(king or queen)?",
+      "options": [
+        "2/13",
+        "4/13",
+        "8/52",
+        "1/13"
+      ],
+      "correctIndex": 0,
+      "explanation": "8/52 = 2/13."
+    },
+    {
+      "id": "puzzles-q71",
+      "difficulty": "medium",
+      "prompt": "Prisoner's dilemma: mutual defection is:",
+      "options": [
+        "Pareto optimal",
+        "Nash equilibrium but not Pareto optimal",
+        "Always worst",
+        "Impossible"
+      ],
+      "correctIndex": 1,
+      "explanation": "Both defect is NE but worse than mutual cooperate."
+    },
+    {
+      "id": "puzzles-q72",
+      "difficulty": "medium",
+      "prompt": "Island truth-tellers and liars. Ask 'Are you a liar?' Answer?",
+      "options": [
+        "Yes always",
+        "No always",
+        "Depends",
+        "Silence"
+      ],
+      "correctIndex": 1,
+      "explanation": "Both truth-teller and liar say no."
+    },
+    {
+      "id": "puzzles-q73",
+      "difficulty": "medium",
+      "prompt": "You break a stick twice uniformly. P(form triangle)?",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/6"
+      ],
+      "correctIndex": 2,
+      "explanation": "Classic probability 1/4."
+    },
+    {
+      "id": "puzzles-q74",
+      "difficulty": "medium",
+      "prompt": "Poison wine: 1000 bottles, 10 slaves, one night. Min slaves?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "explanation": "Binary encoding with 10 bits."
+    },
+    {
+      "id": "puzzles-q75",
+      "difficulty": "medium",
+      "prompt": "Hat line of 3 with 2 colors. Parity strategy guarantees?",
+      "options": [
+        "0 correct",
+        "At least 1 correct",
+        "2 correct always",
+        "All 3 correct"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard parity saves all but first."
+    },
+    {
+      "id": "puzzles-q76",
+      "difficulty": "medium",
+      "prompt": "Two envelopes X and 2X. Open see 10. Switch EV under uniform X?",
+      "options": [
+        "Always better",
+        "Never better",
+        "Same expected value",
+        "Always double"
+      ],
+      "correctIndex": 2,
+      "explanation": "Without proper prior, switching doesn't help."
+    },
+    {
+      "id": "puzzles-q77",
+      "difficulty": "medium",
+      "prompt": "Find heavy ball among 12 in 3 weighings?",
+      "options": [
+        "Always possible",
+        "Sometimes",
+        "Need 4",
+        "Impossible"
+      ],
+      "correctIndex": 0,
+      "explanation": "Classic 12-ball puzzle: 3 weighings suffice."
+    },
+    {
+      "id": "puzzles-q78",
+      "difficulty": "medium",
+      "prompt": "Expected tosses until first six on die?",
+      "options": [
+        "6",
+        "12",
+        "21",
+        "36"
+      ],
+      "correctIndex": 0,
+      "explanation": "Geometric with p=1/6: mean 6."
+    },
+    {
+      "id": "puzzles-q79",
+      "difficulty": "medium",
+      "prompt": "P(sum even with two dice)?",
+      "options": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "correctIndex": 2,
+      "explanation": "Half of 36 outcomes have even sum."
+    },
+    {
+      "id": "puzzles-q80",
+      "difficulty": "medium",
+      "prompt": "Three gods True/False/Random. Identify all in three questions?",
+      "options": [
+        "Impossible",
+        "Possible",
+        "Need four",
+        "Need one"
+      ],
+      "correctIndex": 1,
+      "explanation": "Classic logic puzzle is solvable."
+    },
+    {
+      "id": "puzzles-q81",
+      "difficulty": "medium",
+      "prompt": "100 prisoners each open 50 of 100 boxes with names. Best strategy saves all with prob?",
+      "options": [
+        "0%",
+        "~31%",
+        "50%",
+        "100%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Loop strategy ≈31%."
+    },
+    {
+      "id": "puzzles-q82",
+      "difficulty": "medium",
+      "prompt": "Farmer fox/chicken/grain river: minimum crossings?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctIndex": 1,
+      "explanation": "Seven safe crossings."
+    },
+    {
+      "id": "puzzles-q83",
+      "difficulty": "medium",
+      "prompt": "Switch puzzle: bulb warm but off means which switch?",
+      "options": [
+        "First switch",
+        "Second switch",
+        "Third switch",
+        "Any"
+      ],
+      "correctIndex": 0,
+      "explanation": "First was on long enough to heat, then off."
+    },
+    {
+      "id": "puzzles-q84",
+      "difficulty": "medium",
+      "prompt": "P(at least one six in four die rolls)?",
+      "options": [
+        "1/6",
+        "1-(5/6)^4",
+        "4/6",
+        "2/3"
+      ],
+      "correctIndex": 1,
+      "explanation": "Complement: 1 − (5/6)⁴."
+    },
+    {
+      "id": "puzzles-q85",
+      "difficulty": "medium",
+      "prompt": "Two dice product is odd. P(both ones)?",
+      "options": [
+        "1/9",
+        "1/6",
+        "1/3",
+        "1/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "Odd product means both odd: P(1,1|both odd)=1/9."
+    },
+    {
+      "id": "puzzles-q86",
+      "difficulty": "hard",
+      "prompt": "Weigh 13 coins, one fake (lighter or heavier), 3 weighings?",
+      "options": [
+        "Always find",
+        "Never",
+        "Need 4",
+        "Need 2"
+      ],
+      "correctIndex": 0,
+      "explanation": "Information theory allows 13 with 3 weighings."
+    },
+    {
+      "id": "puzzles-q87",
+      "difficulty": "hard",
+      "prompt": "Expected flips until TH (tail then head)?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctIndex": 1,
+      "explanation": "Waiting time for TH is 4."
+    },
+    {
+      "id": "puzzles-q88",
+      "difficulty": "hard",
+      "prompt": "You have 100 coins on table, 10 heads up, blindfolded. Split into two groups with equal heads?",
+      "options": [
+        "Impossible",
+        "Always possible",
+        "50-50",
+        "Need scale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Take 10 coins, flip them; balances heads."
+    },
+    {
+      "id": "puzzles-q89",
+      "difficulty": "hard",
+      "prompt": "Burning rope from both ends finishes in 30 min. Two ropes measure 45 min?",
+      "options": [
+        "Yes",
+        "No",
+        "Need third",
+        "Only 60"
+      ],
+      "correctIndex": 0,
+      "explanation": "30 + 15 strategy."
+    },
+    {
+      "id": "puzzles-q90",
+      "difficulty": "hard",
+      "prompt": "P(different birthdays for 2 people)?",
+      "options": [
+        "364/365",
+        "1/365",
+        "50%",
+        "1/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "365/365 × 364/365 = 364/365."
+    },
+    {
+      "id": "puzzles-q91",
+      "difficulty": "hard",
+      "prompt": "Three switches one bulb: minimum entries to room?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correctIndex": 0,
+      "explanation": "Heat/on-off pattern with one entry."
+    },
+    {
+      "id": "puzzles-q92",
+      "difficulty": "hard",
+      "prompt": "Monty Hall with 100 doors, open 98 goats. Switch wins with?",
+      "options": [
+        "1/100",
+        "1/2",
+        "99/100",
+        "50/100"
+      ],
+      "correctIndex": 2,
+      "explanation": "Switch wins (n−1)/n of the time."
+    },
+    {
+      "id": "puzzles-q93",
+      "difficulty": "hard",
+      "prompt": "How many trailing zeros in 100!?",
+      "options": [
+        "10",
+        "20",
+        "24",
+        "25"
+      ],
+      "correctIndex": 2,
+      "explanation": "Count factors of 5: 24 zeros."
+    },
+    {
+      "id": "puzzles-q94",
+      "difficulty": "hard",
+      "prompt": "Clock strikes 6 at 6 o'clock taking 5 seconds. Strikes 12 in?",
+      "options": [
+        "10 s",
+        "11 s",
+        "12 s",
+        "15 s"
+      ],
+      "correctIndex": 1,
+      "explanation": "6 strikes have 5 intervals; 12 strikes have 11 intervals → 11 s."
+    },
+    {
+      "id": "puzzles-q95",
+      "difficulty": "hard",
+      "prompt": "Divide 10 coins into two piles with equal heads (blind, unknown heads count)?",
+      "options": [
+        "Impossible",
+        "Flip one pile",
+        "Take 10 and flip",
+        "Random"
+      ],
+      "correctIndex": 2,
+      "explanation": "Take k coins equal to known heads, flip pile."
+    },
+    {
+      "id": "puzzles-q96",
+      "difficulty": "hard",
+      "prompt": "Two dice, P(product is prime)?",
+      "options": [
+        "1/12",
+        "1/6",
+        "1/4",
+        "5/36"
+      ],
+      "correctIndex": 1,
+      "explanation": "Prime product requires one die showing 1: 6 cases out of 36."
+    },
+    {
+      "id": "puzzles-q97",
+      "difficulty": "hard",
+      "prompt": "Expected value of max of three dice?",
+      "options": [
+        "约3.5",
+        "约4.0",
+        "约4.96",
+        "约5.5"
+      ],
+      "correctIndex": 2,
+      "explanation": "E[max of 3 dice] = 91/18 ≈ 5.06."
+    },
+    {
+      "id": "puzzles-q98",
+      "difficulty": "hard",
+      "prompt": "You have 3-quart and 8-quart. Can measure 5 quarts?",
+      "options": [
+        "No",
+        "Yes",
+        "Only 4",
+        "Only 1"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fill 8, pour to 3 twice etc."
+    },
+    {
+      "id": "puzzles-q99",
+      "difficulty": "hard",
+      "prompt": "100 lights toggled by every nth person. Open lights count?",
+      "options": [
+        "10",
+        "25",
+        "50",
+        "100"
+      ],
+      "correctIndex": 0,
+      "explanation": "Perfect squares: 10."
+    },
+    {
+      "id": "puzzles-q100",
+      "difficulty": "hard",
+      "prompt": "Bridge puzzle 1,2,5,10 optimal time?",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "correctIndex": 2,
+      "explanation": "Send 1&2, 1 back, 5&10, 2 back, 1&2 → 17."
+    },
+    {
+      "id": "puzzles-q101",
+      "difficulty": "hard",
+      "prompt": "P(exactly one head in three flips)?",
+      "options": [
+        "1/8",
+        "1/4",
+        "3/8",
+        "1/2"
+      ],
+      "correctIndex": 2,
+      "explanation": "C(3,1)/8 = 3/8."
+    },
+    {
+      "id": "puzzles-q102",
+      "difficulty": "hard",
+      "prompt": "Draw two cards without replacement P(both aces)?",
+      "options": [
+        "1/13",
+        "1/221",
+        "1/169",
+        "2/13"
+      ],
+      "correctIndex": 1,
+      "explanation": "(4/52)(3/51)=1/221."
+    },
+    {
+      "id": "puzzles-q103",
+      "difficulty": "hard",
+      "prompt": "Guess number 1-1000 worst-case binary guesses?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "⌈log₂(1000)⌉ = 10."
+    },
+    {
+      "id": "puzzles-q104",
+      "difficulty": "hard",
+      "prompt": "Three boxes mislabeled. One pick fixes labels?",
+      "options": [
+        "Yes",
+        "No",
+        "Need two picks",
+        "Impossible"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pick Mixed-labeled box."
+    },
+    {
+      "id": "puzzles-q105",
+      "difficulty": "hard",
+      "prompt": "Poisoned bottle puzzle 1000 bottles 10 slaves?",
+      "options": [
+        "Need 11",
+        "10 enough",
+        "Need 8",
+        "Need 1000"
+      ],
+      "correctIndex": 1,
+      "explanation": "2¹⁰ ≥ 1000."
+    },
+    {
+      "id": "puzzles-q106",
+      "difficulty": "hard",
+      "prompt": "Expected rolls for first double-six (two dice)?",
+      "options": [
+        "6",
+        "12",
+        "36",
+        "42"
+      ],
+      "correctIndex": 2,
+      "explanation": "Geometric on p=1/36: mean 36."
+    },
+    {
+      "id": "puzzles-q107",
+      "difficulty": "hard",
+      "prompt": "Two children, younger is a girl. P(both girls)?",
+      "options": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "correctIndex": 2,
+      "explanation": "Given younger is girl: GG, GB → 1/2."
+    },
+    {
+      "id": "puzzles-q108",
+      "difficulty": "hard",
+      "prompt": "Water 6 and 10 jugs measure 4?",
+      "options": [
+        "Yes",
+        "No",
+        "Only 2",
+        "Only 8"
+      ],
+      "correctIndex": 0,
+      "explanation": "gcd(6,10)=2; 4 is achievable."
+    },
+    {
+      "id": "puzzles-q109",
+      "difficulty": "hard",
+      "prompt": "100 prisoners strategy saves all with probability about?",
+      "options": [
+        "31%",
+        "50%",
+        "63%",
+        "100%"
+      ],
+      "correctIndex": 0,
+      "explanation": "Loop method ≈31%."
+    },
+    {
+      "id": "puzzles-q110",
+      "difficulty": "hard",
+      "prompt": "Rope around Earth +6 ft slack. Height increase everywhere?",
+      "options": [
+        "6 ft",
+        "≈1 ft",
+        "≈1/(2π) ft",
+        "0"
+      ],
+      "correctIndex": 2,
+      "explanation": "h = extra/(2π) ≈ 1 ft for 6 ft extra."
+    },
+    {
+      "id": "puzzles-q111",
+      "difficulty": "hard",
+      "prompt": "5 pirates 100 gold, proposer 5 keeps?",
+      "options": [
+        "96",
+        "97",
+        "98",
+        "100"
+      ],
+      "correctIndex": 2,
+      "explanation": "Standard backward induction: 98 for pirate 5."
+    },
+    {
+      "id": "puzzles-q112",
+      "difficulty": "hard",
+      "prompt": "Flip biased coin P(H)=0.6 twice. P(exactly one H)?",
+      "options": [
+        "0.24",
+        "0.36",
+        "0.48",
+        "0.60"
+      ],
+      "correctIndex": 2,
+      "explanation": "2×0.6×0.4=0.48."
+    },
+    {
+      "id": "puzzles-q113",
+      "difficulty": "hard",
+      "prompt": "How many ways to climb 4 stairs taking 1 or 2 steps?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fibonacci: 5 ways."
+    },
+    {
+      "id": "puzzles-q114",
+      "difficulty": "hard",
+      "prompt": "Three ants on triangle, each picks direction. P(no collision)?",
+      "options": [
+        "0",
+        "1/4",
+        "1/2",
+        "1"
+      ],
+      "correctIndex": 1,
+      "explanation": "All clockwise or all counterclockwise: 2 of 8 outcomes."
+    },
+    {
+      "id": "puzzles-q115",
+      "difficulty": "hard",
+      "prompt": "Expected value of minimum of two dice?",
+      "options": [
+        "约1.47",
+        "约2.5",
+        "约3.5",
+        "约4.5"
+      ],
+      "correctIndex": 1,
+      "explanation": "E[min of 2 dice] = 91/36 ≈ 2.53."
     }
   ]
 }

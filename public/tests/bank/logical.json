@@ -12,7 +12,7 @@
         "48"
       ],
       "correctIndex": 2,
-      "explanation": "The terms are n(n+1): 1\u00d72, 2\u00d73, 3\u00d74, 4\u00d75, 5\u00d76, so next is 6\u00d77 = 42."
+      "explanation": "The terms are n(n+1): 1×2, 2×3, 3×4, 4×5, 5×6, so next is 6×7 = 42."
     },
     {
       "id": "logical-q2",
@@ -38,7 +38,7 @@
         "FQFG"
       ],
       "correctIndex": 1,
-      "explanation": "C\u2192E, O\u2192Q, D\u2192F, E\u2192G, so CODE \u2192 EQFG."
+      "explanation": "C→E, O→Q, D→F, E→G, so CODE → EQFG."
     },
     {
       "id": "logical-q4",
@@ -58,10 +58,10 @@
       "difficulty": "medium",
       "prompt": "What is the angle between the hour and minute hands at 3:00?",
       "options": [
-        "0\u00b0",
-        "75\u00b0",
-        "90\u00b0",
-        "180\u00b0"
+        "0°",
+        "75°",
+        "90°",
+        "180°"
       ],
       "correctIndex": 2,
       "explanation": "At 3:00 the hands sit on 3 and 12, which are a right angle."
@@ -77,7 +77,7 @@
         "Thursday"
       ],
       "correctIndex": 1,
-      "explanation": "61 = 8\u00d77 + 5, so add 5 weekdays to Wednesday: Monday."
+      "explanation": "61 = 8×7 + 5, so add 5 weekdays to Wednesday: Monday."
     },
     {
       "id": "logical-q7",
@@ -90,12 +90,12 @@
         "20"
       ],
       "correctIndex": 0,
-      "explanation": "25 + 20 \u2212 10 = 35 know at least one language. 40 \u2212 35 = 5 know neither."
+      "explanation": "25 + 20 − 10 = 35 know at least one language. 40 − 35 = 5 know neither."
     },
     {
       "id": "logical-q8",
       "difficulty": "medium",
-      "prompt": "A 3\u00d73\u00d73 cube is painted on all outer faces, then cut into 27 unit cubes. How many unit cubes have paint on exactly two faces?",
+      "prompt": "A 3×3×3 cube is painted on all outer faces, then cut into 27 unit cubes. How many unit cubes have paint on exactly two faces?",
       "options": [
         "6",
         "8",
@@ -129,7 +129,7 @@
         "14"
       ],
       "correctIndex": 2,
-      "explanation": "20 \u2212 7 = 13 people behind A."
+      "explanation": "20 − 7 = 13 people behind A."
     },
     {
       "id": "logical-q11",
@@ -175,13 +175,13 @@
       "difficulty": "medium",
       "prompt": "What is the angle between the hour and minute hands at 3:15?",
       "options": [
-        "0\u00b0",
-        "7.5\u00b0",
-        "15\u00b0",
-        "30\u00b0"
+        "0°",
+        "7.5°",
+        "15°",
+        "30°"
       ],
       "correctIndex": 1,
-      "explanation": "Minute hand at 90\u00b0. Hour hand at 3\u00d730 + 15\u00d70.5 = 97.5\u00b0. Difference 7.5\u00b0."
+      "explanation": "Minute hand at 90°. Hour hand at 3×30 + 15×0.5 = 97.5°. Difference 7.5°."
     },
     {
       "id": "logical-q15",
@@ -194,7 +194,7 @@
         "Saturday"
       ],
       "correctIndex": 0,
-      "explanation": "Day before yesterday = Thursday \u21d2 today = Saturday \u21d2 tomorrow = Sunday."
+      "explanation": "Day before yesterday = Thursday ⇒ today = Saturday ⇒ tomorrow = Sunday."
     },
     {
       "id": "logical-q16",
@@ -207,7 +207,7 @@
         "49"
       ],
       "correctIndex": 2,
-      "explanation": "These are n\u00b2 \u2212 1 for n = 2,3,4,5,6, so next is 7\u00b2 \u2212 1 = 48."
+      "explanation": "These are n² − 1 for n = 2,3,4,5,6, so next is 7² − 1 = 48."
     },
     {
       "id": "logical-q17",
@@ -238,7 +238,7 @@
     {
       "id": "logical-q19",
       "difficulty": "easy",
-      "prompt": "A number is coded by the count of letters in its English name: 1\u21923 (ONE), 2\u21923 (TWO), 4\u21924 (FOUR). What is 11 coded as?",
+      "prompt": "A number is coded by the count of letters in its English name: 1→3 (ONE), 2→3 (TWO), 4→4 (FOUR). What is 11 coded as?",
       "options": [
         "5",
         "6",
@@ -260,6 +260,1306 @@
       ],
       "correctIndex": 1,
       "explanation": "Net movement is 3 km north and 0 km east, so 3 km from the start."
+    },
+    {
+      "id": "logical-q21",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 1, 4, 9, 16, 25, ?",
+      "options": [
+        "30",
+        "36",
+        "42",
+        "49"
+      ],
+      "correctIndex": 1,
+      "explanation": "Perfect squares: 6² = 36."
+    },
+    {
+      "id": "logical-q22",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 3, 6, 11, 18, 27, ?",
+      "options": [
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
+      "correctIndex": 2,
+      "explanation": "Differences increase by 2: 27 + 11 = 38."
+    },
+    {
+      "id": "logical-q23",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 2, 3, 5, 8, 13, ?",
+      "options": [
+        "18",
+        "19",
+        "21",
+        "24"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fibonacci: 8 + 13 = 21."
+    },
+    {
+      "id": "logical-q24",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 5, 10, 20, 40, ?",
+      "options": [
+        "60",
+        "70",
+        "80",
+        "100"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each term doubles: 40 × 2 = 80."
+    },
+    {
+      "id": "logical-q25",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 100, 81, 64, 49, ?",
+      "options": [
+        "25",
+        "36",
+        "42",
+        "45"
+      ],
+      "correctIndex": 1,
+      "explanation": "Descending squares: next is 6² = 36."
+    },
+    {
+      "id": "logical-q26",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 1, 8, 27, 64, ?",
+      "options": [
+        "100",
+        "125",
+        "144",
+        "216"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cubes: 5³ = 125."
+    },
+    {
+      "id": "logical-q27",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 3, 9, 27, 81, ?",
+      "options": [
+        "162",
+        "243",
+        "324",
+        "729"
+      ],
+      "correctIndex": 1,
+      "explanation": "Powers of 3: 3⁵ = 243."
+    },
+    {
+      "id": "logical-q28",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 4, 9, 19, 39, ?",
+      "options": [
+        "59",
+        "69",
+        "79",
+        "89"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each term ×2 + 1: 39×2 + 1 = 79."
+    },
+    {
+      "id": "logical-q29",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 50, 45, 40, 35, ?",
+      "options": [
+        "25",
+        "30",
+        "32",
+        "33"
+      ],
+      "correctIndex": 1,
+      "explanation": "Subtract 5 each time: 35 − 5 = 30."
+    },
+    {
+      "id": "logical-q30",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 2, 4, 8, 16, 32, ?",
+      "options": [
+        "48",
+        "56",
+        "64",
+        "128"
+      ],
+      "correctIndex": 2,
+      "explanation": "Powers of 2: 2⁶ = 64."
+    },
+    {
+      "id": "logical-q31",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 1, 3, 6, 10, 15, ?",
+      "options": [
+        "18",
+        "20",
+        "21",
+        "25"
+      ],
+      "correctIndex": 2,
+      "explanation": "Triangular numbers: 15 + 6 = 21."
+    },
+    {
+      "id": "logical-q32",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 7, 14, 28, 56, ?",
+      "options": [
+        "84",
+        "98",
+        "112",
+        "128"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each doubles: 56 × 2 = 112."
+    },
+    {
+      "id": "logical-q33",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 9, 18, 36, 72, ?",
+      "options": [
+        "108",
+        "126",
+        "144",
+        "162"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each doubles: 72 × 2 = 144."
+    },
+    {
+      "id": "logical-q34",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 11, 22, 44, 88, ?",
+      "options": [
+        "132",
+        "154",
+        "176",
+        "198"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each doubles: 88 × 2 = 176."
+    },
+    {
+      "id": "logical-q35",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 2, 6, 12, 20, 30, 42, ?",
+      "options": [
+        "50",
+        "54",
+        "56",
+        "60"
+      ],
+      "correctIndex": 2,
+      "explanation": "n(n+1): 7×8 = 56."
+    },
+    {
+      "id": "logical-q36",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 64, 32, 16, 8, ?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "0"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each halved: 8 ÷ 2 = 4."
+    },
+    {
+      "id": "logical-q37",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 3, 5, 9, 17, 33, ?",
+      "options": [
+        "49",
+        "57",
+        "65",
+        "67"
+      ],
+      "correctIndex": 2,
+      "explanation": "Each ×2 − 1: 33×2 − 1 = 65."
+    },
+    {
+      "id": "logical-q38",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 2, 5, 10, 17, 26, ?",
+      "options": [
+        "35",
+        "37",
+        "39",
+        "41"
+      ],
+      "correctIndex": 1,
+      "explanation": "n² + 1: 6² + 1 = 37."
+    },
+    {
+      "id": "logical-q39",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 6, 11, 21, 36, 56, ?",
+      "options": [
+        "76",
+        "81",
+        "86",
+        "91"
+      ],
+      "correctIndex": 1,
+      "explanation": "Differences +5: 56 + 25 = 81."
+    },
+    {
+      "id": "logical-q40",
+      "difficulty": "easy",
+      "prompt": "Find the next number: 0, 1, 1, 2, 3, 5, 8, 13, ?",
+      "options": [
+        "18",
+        "20",
+        "21",
+        "24"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fibonacci: 8 + 13 = 21."
+    },
+    {
+      "id": "logical-q41",
+      "difficulty": "easy",
+      "prompt": "If CAT is coded as 3120 (C=3, A=1, T=20), how is DOG coded?",
+      "options": [
+        "4157",
+        "4715",
+        "1574",
+        "7415"
+      ],
+      "correctIndex": 0,
+      "explanation": "D=4, O=15, G=7 → 4157."
+    },
+    {
+      "id": "logical-q42",
+      "difficulty": "easy",
+      "prompt": "If FRIEND is coded as GSJFOE (+1 each letter), how is SCHOOL coded?",
+      "options": [
+        "TDIPPM",
+        "TDIPOM",
+        "TDIPOL",
+        "TDJPOM"
+      ],
+      "correctIndex": 0,
+      "explanation": "S→T, C→D, H→I, O→P, O→P, L→M → TDIPPM."
+    },
+    {
+      "id": "logical-q43",
+      "difficulty": "easy",
+      "prompt": "If RED is written as UHG (+3 shift), how is BLUE written?",
+      "options": [
+        "EOXH",
+        "EYPH",
+        "EOXG",
+        "FOXH"
+      ],
+      "correctIndex": 0,
+      "explanation": "B→E, L→O, U→X, E→H → EOXH."
+    },
+    {
+      "id": "logical-q44",
+      "difficulty": "easy",
+      "prompt": "If CLOUD is coded as DMPVE, how is STORM coded?",
+      "options": [
+        "TUPSN",
+        "TUPSO",
+        "TVPSN",
+        "TUSPN"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each letter +1 → TUPSN."
+    },
+    {
+      "id": "logical-q45",
+      "difficulty": "easy",
+      "prompt": "If PENCIL is written as QFODJM, how is ERASER written?",
+      "options": [
+        "FSBTFS",
+        "FSBSES",
+        "FRBTFS",
+        "FSATFS"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each letter +1 → FSBTFS."
+    },
+    {
+      "id": "logical-q46",
+      "difficulty": "easy",
+      "prompt": "If WATER is written as YCVGT (+2), how is FIRE written?",
+      "options": [
+        "HKTG",
+        "HKTF",
+        "GKTG",
+        "HITG"
+      ],
+      "correctIndex": 0,
+      "explanation": "F→H, I→K, R→T, E→G → HKTG."
+    },
+    {
+      "id": "logical-q47",
+      "difficulty": "easy",
+      "prompt": "Code: 253='books are old', 546='man is old', 378='buy good books'. Code for 'old'?",
+      "options": [
+        "2",
+        "5",
+        "6",
+        "3"
+      ],
+      "correctIndex": 2,
+      "explanation": "'old' is common to first two: digit 6."
+    },
+    {
+      "id": "logical-q48",
+      "difficulty": "easy",
+      "prompt": "Code: 123='hot filtered coffee', 356='filtered hot tea'. Code for 'filtered'?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctIndex": 2,
+      "explanation": "'filtered' is common: digit 3."
+    },
+    {
+      "id": "logical-q49",
+      "difficulty": "easy",
+      "prompt": "Code: 256='she is clever', 751='he is honest', 328='clever and honest'. Code for 'is'?",
+      "options": [
+        "2",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctIndex": 1,
+      "explanation": "'is' is common to first two: digit 5."
+    },
+    {
+      "id": "logical-q50",
+      "difficulty": "easy",
+      "prompt": "If MACHINE is 19-7-9-14-15-20-11, how is DANGER coded?",
+      "options": [
+        "4-1-20-7-5-18",
+        "4-1-14-7-5-18",
+        "4-1-14-7-5-8",
+        "4-1-20-7-5-8"
+      ],
+      "correctIndex": 1,
+      "explanation": "D=4, A=1, N=14, G=7, E=5, R=18."
+    },
+    {
+      "id": "logical-q51",
+      "difficulty": "easy",
+      "prompt": "Find the next letter group: AZ, BY, CX, ?",
+      "options": [
+        "DW",
+        "DX",
+        "DY",
+        "EV"
+      ],
+      "correctIndex": 0,
+      "explanation": "First advances, second retreats: DW."
+    },
+    {
+      "id": "logical-q52",
+      "difficulty": "easy",
+      "prompt": "Find the next group: ZA, YB, XC, ?",
+      "options": [
+        "WD",
+        "WE",
+        "VD",
+        "XD"
+      ],
+      "correctIndex": 0,
+      "explanation": "Z→W and A→D."
+    },
+    {
+      "id": "logical-q53",
+      "difficulty": "easy",
+      "prompt": "Find the next letter: A, C, F, J, ?",
+      "options": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "correctIndex": 2,
+      "explanation": "Gaps +2,+3,+4,+5: J + 5 = O."
+    },
+    {
+      "id": "logical-q54",
+      "difficulty": "easy",
+      "prompt": "Find the next letter: B, D, G, K, ?",
+      "options": [
+        "N",
+        "O",
+        "P",
+        "Q"
+      ],
+      "correctIndex": 2,
+      "explanation": "Gaps +2,+3,+4,+5: K + 5 = P."
+    },
+    {
+      "id": "logical-q55",
+      "difficulty": "easy",
+      "prompt": "Find the next letter: Z, X, V, T, ?",
+      "options": [
+        "Q",
+        "R",
+        "S",
+        "P"
+      ],
+      "correctIndex": 1,
+      "explanation": "Retreat by 2: T − 2 = R."
+    },
+    {
+      "id": "logical-q56",
+      "difficulty": "medium",
+      "prompt": "What comes next: J, F, M, A, M, ?",
+      "options": [
+        "J",
+        "S",
+        "O",
+        "N"
+      ],
+      "correctIndex": 0,
+      "explanation": "Month initials: Jun."
+    },
+    {
+      "id": "logical-q57",
+      "difficulty": "medium",
+      "prompt": "Find the next group: ACE, BDF, CEG, ?",
+      "options": [
+        "DFH",
+        "DEH",
+        "DFI",
+        "CFH"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each letter +1: DFH."
+    },
+    {
+      "id": "logical-q58",
+      "difficulty": "medium",
+      "prompt": "If NORTH reversed is HTUOS, how is EAST reversed?",
+      "options": [
+        "TSAE",
+        "ESTA",
+        "TSEA",
+        "AETS"
+      ],
+      "correctIndex": 0,
+      "explanation": "EAST reversed is TSAE."
+    },
+    {
+      "id": "logical-q59",
+      "difficulty": "medium",
+      "prompt": "P is father of Q. Q is father of R. How is P related to R?",
+      "options": [
+        "Father",
+        "Grandfather",
+        "Uncle",
+        "Brother"
+      ],
+      "correctIndex": 1,
+      "explanation": "P is Q's father and Q is R's father."
+    },
+    {
+      "id": "logical-q60",
+      "difficulty": "medium",
+      "prompt": "M is brother of N. N is sister of O. O is father of P. How is M related to P?",
+      "options": [
+        "Father",
+        "Uncle",
+        "Brother",
+        "Grandfather"
+      ],
+      "correctIndex": 1,
+      "explanation": "M and O are siblings; M is P's uncle."
+    },
+    {
+      "id": "logical-q61",
+      "difficulty": "medium",
+      "prompt": "A is B's mother. B is C's brother. How is A related to C?",
+      "options": [
+        "Sister",
+        "Mother",
+        "Aunt",
+        "Grandmother"
+      ],
+      "correctIndex": 1,
+      "explanation": "A is mother of both B and C."
+    },
+    {
+      "id": "logical-q62",
+      "difficulty": "medium",
+      "prompt": "X's father's only daughter is Y. How is Y related to X (X is male)?",
+      "options": [
+        "Mother",
+        "Sister",
+        "Daughter",
+        "Aunt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Father's only daughter is X's sister."
+    },
+    {
+      "id": "logical-q63",
+      "difficulty": "medium",
+      "prompt": "Ravi: 'She is the daughter of my grandfather's only son.' Who is she?",
+      "options": [
+        "Ravi's mother",
+        "Ravi's sister",
+        "Ravi's daughter",
+        "Ravi's aunt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Grandfather's only son is Ravi's father."
+    },
+    {
+      "id": "logical-q64",
+      "difficulty": "medium",
+      "prompt": "C is A's sister. B is A's father. How is B related to C?",
+      "options": [
+        "Brother",
+        "Father",
+        "Uncle",
+        "Grandfather"
+      ],
+      "correctIndex": 1,
+      "explanation": "B is father of both A and C."
+    },
+    {
+      "id": "logical-q65",
+      "difficulty": "medium",
+      "prompt": "D is E's son. F is E's wife. How is F related to D?",
+      "options": [
+        "Sister",
+        "Mother",
+        "Aunt",
+        "Grandmother"
+      ],
+      "correctIndex": 1,
+      "explanation": "F is D's mother."
+    },
+    {
+      "id": "logical-q66",
+      "difficulty": "medium",
+      "prompt": "All roses are flowers. Some flowers fade quickly. Conclusion: Some roses fade quickly.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Both true and false"
+      ],
+      "correctIndex": 2,
+      "explanation": "Roses may not be among flowers that fade quickly."
+    },
+    {
+      "id": "logical-q67",
+      "difficulty": "medium",
+      "prompt": "No cats are dogs. All dogs are pets. Conclusion: No cats are pets.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Partially true"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cats may still be pets."
+    },
+    {
+      "id": "logical-q68",
+      "difficulty": "medium",
+      "prompt": "All managers are leaders. Some leaders are innovators. Conclusion: Some managers are innovators.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Both A and B"
+      ],
+      "correctIndex": 2,
+      "explanation": "Innovators may exclude all managers."
+    },
+    {
+      "id": "logical-q69",
+      "difficulty": "medium",
+      "prompt": "All students passed. Some who passed got scholarships. Conclusion: Some students got scholarships.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Ambiguous"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scholarship recipients are students who passed."
+    },
+    {
+      "id": "logical-q70",
+      "difficulty": "medium",
+      "prompt": "All birds have wings. Penguins are birds. Conclusion: Penguins have wings.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Partially true"
+      ],
+      "correctIndex": 0,
+      "explanation": "Penguins are birds."
+    },
+    {
+      "id": "logical-q71",
+      "difficulty": "medium",
+      "prompt": "All APIs are endpoints. Some endpoints are cached. Conclusion: Some APIs are cached.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Does not necessarily follow",
+        "Always false"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cached endpoints might not be APIs."
+    },
+    {
+      "id": "logical-q72",
+      "difficulty": "medium",
+      "prompt": "No reptiles are mammals. All snakes are reptiles. Conclusion: No snakes are mammals.",
+      "options": [
+        "Definitely true",
+        "Definitely false",
+        "Cannot be determined",
+        "Partially true"
+      ],
+      "correctIndex": 0,
+      "explanation": "Snakes are reptiles."
+    },
+    {
+      "id": "logical-q73",
+      "difficulty": "medium",
+      "prompt": "Angle between hands at 6:00?",
+      "options": [
+        "0°",
+        "90°",
+        "120°",
+        "180°"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hands point opposite: 180°."
+    },
+    {
+      "id": "logical-q74",
+      "difficulty": "medium",
+      "prompt": "Angle between hands at 9:30?",
+      "options": [
+        "75°",
+        "90°",
+        "105°",
+        "120°"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hour 285°, minute 180°: difference 105°."
+    },
+    {
+      "id": "logical-q75",
+      "difficulty": "medium",
+      "prompt": "Angle between hands at 4:20?",
+      "options": [
+        "0°",
+        "10°",
+        "20°",
+        "30°"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hour ≈130°, minute 120°: ≈10°."
+    },
+    {
+      "id": "logical-q76",
+      "difficulty": "medium",
+      "prompt": "Clock loses 6 min/hour. Set at noon, what does it show at actual 4:00 PM?",
+      "options": [
+        "3:24 PM",
+        "3:36 PM",
+        "3:48 PM",
+        "4:24 PM"
+      ],
+      "correctIndex": 1,
+      "explanation": "4×54 = 216 min = 3 h 36 min."
+    },
+    {
+      "id": "logical-q77",
+      "difficulty": "medium",
+      "prompt": "How many times do clock hands overlap in 12 hours?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "22"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hands overlap 11 times in 12 hours."
+    },
+    {
+      "id": "logical-q78",
+      "difficulty": "medium",
+      "prompt": "When between 2:00 and 3:00 do the hands coincide?",
+      "options": [
+        "2:10",
+        "2:12",
+        "2:15",
+        "2:20"
+      ],
+      "correctIndex": 0,
+      "explanation": "At 2 + 10/11 hours ≈ 2:10:54."
+    },
+    {
+      "id": "logical-q79",
+      "difficulty": "medium",
+      "prompt": "If 1 Jan 2001 was Monday, what day was 1 Jan 2002?",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "correctIndex": 1,
+      "explanation": "365 days = 52 weeks + 1 → Tuesday."
+    },
+    {
+      "id": "logical-q80",
+      "difficulty": "medium",
+      "prompt": "If today is Friday, what day was 10 days ago?",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "correctIndex": 1,
+      "explanation": "10 mod 7 = 3; Friday − 3 = Tuesday."
+    },
+    {
+      "id": "logical-q81",
+      "difficulty": "medium",
+      "prompt": "If Monday was 2 days ago, what day is the day after tomorrow?",
+      "options": [
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "correctIndex": 1,
+      "explanation": "Today is Wednesday; day after tomorrow is Friday."
+    },
+    {
+      "id": "logical-q82",
+      "difficulty": "medium",
+      "prompt": "What day was 28 Feb 2024?",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "correctIndex": 2,
+      "explanation": "28 Feb 2024 was Wednesday."
+    },
+    {
+      "id": "logical-q83",
+      "difficulty": "medium",
+      "prompt": "How many months have exactly 30 days?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctIndex": 0,
+      "explanation": "Apr, Jun, Sep, Nov."
+    },
+    {
+      "id": "logical-q84",
+      "difficulty": "medium",
+      "prompt": "Watch gains 5 min/hour. Set at 6 AM, actual time when it shows 9 AM?",
+      "options": [
+        "8:00 AM",
+        "8:15 AM",
+        "8:30 AM",
+        "8:45 AM"
+      ],
+      "correctIndex": 3,
+      "explanation": "Real ≈ 180×60/65 min ≈ 2h 46m → ~8:46 AM."
+    },
+    {
+      "id": "logical-q85",
+      "difficulty": "medium",
+      "prompt": "Walk 5 km North, 3 km East. Distance from start?",
+      "options": [
+        "2 km",
+        "4 km",
+        "√34 km",
+        "8 km"
+      ],
+      "correctIndex": 2,
+      "explanation": "√(5² + 3²) = √34 km."
+    },
+    {
+      "id": "logical-q86",
+      "difficulty": "medium",
+      "prompt": "Walk 3 km South, 4 km West, 3 km North. Distance from start?",
+      "options": [
+        "3 km",
+        "4 km",
+        "5 km",
+        "7 km"
+      ],
+      "correctIndex": 1,
+      "explanation": "Net 4 km West."
+    },
+    {
+      "id": "logical-q87",
+      "difficulty": "medium",
+      "prompt": "If South-East becomes North, what does North-West become?",
+      "options": [
+        "South",
+        "South-East",
+        "East",
+        "West"
+      ],
+      "correctIndex": 0,
+      "explanation": "Same 135° CCW rotation."
+    },
+    {
+      "id": "logical-q88",
+      "difficulty": "medium",
+      "prompt": "Face North, 90° CW then 180° CCW. Facing?",
+      "options": [
+        "North",
+        "East",
+        "West",
+        "South"
+      ],
+      "correctIndex": 2,
+      "explanation": "N → E → W."
+    },
+    {
+      "id": "logical-q89",
+      "difficulty": "medium",
+      "prompt": "Face East, turn 270° clockwise. Facing?",
+      "options": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ],
+      "correctIndex": 0,
+      "explanation": "270° CW from East is North."
+    },
+    {
+      "id": "logical-q90",
+      "difficulty": "medium",
+      "prompt": "Row of 25, Sita 12th from left. Position from right?",
+      "options": [
+        "12th",
+        "13th",
+        "14th",
+        "15th"
+      ],
+      "correctIndex": 2,
+      "explanation": "25 − 12 + 1 = 14th."
+    },
+    {
+      "id": "logical-q91",
+      "difficulty": "hard",
+      "prompt": "Row of 40, Raj 15th from left, Priya 20th from right. Swap; Raj is 20th from left. Priya from left?",
+      "options": [
+        "15th",
+        "20th",
+        "25th",
+        "30th"
+      ],
+      "correctIndex": 0,
+      "explanation": "Priya takes Raj's old spot."
+    },
+    {
+      "id": "logical-q92",
+      "difficulty": "hard",
+      "prompt": "50 students: 30 Math, 25 Science, 15 both. Only Math?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctIndex": 1,
+      "explanation": "30 − 15 = 15."
+    },
+    {
+      "id": "logical-q93",
+      "difficulty": "hard",
+      "prompt": "100 people: 70 tea, 60 coffee, 40 both. Neither?",
+      "options": [
+        "0",
+        "10",
+        "20",
+        "30"
+      ],
+      "correctIndex": 1,
+      "explanation": "90 like at least one; 10 neither."
+    },
+    {
+      "id": "logical-q94",
+      "difficulty": "hard",
+      "prompt": "A taller than B. C shorter than B. D taller than A. Shortest?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correctIndex": 2,
+      "explanation": "D > A > B > C."
+    },
+    {
+      "id": "logical-q95",
+      "difficulty": "hard",
+      "prompt": "BOOK : READ :: FOOD : ?",
+      "options": [
+        "Cook",
+        "Eat",
+        "Kitchen",
+        "Hungry"
+      ],
+      "correctIndex": 1,
+      "explanation": "Read books, eat food."
+    },
+    {
+      "id": "logical-q96",
+      "difficulty": "hard",
+      "prompt": "DOCTOR : PATIENT :: LAWYER : ?",
+      "options": [
+        "Judge",
+        "Client",
+        "Court",
+        "Case"
+      ],
+      "correctIndex": 1,
+      "explanation": "Professional serves client."
+    },
+    {
+      "id": "logical-q97",
+      "difficulty": "hard",
+      "prompt": "Pen : Write :: Knife : ?",
+      "options": [
+        "Cut",
+        "Sharp",
+        "Kitchen",
+        "Steel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tool and use."
+    },
+    {
+      "id": "logical-q98",
+      "difficulty": "hard",
+      "prompt": "Bird : Fly :: Fish : ?",
+      "options": [
+        "Water",
+        "Swim",
+        "Ocean",
+        "Scale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Birds fly; fish swim."
+    },
+    {
+      "id": "logical-q99",
+      "difficulty": "hard",
+      "prompt": "Eye : See :: Ear : ?",
+      "options": [
+        "Sound",
+        "Hear",
+        "Listen",
+        "Noise"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensory function."
+    },
+    {
+      "id": "logical-q100",
+      "difficulty": "hard",
+      "prompt": "Odd one out: Circle, Square, Triangle, Cube",
+      "options": [
+        "Circle",
+        "Square",
+        "Triangle",
+        "Cube"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cube is 3D."
+    },
+    {
+      "id": "logical-q101",
+      "difficulty": "hard",
+      "prompt": "Odd one out: January, March, April, July",
+      "options": [
+        "January",
+        "March",
+        "April",
+        "July"
+      ],
+      "correctIndex": 2,
+      "explanation": "April has 30 days."
+    },
+    {
+      "id": "logical-q102",
+      "difficulty": "hard",
+      "prompt": "Odd one out: Mercury, Venus, Earth, Moon",
+      "options": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Moon"
+      ],
+      "correctIndex": 3,
+      "explanation": "Moon is a satellite."
+    },
+    {
+      "id": "logical-q103",
+      "difficulty": "hard",
+      "prompt": "Odd one out: Dog, Cat, Lion, Table",
+      "options": [
+        "Dog",
+        "Cat",
+        "Lion",
+        "Table"
+      ],
+      "correctIndex": 3,
+      "explanation": "Table is not an animal."
+    },
+    {
+      "id": "logical-q104",
+      "difficulty": "hard",
+      "prompt": "Odd one out: Addition, Subtraction, Multiplication, Equation",
+      "options": [
+        "Addition",
+        "Subtraction",
+        "Multiplication",
+        "Equation"
+      ],
+      "correctIndex": 3,
+      "explanation": "Equation is a statement."
+    },
+    {
+      "id": "logical-q105",
+      "difficulty": "hard",
+      "prompt": "Odd one out: Piano, Guitar, Violin, Drum",
+      "options": [
+        "Piano",
+        "Guitar",
+        "Violin",
+        "Drum"
+      ],
+      "correctIndex": 3,
+      "explanation": "Drum is percussion."
+    },
+    {
+      "id": "logical-q106",
+      "difficulty": "hard",
+      "prompt": "If ×=+, +=−, −=×, ÷=÷: 15 − 3 + 10 × 5 ÷ 5 = ?",
+      "options": [
+        "30",
+        "34",
+        "36",
+        "40"
+      ],
+      "correctIndex": 2,
+      "explanation": "15×3 − 10+5÷5 = 36."
+    },
+    {
+      "id": "logical-q107",
+      "difficulty": "hard",
+      "prompt": "If ×=+, +=−, −=×, ÷=÷: 8 − 2 + 3 × 4 ÷ 2 = ?",
+      "options": [
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "correctIndex": 1,
+      "explanation": "8×2 − 3+4÷2 = 15."
+    },
+    {
+      "id": "logical-q108",
+      "difficulty": "hard",
+      "prompt": "If ×=+, +=−, −=×, ÷=÷: 6 − 2 + 4 × 3 ÷ 3 = ?",
+      "options": [
+        "7",
+        "9",
+        "11",
+        "13"
+      ],
+      "correctIndex": 1,
+      "explanation": "6×2 − 4+3÷3 = 9."
+    },
+    {
+      "id": "logical-q109",
+      "difficulty": "hard",
+      "prompt": "Train 100 m passes a pole in 10 s. Speed in km/h?",
+      "options": [
+        "36",
+        "40",
+        "45",
+        "50"
+      ],
+      "correctIndex": 0,
+      "explanation": "10 m/s = 36 km/h."
+    },
+    {
+      "id": "logical-q110",
+      "difficulty": "hard",
+      "prompt": "Buy ₹80, sell ₹100. Profit %?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "40%"
+      ],
+      "correctIndex": 1,
+      "explanation": "20/80 = 25%."
+    },
+    {
+      "id": "logical-q111",
+      "difficulty": "hard",
+      "prompt": "How many edges on a cube?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctIndex": 3,
+      "explanation": "12 edges."
+    },
+    {
+      "id": "logical-q112",
+      "difficulty": "hard",
+      "prompt": "Triangle divided by medians: how many triangles?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "Three medians → 6."
+    },
+    {
+      "id": "logical-q113",
+      "difficulty": "hard",
+      "prompt": "Squares on an 8×8 chessboard?",
+      "options": [
+        "64",
+        "128",
+        "204",
+        "256"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sum 1²…8² = 204."
+    },
+    {
+      "id": "logical-q114",
+      "difficulty": "hard",
+      "prompt": "4×4×4 painted cube cut into 64. Unpainted cubes?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correctIndex": 2,
+      "explanation": "Inner 2×2×2 = 8."
+    },
+    {
+      "id": "logical-q115",
+      "difficulty": "hard",
+      "prompt": "4×4×4 painted cube. Exactly one face painted?",
+      "options": [
+        "8",
+        "16",
+        "24",
+        "48"
+      ],
+      "correctIndex": 2,
+      "explanation": "6×4 = 24."
+    },
+    {
+      "id": "logical-q116",
+      "difficulty": "hard",
+      "prompt": "10 players, round robin. Matches?",
+      "options": [
+        "45",
+        "50",
+        "90",
+        "100"
+      ],
+      "correctIndex": 0,
+      "explanation": "¹⁰C₂ = 45."
+    },
+    {
+      "id": "logical-q117",
+      "difficulty": "hard",
+      "prompt": "Five in a row: A not at ends, B right of C, D between A and E. Middle?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correctIndex": 0,
+      "explanation": "Order C,B,A,D,E."
+    },
+    {
+      "id": "logical-q118",
+      "difficulty": "hard",
+      "prompt": "Six around circle: A opposite D, B between A and C. Opposite B?",
+      "options": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "correctIndex": 2,
+      "explanation": "E opposite B."
+    },
+    {
+      "id": "logical-q119",
+      "difficulty": "hard",
+      "prompt": "Seven in row: P 3rd left, Q 2nd right, R between. Right of R?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "R=5, two right."
+    },
+    {
+      "id": "logical-q120",
+      "difficulty": "hard",
+      "prompt": "8 workers, 10 days. 4 workers need?",
+      "options": [
+        "5",
+        "10",
+        "16",
+        "20"
+      ],
+      "correctIndex": 3,
+      "explanation": "80 worker-days ÷ 4 = 20."
     }
   ]
 }

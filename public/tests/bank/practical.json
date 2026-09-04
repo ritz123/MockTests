@@ -260,6 +260,1306 @@
       ],
       "correctIndex": 1,
       "explanation": "Decouple release from deploy."
+    },
+    {
+      "id": "practical-q21",
+      "difficulty": "easy",
+      "prompt": "JWT in localStorage is risky mainly because of:",
+      "options": [
+        "CSS bugs",
+        "XSS stealing the token",
+        "Slow DNS",
+        "Missing alt text"
+      ],
+      "correctIndex": 1,
+      "explanation": "Any script on the page can read localStorage."
+    },
+    {
+      "id": "practical-q22",
+      "difficulty": "easy",
+      "prompt": "Prevent SQL injection best practice:",
+      "options": [
+        "String concat with input",
+        "Parameterized queries",
+        "Disable HTTPS",
+        "Client-only validation"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bind values separately from SQL text."
+    },
+    {
+      "id": "practical-q23",
+      "difficulty": "easy",
+      "prompt": "Browser CORS error on fetch usually means:",
+      "options": [
+        "Invalid JSON",
+        "Server did not allow origin/method/header",
+        "TCP disabled",
+        "Disk full"
+      ],
+      "correctIndex": 1,
+      "explanation": "Browser enforces Access-Control-* headers."
+    },
+    {
+      "id": "practical-q24",
+      "difficulty": "easy",
+      "prompt": "HTTP 429 means:",
+      "options": [
+        "OK",
+        "Redirect",
+        "Too Many Requests",
+        "Not Found"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rate limited."
+    },
+    {
+      "id": "practical-q25",
+      "difficulty": "easy",
+      "prompt": "Idempotent HTTP method:",
+      "options": [
+        "POST",
+        "PUT",
+        "PATCH always",
+        "CONNECT"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeating PUT should leave same state."
+    },
+    {
+      "id": "practical-q26",
+      "difficulty": "easy",
+      "prompt": "WebSockets beat short polling when you need:",
+      "options": [
+        "Static file",
+        "Low-latency bidirectional updates",
+        "SEO HTML only",
+        "DNSSEC"
+      ],
+      "correctIndex": 1,
+      "explanation": "Persistent channel vs empty polls."
+    },
+    {
+      "id": "practical-q27",
+      "difficulty": "easy",
+      "prompt": "Content-Security-Policy helps mitigate:",
+      "options": [
+        "SQL injection directly",
+        "XSS by restricting script sources",
+        "Disk failure",
+        "Slow queries"
+      ],
+      "correctIndex": 1,
+      "explanation": "Limits where scripts/styles load from."
+    },
+    {
+      "id": "practical-q28",
+      "difficulty": "easy",
+      "prompt": "HttpOnly cookie flag prevents:",
+      "options": [
+        "Server reading cookie",
+        "JavaScript access to cookie",
+        "HTTPS",
+        "Caching"
+      ],
+      "correctIndex": 1,
+      "explanation": "document.cookie cannot read it."
+    },
+    {
+      "id": "practical-q29",
+      "difficulty": "easy",
+      "prompt": "SameSite=Lax cookie mainly mitigates:",
+      "options": [
+        "XSS",
+        "CSRF on cross-site requests",
+        "SQL injection",
+        "DDoS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Restricts cross-site cookie sending."
+    },
+    {
+      "id": "practical-q30",
+      "difficulty": "easy",
+      "prompt": "CSRF token defense works because:",
+      "options": [
+        "It encrypts passwords",
+        "Attacker cannot read token on your site to forge requests easily",
+        "It disables JS",
+        "It replaces HTTPS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Secret token required on state-changing requests."
+    },
+    {
+      "id": "practical-q31",
+      "difficulty": "easy",
+      "prompt": "bcrypt/scrypt/argon2 are for:",
+      "options": [
+        "Compression",
+        "Password hashing",
+        "JSON parsing",
+        "Load balancing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slow password hashing algorithms."
+    },
+    {
+      "id": "practical-q32",
+      "difficulty": "easy",
+      "prompt": "OAuth 2 authorization code flow with PKCE is for:",
+      "options": [
+        "Server-only apps",
+        "Public clients like SPAs/mobile",
+        "Disabling TLS",
+        "Caching static assets"
+      ],
+      "correctIndex": 1,
+      "explanation": "PKCE protects public clients without secret."
+    },
+    {
+      "id": "practical-q33",
+      "difficulty": "easy",
+      "prompt": "Refresh tokens should be stored:",
+      "options": [
+        "In URL query always",
+        "Securely server-side or secure storage; not in logs",
+        "In HTML comments",
+        "In CSS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Treat as sensitive credentials."
+    },
+    {
+      "id": "practical-q34",
+      "difficulty": "easy",
+      "prompt": "REST cacheable GET responses use:",
+      "options": [
+        "POST body",
+        "Cache-Control/ETag headers",
+        "SQL indexes",
+        "WebSockets"
+      ],
+      "correctIndex": 1,
+      "explanation": "HTTP caching headers control reuse."
+    },
+    {
+      "id": "practical-q35",
+      "difficulty": "easy",
+      "prompt": "HTTP 301 vs 302 for permanent move:",
+      "options": [
+        "301 permanent",
+        "302 permanent",
+        "Both temporary",
+        "Neither redirects"
+      ],
+      "correctIndex": 0,
+      "explanation": "301 is moved permanently."
+    },
+    {
+      "id": "practical-q36",
+      "difficulty": "easy",
+      "prompt": "HSTS header purpose:",
+      "options": [
+        "Compress responses",
+        "Force browsers to use HTTPS",
+        "Enable CORS",
+        "Parse JSON"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strict-Transport-Security upgrades to HTTPS."
+    },
+    {
+      "id": "practical-q37",
+      "difficulty": "easy",
+      "prompt": "TLS certificate validates:",
+      "options": [
+        "JSON schema",
+        "Server identity (and enables encryption)",
+        "Git branch",
+        "Docker image tag"
+      ],
+      "correctIndex": 1,
+      "explanation": "PKI binds domain to public key."
+    },
+    {
+      "id": "practical-q38",
+      "difficulty": "easy",
+      "prompt": "Reverse proxy (nginx) in front of app helps with:",
+      "options": [
+        "Removing TLS",
+        "TLS termination, routing, rate limits",
+        "Disabling logs",
+        "Running without ports"
+      ],
+      "correctIndex": 1,
+      "explanation": "Edge termination and routing."
+    },
+    {
+      "id": "practical-q39",
+      "difficulty": "easy",
+      "prompt": "Docker image vs container:",
+      "options": [
+        "Same thing",
+        "Image is template; container is running instance",
+        "Container is template",
+        "Image is running process only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Image layers vs runnable container."
+    },
+    {
+      "id": "practical-q40",
+      "difficulty": "easy",
+      "prompt": "Dockerfile CMD vs ENTRYPOINT:",
+      "options": [
+        "Identical always",
+        "ENTRYPOINT sets main executable; CMD default args",
+        "CMD cannot be overridden",
+        "ENTRYPOINT is only for shell"
+      ],
+      "correctIndex": 1,
+      "explanation": "ENTRYPOINT fixed command, CMD args."
+    },
+    {
+      "id": "practical-q41",
+      "difficulty": "easy",
+      "prompt": "Kubernetes Pod is:",
+      "options": [
+        "A VM",
+        "Smallest deployable unit sharing network/storage context",
+        "Only a container runtime",
+        "A load balancer"
+      ],
+      "correctIndex": 1,
+      "explanation": "One or more containers with shared context."
+    },
+    {
+      "id": "practical-q42",
+      "difficulty": "easy",
+      "prompt": "Kubernetes Deployment manages:",
+      "options": [
+        "DNS only",
+        "Desired state of ReplicaSets/Pods",
+        "Physical disks only",
+        "TLS certs only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Declarative rollout of pods."
+    },
+    {
+      "id": "practical-q43",
+      "difficulty": "easy",
+      "prompt": "kubectl apply is:",
+      "options": [
+        "Destructive delete always",
+        "Declarative create/update from manifest",
+        "Only logs",
+        "Only shell access"
+      ],
+      "correctIndex": 1,
+      "explanation": "Apply desired configuration."
+    },
+    {
+      "id": "practical-q44",
+      "difficulty": "easy",
+      "prompt": "Git merge vs rebase on feature branch:",
+      "options": [
+        "Same history always",
+        "Merge preserves branch graph; rebase replays commits linearly",
+        "Rebase deletes commits",
+        "Merge cannot conflict"
+      ],
+      "correctIndex": 1,
+      "explanation": "Different history shapes."
+    },
+    {
+      "id": "practical-q45",
+      "difficulty": "easy",
+      "prompt": "git revert vs reset:",
+      "options": [
+        "Same",
+        "Revert creates new commit undoing changes; reset moves HEAD",
+        "Reset always pushes",
+        "Revert deletes history"
+      ],
+      "correctIndex": 1,
+      "explanation": "Revert is safe for shared history."
+    },
+    {
+      "id": "practical-q46",
+      "difficulty": "easy",
+      "prompt": "Interactive rebase useful to:",
+      "options": [
+        "Delete remote",
+        "Squash/edit commits before sharing",
+        "Disable hooks",
+        "Skip CI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Clean up local commit history."
+    },
+    {
+      "id": "practical-q47",
+      "difficulty": "easy",
+      "prompt": "Git cherry-pick applies:",
+      "options": [
+        "Whole branch merge only",
+        "Specific commit(s) onto current branch",
+        "Only tags",
+        "Only stashes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Replay chosen commit patch."
+    },
+    {
+      "id": "practical-q48",
+      "difficulty": "easy",
+      "prompt": "Git bisect helps:",
+      "options": [
+        "Format code",
+        "Find commit that introduced bug",
+        "Create tags",
+        "Push force"
+      ],
+      "correctIndex": 1,
+      "explanation": "Binary search through history."
+    },
+    {
+      "id": "practical-q49",
+      "difficulty": "easy",
+      "prompt": ".gitignore prevents:",
+      "options": [
+        "All secrets automatically",
+        "Tracking specified files in repo",
+        "Pushing branches",
+        "Merging"
+      ],
+      "correctIndex": 1,
+      "explanation": "Untracked/ignored paths not added."
+    },
+    {
+      "id": "practical-q50",
+      "difficulty": "easy",
+      "prompt": "Semantic versioning MAJOR bump means:",
+      "options": [
+        "Bug fix only",
+        "Breaking API change",
+        "Documentation only",
+        "Patch security"
+      ],
+      "correctIndex": 0,
+      "explanation": "Breaking incompatible changes."
+    },
+    {
+      "id": "practical-q51",
+      "difficulty": "easy",
+      "prompt": "npm ci vs npm install:",
+      "options": [
+        "Identical",
+        "ci uses package-lock exactly for clean reproducible install",
+        "ci ignores lockfile",
+        "install never uses lock"
+      ],
+      "correctIndex": 1,
+      "explanation": "ci for CI: strict lockfile install."
+    },
+    {
+      "id": "practical-q52",
+      "difficulty": "easy",
+      "prompt": "package-lock.json purpose:",
+      "options": [
+        "Replace package.json",
+        "Pin exact dependency tree for reproducibility",
+        "Store secrets",
+        "Configure ESLint"
+      ],
+      "correctIndex": 1,
+      "explanation": "Locks resolved versions."
+    },
+    {
+      "id": "practical-q53",
+      "difficulty": "easy",
+      "prompt": "ESM import vs CommonJS require:",
+      "options": [
+        "Same in Node always",
+        "ESM static import/export; CJS require/module.exports",
+        "ESM only in browsers",
+        "CJS is standard in browsers natively"
+      ],
+      "correctIndex": 1,
+      "explanation": "Different module systems."
+    },
+    {
+      "id": "practical-q54",
+      "difficulty": "easy",
+      "prompt": "Tree shaking removes:",
+      "options": [
+        "All bugs",
+        "Unused exports in bundled ESM",
+        "Git history",
+        "Docker layers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dead code elimination in bundles."
+    },
+    {
+      "id": "practical-q55",
+      "difficulty": "easy",
+      "prompt": "Source maps help:",
+      "options": [
+        "Minify CSS only",
+        "Debug minified JS in browser devtools",
+        "Disable HTTPS",
+        "Run SQL"
+      ],
+      "correctIndex": 1,
+      "explanation": "Map compiled code to sources."
+    },
+    {
+      "id": "practical-q56",
+      "difficulty": "medium",
+      "prompt": "React key prop in lists helps:",
+      "options": [
+        "Style colors",
+        "Stable identity for efficient reconciliation",
+        "Disable hooks",
+        "Skip rendering"
+      ],
+      "correctIndex": 1,
+      "explanation": "Helps diff list items correctly."
+    },
+    {
+      "id": "practical-q57",
+      "difficulty": "medium",
+      "prompt": "useEffect dependency array empty [] means:",
+      "options": [
+        "Run every render",
+        "Run once after mount (and cleanup on unmount)",
+        "Never run",
+        "Run only on unmount"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mount/unmount lifecycle effect."
+    },
+    {
+      "id": "practical-q58",
+      "difficulty": "medium",
+      "prompt": "Virtual DOM benefit:",
+      "options": [
+        "Eliminates DOM entirely",
+        "Batch/minimize actual DOM updates",
+        "Removes JS",
+        "Disables events"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficient UI updates via diffing."
+    },
+    {
+      "id": "practical-q59",
+      "difficulty": "medium",
+      "prompt": "SSR vs CSR main tradeoff:",
+      "options": [
+        "SSR never uses JS",
+        "SSR sends rendered HTML; better first paint/SEO often",
+        "CSR always faster TTFB",
+        "Identical SEO"
+      ],
+      "correctIndex": 1,
+      "explanation": "SSR improves initial load/SEO tradeoffs."
+    },
+    {
+      "id": "practical-q60",
+      "difficulty": "medium",
+      "prompt": "Hydration in SSR frameworks means:",
+      "options": [
+        "Deleting server HTML",
+        "Attaching client JS to server-rendered HTML",
+        "Only CSS loading",
+        "Database migration"
+      ],
+      "correctIndex": 1,
+      "explanation": "Client takes over static markup."
+    },
+    {
+      "id": "practical-q61",
+      "difficulty": "medium",
+      "prompt": "API pagination cursor vs offset:",
+      "options": [
+        "Same",
+        "Cursor stable for live data; offset can skip/duplicate",
+        "Offset always faster at depth",
+        "Cursor returns all rows"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cursor avoids large OFFSET cost/issues."
+    },
+    {
+      "id": "practical-q62",
+      "difficulty": "medium",
+      "prompt": "Idempotency-Key header used to:",
+      "options": [
+        "Encrypt body",
+        "Safely retry POST without duplicate side effects",
+        "Enable CORS",
+        "Cache GET forever"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dedup retried writes."
+    },
+    {
+      "id": "practical-q63",
+      "difficulty": "medium",
+      "prompt": "OpenAPI/Swagger describes:",
+      "options": [
+        "Kernel drivers",
+        "HTTP API contract",
+        "Git hooks",
+        "CPU pins"
+      ],
+      "correctIndex": 1,
+      "explanation": "Machine-readable API spec."
+    },
+    {
+      "id": "practical-q64",
+      "difficulty": "medium",
+      "prompt": "GraphQL vs REST typical difference:",
+      "options": [
+        "GraphQL has no server",
+        "Client selects fields/shape in one endpoint",
+        "REST cannot cache",
+        "GraphQL only for SQL"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flexible queries vs resource endpoints."
+    },
+    {
+      "id": "practical-q65",
+      "difficulty": "medium",
+      "prompt": "gRPC commonly uses:",
+      "options": [
+        "HTML forms",
+        "HTTP/2 and Protocol Buffers",
+        "FTP",
+        "SMTP"
+      ],
+      "correctIndex": 1,
+      "explanation": "Binary protobuf over HTTP/2."
+    },
+    {
+      "id": "practical-q66",
+      "difficulty": "medium",
+      "prompt": "Webhook delivery should verify:",
+      "options": [
+        "User agent only",
+        "Signature (e.g., HMAC) of payload",
+        "CSS hash",
+        "Git SHA only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Verify sender with shared secret/signature."
+    },
+    {
+      "id": "practical-q67",
+      "difficulty": "medium",
+      "prompt": "Rate limiting token bucket allows:",
+      "options": [
+        "Infinite burst always",
+        "Controlled burst while averaging rate",
+        "No bursts ever",
+        "Only daily limits"
+      ],
+      "correctIndex": 1,
+      "explanation": "Burst capacity with refill rate."
+    },
+    {
+      "id": "practical-q68",
+      "difficulty": "medium",
+      "prompt": "Circuit breaker pattern prevents:",
+      "options": [
+        "All errors",
+        "Cascading failures by failing fast when downstream unhealthy",
+        "Caching",
+        "Logging"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stop hammering failing service."
+    },
+    {
+      "id": "practical-q69",
+      "difficulty": "medium",
+      "prompt": "Health check endpoint should reflect:",
+      "options": [
+        "Only process up",
+        "Dependencies critical to serving traffic",
+        "Git version only",
+        "Random number"
+      ],
+      "correctIndex": 1,
+      "explanation": "Liveness/readiness of real dependencies."
+    },
+    {
+      "id": "practical-q70",
+      "difficulty": "medium",
+      "prompt": "Blue-green deployment reduces:",
+      "options": [
+        "Need for tests",
+        "Downtime by switching traffic between two environments",
+        "Security",
+        "Logs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Instant cutover after validation."
+    },
+    {
+      "id": "practical-q71",
+      "difficulty": "medium",
+      "prompt": "Canary release:",
+      "options": [
+        "Deploy to all users at once",
+        "Roll out to small subset first",
+        "Delete old version first always",
+        "Disable monitoring"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gradual exposure limits blast radius."
+    },
+    {
+      "id": "practical-q72",
+      "difficulty": "medium",
+      "prompt": "Infrastructure as Code (Terraform) benefits:",
+      "options": [
+        "Manual clicks only",
+        "Reproducible, versioned infrastructure",
+        "Removes need for cloud",
+        "Eliminates state"
+      ],
+      "correctIndex": 1,
+      "explanation": "Declarative infra with state tracking."
+    },
+    {
+      "id": "practical-q73",
+      "difficulty": "medium",
+      "prompt": "CI pipeline lint stage catches:",
+      "options": [
+        "Hardware faults",
+        "Style/errors before tests/build",
+        "DNS issues always",
+        "User passwords"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static checks early in pipeline."
+    },
+    {
+      "id": "practical-q74",
+      "difficulty": "medium",
+      "prompt": "Artifact in CI/CD is:",
+      "options": [
+        "A bug",
+        "Built output stored between stages (jar, image, bundle)",
+        "Git commit message",
+        "SSH key"
+      ],
+      "correctIndex": 1,
+      "explanation": "Immutable build result passed along."
+    },
+    {
+      "id": "practical-q75",
+      "difficulty": "medium",
+      "prompt": "Secrets in CI should be:",
+      "options": [
+        "Plain text in repo",
+        "Stored in CI secret store/env, not committed",
+        "In Dockerfile ARG defaults",
+        "Logged verbosely"
+      ],
+      "correctIndex": 1,
+      "explanation": "Never commit credentials."
+    },
+    {
+      "id": "practical-q76",
+      "difficulty": "medium",
+      "prompt": "Docker multi-stage build helps:",
+      "options": [
+        "Increase image size",
+        "Smaller final image by separating build/runtime",
+        "Disable caching",
+        "Remove ENTRYPOINT"
+      ],
+      "correctIndex": 1,
+      "explanation": "Drop build tools from final image."
+    },
+    {
+      "id": "practical-q77",
+      "difficulty": "medium",
+      "prompt": "docker-compose networks allow:",
+      "options": [
+        "Only one container",
+        "Service DNS names on shared network",
+        "No isolation",
+        "Only host networking always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Containers resolve service names."
+    },
+    {
+      "id": "practical-q78",
+      "difficulty": "medium",
+      "prompt": "ENV in Dockerfile sets:",
+      "options": [
+        "Only build-time vars always",
+        "Default environment variables in container",
+        "Git config",
+        "Kubernetes namespace"
+      ],
+      "correctIndex": 1,
+      "explanation": "Available at runtime unless overridden."
+    },
+    {
+      "id": "practical-q79",
+      "difficulty": "medium",
+      "prompt": "HEALTHCHECK in Dockerfile:",
+      "options": [
+        "Replaces k8s probes always",
+        "Docker-level container health command",
+        "Installs npm",
+        "Sets CMD"
+      ],
+      "correctIndex": 1,
+      "explanation": "Docker can mark container unhealthy."
+    },
+    {
+      "id": "practical-q80",
+      "difficulty": "medium",
+      "prompt": "nginx try_files often used to:",
+      "options": [
+        "Run Python",
+        "Serve SPA fallback to index.html",
+        "Enable WebSockets only",
+        "Compile TypeScript"
+      ],
+      "correctIndex": 1,
+      "explanation": "Client-side routing fallback."
+    },
+    {
+      "id": "practical-q81",
+      "difficulty": "medium",
+      "prompt": "Load balancer round robin:",
+      "options": [
+        "Sticky sessions always",
+        "Distributes requests sequentially across backends",
+        "Sorts by latency only",
+        "Encrypts payloads"
+      ],
+      "correctIndex": 1,
+      "explanation": "Simple cyclic distribution."
+    },
+    {
+      "id": "practical-q82",
+      "difficulty": "medium",
+      "prompt": "Sticky sessions (session affinity) can cause:",
+      "options": [
+        "Perfect balance always",
+        "Uneven load if sessions skew",
+        "No cookies ever",
+        "Disable TLS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hot spots if many users one server."
+    },
+    {
+      "id": "practical-q83",
+      "difficulty": "medium",
+      "prompt": "Redis often used for:",
+      "options": [
+        "Permanent archive only",
+        "Cache, pub/sub, session store",
+        "Replacing PostgreSQL always",
+        "Compiling code"
+      ],
+      "correctIndex": 1,
+      "explanation": "In-memory data structure server uses."
+    },
+    {
+      "id": "practical-q84",
+      "difficulty": "medium",
+      "prompt": "Database connection pool purpose:",
+      "options": [
+        "Slow down app",
+        "Reuse connections, avoid connect overhead",
+        "Disable transactions",
+        "Remove indexes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Amortize expensive connects."
+    },
+    {
+      "id": "practical-q85",
+      "difficulty": "medium",
+      "prompt": "Migration tool (Flyway/Liquibase) tracks:",
+      "options": [
+        "CSS versions",
+        "Applied schema changes versioned",
+        "Git branches",
+        "Docker tags"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ordered DB schema migrations."
+    },
+    {
+      "id": "practical-q86",
+      "difficulty": "medium",
+      "prompt": "Read replica helps:",
+      "options": [
+        "Primary writes only",
+        "Scale read traffic off primary",
+        "Eliminate replication lag always",
+        "Replace backups"
+      ],
+      "correctIndex": 1,
+      "explanation": "Offload SELECT queries."
+    },
+    {
+      "id": "practical-q87",
+      "difficulty": "medium",
+      "prompt": "CAP in microservices: during partition you often choose:",
+      "options": [
+        "Both C and A",
+        "Consistency or availability",
+        "Neither",
+        "Only compression"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tradeoff under network split."
+    },
+    {
+      "id": "practical-q88",
+      "difficulty": "medium",
+      "prompt": "Message queue (RabbitMQ/Kafka) decouples:",
+      "options": [
+        "CSS from HTML",
+        "Producers and consumers in time/scale",
+        "TLS from HTTP",
+        "Git from GitHub"
+      ],
+      "correctIndex": 1,
+      "explanation": "Async buffering between services."
+    },
+    {
+      "id": "practical-q89",
+      "difficulty": "medium",
+      "prompt": "Kafka partitions enable:",
+      "options": [
+        "Single-thread only",
+        "Parallelism and ordering per partition key",
+        "Deleting topics automatically",
+        "SQL joins"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scale consumers with partition keys."
+    },
+    {
+      "id": "practical-q90",
+      "difficulty": "medium",
+      "prompt": "Dead letter queue holds:",
+      "options": [
+        "Successful messages",
+        "Messages that failed processing repeatedly",
+        "TLS certs",
+        "Docker logs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Poison messages for inspection."
+    },
+    {
+      "id": "practical-q91",
+      "difficulty": "hard",
+      "prompt": "Structured logging (JSON) helps:",
+      "options": [
+        "Remove timestamps",
+        "Machine parsing/search in observability tools",
+        "Disable metrics",
+        "Hide errors"
+      ],
+      "correctIndex": 1,
+      "explanation": "Query logs in ELK/Datadog etc."
+    },
+    {
+      "id": "practical-q92",
+      "difficulty": "hard",
+      "prompt": "OpenTelemetry provides:",
+      "options": [
+        "CSS framework",
+        "Unified traces/metrics/logs instrumentation",
+        "Git hosting",
+        "Package manager"
+      ],
+      "correctIndex": 1,
+      "explanation": "Observability standard APIs."
+    },
+    {
+      "id": "practical-q93",
+      "difficulty": "hard",
+      "prompt": "Prometheus pull model means:",
+      "options": [
+        "Apps push all metrics always",
+        "Scraper pulls metrics from exporters/targets",
+        "No time series",
+        "Only logs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Server scrapes /metrics endpoints."
+    },
+    {
+      "id": "practical-q94",
+      "difficulty": "hard",
+      "prompt": "Alert fatigue best reduced by:",
+      "options": [
+        "Alert on everything",
+        "Actionable alerts with SLOs/thresholds",
+        "Disable monitoring",
+        "Email each log line"
+      ],
+      "correctIndex": 1,
+      "explanation": "Alert on symptoms that need human action."
+    },
+    {
+      "id": "practical-q95",
+      "difficulty": "hard",
+      "prompt": "S3 object storage consistency model (read after write new objects)?",
+      "options": [
+        "Never consistent",
+        "Read-after-write for new PUTs",
+        "Only eventual for all ops always",
+        "Linearizable always"
+      ],
+      "correctIndex": 1,
+      "explanation": "New objects strongly readable; overwrites vary."
+    },
+    {
+      "id": "practical-q96",
+      "difficulty": "hard",
+      "prompt": "IAM least privilege means:",
+      "options": [
+        "Admin for all",
+        "Grant minimum permissions needed",
+        "Share root keys",
+        "Disable MFA"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reduce blast radius of credentials."
+    },
+    {
+      "id": "practical-q97",
+      "difficulty": "hard",
+      "prompt": "X-Forwarded-For header used behind proxy to:",
+      "options": [
+        "Encrypt traffic",
+        "Record original client IP",
+        "Set cookies",
+        "Disable HTTPS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pass client IP through proxy chain."
+    },
+    {
+      "id": "practical-q98",
+      "difficulty": "hard",
+      "prompt": "Double submit cookie pattern mitigates:",
+      "options": [
+        "XSS only",
+        "CSRF by requiring cookie+header token match",
+        "SQL injection",
+        "DDoS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Attacker cannot read cookie to set header cross-site."
+    },
+    {
+      "id": "practical-q99",
+      "difficulty": "hard",
+      "prompt": "Subresource Integrity (SRI) on script tags:",
+      "options": [
+        "Blocks CORS",
+        "Verifies CDN file hash matches expected",
+        "Enables HTTP",
+        "Removes CSP"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tamper detection for third-party scripts."
+    },
+    {
+      "id": "practical-q100",
+      "difficulty": "hard",
+      "prompt": "Feature flags allow:",
+      "options": [
+        "Removing tests",
+        "Gradual rollout/kill switch without redeploy",
+        "Disabling TLS",
+        "Skipping code review"
+      ],
+      "correctIndex": 1,
+      "explanation": "Runtime toggles for features."
+    },
+    {
+      "id": "practical-q101",
+      "difficulty": "hard",
+      "prompt": "12-factor app config stored in:",
+      "options": [
+        "Source repo secrets",
+        "Environment variables",
+        "Compiled binary only",
+        "CSS files"
+      ],
+      "correctIndex": 1,
+      "explanation": "Config from env, not code."
+    },
+    {
+      "id": "practical-q102",
+      "difficulty": "hard",
+      "prompt": "Horizontal scaling means:",
+      "options": [
+        "Bigger CPU only",
+        "Add more instances",
+        "More RAM on one box only",
+        "Disable load balancer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scale out with more nodes."
+    },
+    {
+      "id": "practical-q103",
+      "difficulty": "hard",
+      "prompt": "Vertical scaling means:",
+      "options": [
+        "More servers",
+        "Bigger/more powerful single machine",
+        "Sharding only",
+        "CDN only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scale up hardware on one host."
+    },
+    {
+      "id": "practical-q104",
+      "difficulty": "hard",
+      "prompt": "CDN primarily improves:",
+      "options": [
+        "Database writes",
+        "Latency/bandwidth for static/edge-cached content",
+        "Git merges",
+        "Unit tests"
+      ],
+      "correctIndex": 1,
+      "explanation": "Edge caching closer to users."
+    },
+    {
+      "id": "practical-q105",
+      "difficulty": "hard",
+      "prompt": "Cache stampede mitigated by:",
+      "options": [
+        "Never expiring keys",
+        "Probabilistic early expiration/locking",
+        "Deleting cache",
+        "Disabling TTL"
+      ],
+      "correctIndex": 1,
+      "explanation": "Prevent thundering herd on expiry."
+    },
+    {
+      "id": "practical-q106",
+      "difficulty": "hard",
+      "prompt": "ETag header enables:",
+      "options": [
+        "SQL injection",
+        "Conditional GET with If-None-Match",
+        "WebSockets",
+        "OAuth"
+      ],
+      "correctIndex": 1,
+      "explanation": "304 Not Modified when unchanged."
+    },
+    {
+      "id": "practical-q107",
+      "difficulty": "hard",
+      "prompt": "HTTP/2 multiplexing:",
+      "options": [
+        "One request at a time",
+        "Multiple streams over single connection",
+        "Replaces TLS",
+        "Disables headers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Parallel requests on one TCP conn."
+    },
+    {
+      "id": "practical-q108",
+      "difficulty": "hard",
+      "prompt": "Server-sent events (SSE) are:",
+      "options": [
+        "Bidirectional binary only",
+        "Server push over HTTP one-way stream",
+        "Replacement for WebSockets always",
+        "UDP only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Text event stream from server."
+    },
+    {
+      "id": "practical-q109",
+      "difficulty": "hard",
+      "prompt": "WebSocket handshake starts as:",
+      "options": [
+        "UDP packet",
+        "HTTP Upgrade request",
+        "FTP command",
+        "SMTP"
+      ],
+      "correctIndex": 1,
+      "explanation": "HTTP Upgrade to WebSocket."
+    },
+    {
+      "id": "practical-q110",
+      "difficulty": "hard",
+      "prompt": "MIME type application/json indicates:",
+      "options": [
+        "HTML page",
+        "JSON payload",
+        "Image/png",
+        "Form data"
+      ],
+      "correctIndex": 1,
+      "explanation": "JSON content type."
+    },
+    {
+      "id": "practical-q111",
+      "difficulty": "hard",
+      "prompt": "multipart/form-data used for:",
+      "options": [
+        "JSON APIs always",
+        "File uploads and form fields",
+        "WebSockets",
+        "DNS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Encoding files in HTTP forms."
+    },
+    {
+      "id": "practical-q112",
+      "difficulty": "hard",
+      "prompt": "CORS preflight is triggered by:",
+      "options": [
+        "Simple GET only",
+        "Non-simple methods/headers cross-origin",
+        "Same-origin fetch",
+        "Static CSS"
+      ],
+      "correctIndex": 1,
+      "explanation": "OPTIONS request for non-simple CORS."
+    },
+    {
+      "id": "practical-q113",
+      "difficulty": "hard",
+      "prompt": "Access-Control-Allow-Origin: * with credentials:",
+      "options": [
+        "Allowed",
+        "Not allowed together",
+        "Required",
+        "Ignores CORS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Credentials need explicit origin, not wildcard."
+    },
+    {
+      "id": "practical-q114",
+      "difficulty": "hard",
+      "prompt": "SQL EXPLAIN helps:",
+      "options": [
+        "Encrypt data",
+        "Analyze query plan/index usage",
+        "Deploy Docker",
+        "Run tests"
+      ],
+      "correctIndex": 1,
+      "explanation": "See how database executes query."
+    },
+    {
+      "id": "practical-q115",
+      "difficulty": "hard",
+      "prompt": "N+1 query problem fixed by:",
+      "options": [
+        "More N+1 loops",
+        "Eager loading/batching",
+        "Disabling indexes",
+        "Using SELECT *"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fetch related data in fewer queries."
+    },
+    {
+      "id": "practical-q116",
+      "difficulty": "hard",
+      "prompt": "Optimistic locking uses:",
+      "options": [
+        "Table locks always",
+        "Version column/check on update",
+        "Deleting rows",
+        "Random sleeps"
+      ],
+      "correctIndex": 1,
+      "explanation": "Detect concurrent updates via version."
+    },
+    {
+      "id": "practical-q117",
+      "difficulty": "hard",
+      "prompt": "Pessimistic locking:",
+      "options": [
+        "No locks",
+        "Locks rows during transaction",
+        "Only in Redis",
+        "Only for GET"
+      ],
+      "correctIndex": 1,
+      "explanation": "SELECT FOR UPDATE style locks."
+    },
+    {
+      "id": "practical-q118",
+      "difficulty": "hard",
+      "prompt": "Event sourcing stores:",
+      "options": [
+        "Only latest state",
+        "Sequence of events to reconstruct state",
+        "CSS files",
+        "Docker layers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Append-only event log as source of truth."
+    },
+    {
+      "id": "practical-q119",
+      "difficulty": "hard",
+      "prompt": "CQRS separates:",
+      "options": [
+        "HTML and CSS",
+        "Command writes from query reads",
+        "TCP and UDP",
+        "Git and GitHub"
+      ],
+      "correctIndex": 1,
+      "explanation": "Different models for read vs write."
+    },
+    {
+      "id": "practical-q120",
+      "difficulty": "hard",
+      "prompt": "Zero-downtime deploy often needs:",
+      "options": [
+        "Kill all connections instantly",
+        "Graceful shutdown + health checks + rolling update",
+        "Skip tests",
+        "Single server only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Drain connections while shifting traffic."
     }
   ]
 }

@@ -35,7 +35,7 @@
         "O(1)",
         "O(log n)",
         "O(n)",
-        "O(n\u00b2)"
+        "O(n²)"
       ],
       "correctIndex": 0,
       "explanation": "Expected constant time with a good hash and load factor."
@@ -112,11 +112,11 @@
       "options": [
         "O(n)",
         "O(n log n)",
-        "O(n\u00b2)",
-        "O(2\u207f)"
+        "O(n²)",
+        "O(2ⁿ)"
       ],
       "correctIndex": 2,
-      "explanation": "n \u00d7 n constant-time iterations."
+      "explanation": "n × n constant-time iterations."
     },
     {
       "id": "cs-q10",
@@ -325,6 +325,1306 @@
       ],
       "correctIndex": 1,
       "explanation": "You pick C or A when P happens."
+    },
+    {
+      "id": "cs-q26",
+      "difficulty": "easy",
+      "prompt": "Which structure gives O(1) average lookup with a good hash?",
+      "options": [
+        "Array",
+        "Hash table",
+        "Linked list",
+        "Binary tree"
+      ],
+      "correctIndex": 1,
+      "explanation": "Expected O(1) with good hash and load factor."
+    },
+    {
+      "id": "cs-q27",
+      "difficulty": "easy",
+      "prompt": "A stack follows which order?",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "Priority",
+        "Sorted"
+      ],
+      "correctIndex": 1,
+      "explanation": "Last in, first out."
+    },
+    {
+      "id": "cs-q28",
+      "difficulty": "easy",
+      "prompt": "A queue follows which order?",
+      "options": [
+        "LIFO",
+        "FIFO",
+        "Random",
+        "Heap order"
+      ],
+      "correctIndex": 1,
+      "explanation": "First in, first out."
+    },
+    {
+      "id": "cs-q29",
+      "difficulty": "easy",
+      "prompt": "Worst-case binary search on n sorted items?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Halves search space each step."
+    },
+    {
+      "id": "cs-q30",
+      "difficulty": "easy",
+      "prompt": "Which traversal visits root between subtrees?",
+      "options": [
+        "Preorder",
+        "Inorder",
+        "Postorder",
+        "Level order"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inorder: left, root, right."
+    },
+    {
+      "id": "cs-q31",
+      "difficulty": "easy",
+      "prompt": "TCP provides:",
+      "options": [
+        "Unreliable datagrams",
+        "Reliable ordered byte stream",
+        "Broadcast only",
+        "No connection"
+      ],
+      "correctIndex": 1,
+      "explanation": "Connection-oriented and reliable."
+    },
+    {
+      "id": "cs-q32",
+      "difficulty": "easy",
+      "prompt": "UDP is best when you need:",
+      "options": [
+        "Guaranteed delivery",
+        "Low latency and can tolerate loss",
+        "Ordered streams always",
+        "Three-way handshake"
+      ],
+      "correctIndex": 1,
+      "explanation": "UDP is connectionless and lightweight."
+    },
+    {
+      "id": "cs-q33",
+      "difficulty": "easy",
+      "prompt": "HTTP 404 means:",
+      "options": [
+        "Unauthorized",
+        "Forbidden",
+        "Not Found",
+        "Server Error"
+      ],
+      "correctIndex": 2,
+      "explanation": "Resource not found."
+    },
+    {
+      "id": "cs-q34",
+      "difficulty": "easy",
+      "prompt": "HTTP 401 typically means:",
+      "options": [
+        "Not Found",
+        "Unauthorized",
+        "Redirect",
+        "Rate limited"
+      ],
+      "correctIndex": 1,
+      "explanation": "Authentication required or failed."
+    },
+    {
+      "id": "cs-q35",
+      "difficulty": "easy",
+      "prompt": "Primary key in a relational table must be:",
+      "options": [
+        "Nullable",
+        "Unique and not null",
+        "Always composite",
+        "A foreign key"
+      ],
+      "correctIndex": 1,
+      "explanation": "Identifies rows uniquely."
+    },
+    {
+      "id": "cs-q36",
+      "difficulty": "easy",
+      "prompt": "Foreign key enforces:",
+      "options": [
+        "CPU scheduling",
+        "Referential integrity",
+        "DNS lookup",
+        "Cache eviction"
+      ],
+      "correctIndex": 1,
+      "explanation": "Links must reference valid parent rows."
+    },
+    {
+      "id": "cs-q37",
+      "difficulty": "easy",
+      "prompt": "Normalization mainly reduces:",
+      "options": [
+        "Network latency",
+        "Redundancy and update anomalies",
+        "Compile time",
+        "Disk size always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reduces duplicate data and anomalies."
+    },
+    {
+      "id": "cs-q38",
+      "difficulty": "easy",
+      "prompt": "ACID 'A' stands for:",
+      "options": [
+        "Availability",
+        "Atomicity",
+        "Asynchronous",
+        "Addressing"
+      ],
+      "correctIndex": 1,
+      "explanation": "All or nothing transactions."
+    },
+    {
+      "id": "cs-q39",
+      "difficulty": "easy",
+      "prompt": "Which is volatile memory?",
+      "options": [
+        "SSD",
+        "RAM",
+        "HDD",
+        "Tape"
+      ],
+      "correctIndex": 1,
+      "explanation": "RAM loses data without power."
+    },
+    {
+      "id": "cs-q40",
+      "difficulty": "easy",
+      "prompt": "CPU cache is used to:",
+      "options": [
+        "Store passwords",
+        "Reduce average memory access time",
+        "Replace the OS",
+        "Encrypt disks"
+      ],
+      "correctIndex": 1,
+      "explanation": "Brings frequently used data closer to CPU."
+    },
+    {
+      "id": "cs-q41",
+      "difficulty": "easy",
+      "prompt": "Which OSI layer handles routing?",
+      "options": [
+        "Data link",
+        "Network",
+        "Transport",
+        "Application"
+      ],
+      "correctIndex": 1,
+      "explanation": "Layer 3 routes packets."
+    },
+    {
+      "id": "cs-q42",
+      "difficulty": "easy",
+      "prompt": "DNS translates:",
+      "options": [
+        "IP to MAC",
+        "Domain names to IP addresses",
+        "Files to blocks",
+        "Threads to processes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Name resolution."
+    },
+    {
+      "id": "cs-q43",
+      "difficulty": "easy",
+      "prompt": "IPv4 address size?",
+      "options": [
+        "16 bits",
+        "32 bits",
+        "64 bits",
+        "128 bits"
+      ],
+      "correctIndex": 1,
+      "explanation": "32-bit addresses."
+    },
+    {
+      "id": "cs-q44",
+      "difficulty": "easy",
+      "prompt": "IPv6 address size?",
+      "options": [
+        "32 bits",
+        "64 bits",
+        "128 bits",
+        "256 bits"
+      ],
+      "correctIndex": 2,
+      "explanation": "128-bit addresses."
+    },
+    {
+      "id": "cs-q45",
+      "difficulty": "easy",
+      "prompt": "Which HTTP method is idempotent?",
+      "options": [
+        "POST",
+        "PUT",
+        "PATCH always",
+        "CONNECT"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeating PUT should have same effect."
+    },
+    {
+      "id": "cs-q46",
+      "difficulty": "easy",
+      "prompt": "HTTPS adds security mainly via:",
+      "options": [
+        "FTP",
+        "TLS/SSL",
+        "SMTP",
+        "ARP"
+      ],
+      "correctIndex": 1,
+      "explanation": "TLS encrypts HTTP traffic."
+    },
+    {
+      "id": "cs-q47",
+      "difficulty": "easy",
+      "prompt": "Deadlock requires (Coffman):",
+      "options": [
+        "Only mutual exclusion",
+        "Mutual exclusion, hold-and-wait, no preemption, circular wait",
+        "Only paging",
+        "Only interrupts"
+      ],
+      "correctIndex": 1,
+      "explanation": "All four conditions together."
+    },
+    {
+      "id": "cs-q48",
+      "difficulty": "easy",
+      "prompt": "Paging divides memory into:",
+      "options": [
+        "Files and folders",
+        "Fixed-size pages and frames",
+        "Stacks only",
+        "Registers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Virtual memory in pages."
+    },
+    {
+      "id": "cs-q49",
+      "difficulty": "easy",
+      "prompt": "A process is:",
+      "options": [
+        "A thread only",
+        "A program in execution with its own resources",
+        "A file descriptor",
+        "A cache line"
+      ],
+      "correctIndex": 1,
+      "explanation": "Has address space and resources."
+    },
+    {
+      "id": "cs-q50",
+      "difficulty": "easy",
+      "prompt": "Threads in the same process share:",
+      "options": [
+        "Nothing",
+        "Address space and resources like open files",
+        "Separate address space always",
+        "Separate disk"
+      ],
+      "correctIndex": 1,
+      "explanation": "Threads share process memory."
+    },
+    {
+      "id": "cs-q51",
+      "difficulty": "easy",
+      "prompt": "Semaphores are used for:",
+      "options": [
+        "Sorting arrays",
+        "Synchronization and mutual exclusion",
+        "DNS caching",
+        "HTML parsing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Coordinate concurrent access."
+    },
+    {
+      "id": "cs-q52",
+      "difficulty": "easy",
+      "prompt": "Belady's anomaly can occur with:",
+      "options": [
+        "LRU cache",
+        "FIFO page replacement",
+        "Optimal replacement never",
+        "Stack allocation"
+      ],
+      "correctIndex": 1,
+      "explanation": "More frames can increase faults with FIFO."
+    },
+    {
+      "id": "cs-q53",
+      "difficulty": "easy",
+      "prompt": "B-tree is commonly used in:",
+      "options": [
+        "GPUs",
+        "Database indexes",
+        "DNS only",
+        "Keyboard drivers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Disk-friendly balanced tree indexes."
+    },
+    {
+      "id": "cs-q54",
+      "difficulty": "easy",
+      "prompt": "AVL tree property:",
+      "options": [
+        "Unbalanced heights",
+        "Heights of subtrees differ by at most 1",
+        "Always complete",
+        "Always a heap"
+      ],
+      "correctIndex": 1,
+      "explanation": "Self-balancing BST."
+    },
+    {
+      "id": "cs-q55",
+      "difficulty": "easy",
+      "prompt": "Red-black tree guarantees:",
+      "options": [
+        "O(1) search",
+        "O(log n) search/insert/delete",
+        "O(n) always",
+        "No rotations"
+      ],
+      "correctIndex": 1,
+      "explanation": "Balanced BST operations are logarithmic."
+    },
+    {
+      "id": "cs-q56",
+      "difficulty": "easy",
+      "prompt": "Graph BFS uses which structure?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Priority queue only",
+        "Hash set only"
+      ],
+      "correctIndex": 1,
+      "explanation": "FIFO queue for level order."
+    },
+    {
+      "id": "cs-q57",
+      "difficulty": "easy",
+      "prompt": "Graph DFS naturally uses:",
+      "options": [
+        "Queue",
+        "Stack (or recursion)",
+        "Heap",
+        "Circular buffer only"
+      ],
+      "correctIndex": 1,
+      "explanation": "LIFO stack or recursion."
+    },
+    {
+      "id": "cs-q58",
+      "difficulty": "easy",
+      "prompt": "Dijkstra fails with:",
+      "options": [
+        "Positive weights",
+        "Negative edge weights",
+        "Undirected edges",
+        "Multiple components"
+      ],
+      "correctIndex": 1,
+      "explanation": "Negative edges break greedy finalization."
+    },
+    {
+      "id": "cs-q59",
+      "difficulty": "easy",
+      "prompt": "Bellman-Ford handles:",
+      "options": [
+        "Only trees",
+        "Negative edge weights (no negative cycles)",
+        "Only unweighted graphs",
+        "Only DAGs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Supports negative weights if no negative cycle."
+    },
+    {
+      "id": "cs-q60",
+      "difficulty": "easy",
+      "prompt": "Kruskal builds:",
+      "options": [
+        "Shortest path tree",
+        "Minimum spanning tree",
+        "Max flow",
+        "Topological order"
+      ],
+      "correctIndex": 1,
+      "explanation": "MST via edge sorting and union-find."
+    },
+    {
+      "id": "cs-q61",
+      "difficulty": "medium",
+      "prompt": "Quickselect average complexity for kth smallest?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Average linear time."
+    },
+    {
+      "id": "cs-q62",
+      "difficulty": "medium",
+      "prompt": "Merge sort space complexity (typical array impl)?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Needs auxiliary array O(n)."
+    },
+    {
+      "id": "cs-q63",
+      "difficulty": "medium",
+      "prompt": "In-place heapsort extra space?",
+      "options": [
+        "O(1) extra",
+        "O(n) extra always",
+        "O(log n) stack only",
+        "O(n log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "In-place aside from recursion stack."
+    },
+    {
+      "id": "cs-q64",
+      "difficulty": "medium",
+      "prompt": "Open addressing handles collisions by:",
+      "options": [
+        "Creating a linked list",
+        "Probing for another slot",
+        "Deleting keys",
+        "Sharding only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Probe sequence in table."
+    },
+    {
+      "id": "cs-q65",
+      "difficulty": "medium",
+      "prompt": "Chaining in hash tables uses:",
+      "options": [
+        "Linear probing",
+        "Linked lists at buckets",
+        "CPU caches",
+        "B-trees only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each bucket holds a chain/list."
+    },
+    {
+      "id": "cs-q66",
+      "difficulty": "medium",
+      "prompt": "SQL JOIN returning all rows from both with NULLs for non-matches?",
+      "options": [
+        "INNER",
+        "FULL OUTER",
+        "CROSS",
+        "SELF only"
+      ],
+      "correctIndex": 1,
+      "explanation": "FULL OUTER keeps unmatched rows."
+    },
+    {
+      "id": "cs-q67",
+      "difficulty": "medium",
+      "prompt": "Index on a column mainly speeds up:",
+      "options": [
+        "Inserts always",
+        "SELECT/WHERE on that column",
+        "Deletes only",
+        "Full table scans always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speeds lookups at some write cost."
+    },
+    {
+      "id": "cs-q68",
+      "difficulty": "medium",
+      "prompt": "Two-phase commit ensures:",
+      "options": [
+        "Faster reads",
+        "Distributed transaction atomicity",
+        "IPv6 migration",
+        "Cache coherence only"
+      ],
+      "correctIndex": 1,
+      "explanation": "All participants commit or abort."
+    },
+    {
+      "id": "cs-q69",
+      "difficulty": "medium",
+      "prompt": "Little's Law relates:",
+      "options": [
+        "L = λW",
+        "CPU = RAM × disk",
+        "HTTP = TCP + UDP",
+        "Cache = O(n²)"
+      ],
+      "correctIndex": 0,
+      "explanation": "L = λW in steady state."
+    },
+    {
+      "id": "cs-q70",
+      "difficulty": "medium",
+      "prompt": "Moore's Law historically described:",
+      "options": [
+        "Transistor density doubling ~every two years",
+        "RAM is free",
+        "Networks are always secure",
+        "OSI has 5 layers"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transistor count trend."
+    },
+    {
+      "id": "cs-q71",
+      "difficulty": "medium",
+      "prompt": "Which register holds the next instruction address (typical)?",
+      "options": [
+        "Stack pointer",
+        "Program counter",
+        "Accumulator only",
+        "MAR always"
+      ],
+      "correctIndex": 1,
+      "explanation": "PC points to next instruction."
+    },
+    {
+      "id": "cs-q72",
+      "difficulty": "medium",
+      "prompt": "Pipeline data hazard occurs when:",
+      "options": [
+        "Cache miss",
+        "Instruction depends on prior result",
+        "Branch taken",
+        "I/O wait"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dependency on unfinished instruction."
+    },
+    {
+      "id": "cs-q73",
+      "difficulty": "medium",
+      "prompt": "Virtual memory allows:",
+      "options": [
+        "Infinite RAM physically",
+        "Programs larger than physical RAM",
+        "No page faults ever",
+        "Disabling caches"
+      ],
+      "correctIndex": 1,
+      "explanation": "Uses disk as extension of RAM."
+    },
+    {
+      "id": "cs-q74",
+      "difficulty": "medium",
+      "prompt": "TLB is a cache for:",
+      "options": [
+        "Disk blocks",
+        "Page table translations",
+        "DNS records",
+        "HTTP headers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speeds virtual-to-physical translation."
+    },
+    {
+      "id": "cs-q75",
+      "difficulty": "medium",
+      "prompt": "Context switch saves:",
+      "options": [
+        "Only PC",
+        "CPU state of the outgoing process/thread",
+        "Entire disk",
+        "Browser cookies"
+      ],
+      "correctIndex": 1,
+      "explanation": "Registers and execution state."
+    },
+    {
+      "id": "cs-q76",
+      "difficulty": "medium",
+      "prompt": "Spinlock is best when:",
+      "options": [
+        "Critical section is long",
+        "Wait time is expected to be very short",
+        "On single-core only always",
+        "Never in kernels"
+      ],
+      "correctIndex": 1,
+      "explanation": "Busy-wait OK for tiny waits."
+    },
+    {
+      "id": "cs-q77",
+      "difficulty": "medium",
+      "prompt": "RAID 0 provides:",
+      "options": [
+        "Mirroring",
+        "Striping without redundancy",
+        "Parity only",
+        "Hot spare always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Striping for performance, no redundancy."
+    },
+    {
+      "id": "cs-q78",
+      "difficulty": "medium",
+      "prompt": "RAID 1 provides:",
+      "options": [
+        "Striping only",
+        "Mirroring",
+        "Parity striping",
+        "No redundancy"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mirrored copies."
+    },
+    {
+      "id": "cs-q79",
+      "difficulty": "medium",
+      "prompt": "Endianness refers to:",
+      "options": [
+        "CPU speed",
+        "Byte order in multi-byte values",
+        "Thread count",
+        "HTTP version"
+      ],
+      "correctIndex": 1,
+      "explanation": "Big vs little endian byte order."
+    },
+    {
+      "id": "cs-q80",
+      "difficulty": "medium",
+      "prompt": "Compilation stage that checks types?",
+      "options": [
+        "Linking",
+        "Semantic analysis",
+        "Assembly output",
+        "Bootloading"
+      ],
+      "correctIndex": 1,
+      "explanation": "Type checking in semantic analysis."
+    },
+    {
+      "id": "cs-q81",
+      "difficulty": "medium",
+      "prompt": "Garbage collection reclaims:",
+      "options": [
+        "CPU registers",
+        "Unreachable heap objects",
+        "Open network sockets always",
+        "Source files"
+      ],
+      "correctIndex": 1,
+      "explanation": "Frees unused heap memory."
+    },
+    {
+      "id": "cs-q82",
+      "difficulty": "medium",
+      "prompt": "Reference counting fails on:",
+      "options": [
+        "Trees",
+        "Cycles of references",
+        "Integers",
+        "Stack frames"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cycles never reach zero count."
+    },
+    {
+      "id": "cs-q83",
+      "difficulty": "medium",
+      "prompt": "CAP during partition: cannot guarantee both:",
+      "options": [
+        "Consistency and availability",
+        "Compression and caching",
+        "CPU and RAM",
+        "DNS and HTTP"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pick C or A when P happens."
+    },
+    {
+      "id": "cs-q84",
+      "difficulty": "medium",
+      "prompt": "Bloom filter may have:",
+      "options": [
+        "False negatives",
+        "False positives",
+        "Neither",
+        "Both always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Can say maybe present; no false negatives."
+    },
+    {
+      "id": "cs-q85",
+      "difficulty": "medium",
+      "prompt": "Consistent hashing helps:",
+      "options": [
+        "Sorting integers",
+        "Minimal key redistribution when nodes change",
+        "Eliminating TCP",
+        "Parsing JSON"
+      ],
+      "correctIndex": 1,
+      "explanation": "Only small slice moves on node add/remove."
+    },
+    {
+      "id": "cs-q86",
+      "difficulty": "medium",
+      "prompt": "MQTT is suited for:",
+      "options": [
+        "4K video streaming only",
+        "IoT pub/sub with low bandwidth",
+        "Compiling C",
+        "RAID rebuild"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lightweight IoT messaging."
+    },
+    {
+      "id": "cs-q87",
+      "difficulty": "medium",
+      "prompt": "SSH primarily provides:",
+      "options": [
+        "HTML rendering",
+        "Encrypted remote shell/file transfer",
+        "DNS resolution",
+        "GPU scheduling"
+      ],
+      "correctIndex": 1,
+      "explanation": "Secure remote access."
+    },
+    {
+      "id": "cs-q88",
+      "difficulty": "medium",
+      "prompt": "NAT allows:",
+      "options": [
+        "IPv6 to IPv4 without translation",
+        "Private IPs to share a public IP",
+        "Eliminating routers",
+        "Disabling firewalls"
+      ],
+      "correctIndex": 1,
+      "explanation": "Network address translation."
+    },
+    {
+      "id": "cs-q89",
+      "difficulty": "medium",
+      "prompt": "Which is non-preemptive CPU scheduling?",
+      "options": [
+        "Round robin",
+        "FCFS without preemption",
+        "Priority with preemption",
+        "Multilevel feedback with preemption"
+      ],
+      "correctIndex": 1,
+      "explanation": "FCFS runs until block or finish."
+    },
+    {
+      "id": "cs-q90",
+      "difficulty": "medium",
+      "prompt": "Thrashing occurs when:",
+      "options": [
+        "CPU is idle",
+        "System spends too much time paging",
+        "Cache is too large",
+        "Network is fast"
+      ],
+      "correctIndex": 1,
+      "explanation": "Excessive paging dominates."
+    },
+    {
+      "id": "cs-q91",
+      "difficulty": "medium",
+      "prompt": "Sliding window in TCP helps:",
+      "options": [
+        "Flow and reliability control",
+        "DNS caching",
+        "Compile optimization",
+        "Disk defrag"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flow control and retransmission window."
+    },
+    {
+      "id": "cs-q92",
+      "difficulty": "medium",
+      "prompt": "SYN flood attacks exploit:",
+      "options": [
+        "UDP ports",
+        "TCP handshake resource exhaustion",
+        "HTML parsing",
+        "Git merge"
+      ],
+      "correctIndex": 1,
+      "explanation": "Half-open connection exhaustion."
+    },
+    {
+      "id": "cs-q93",
+      "difficulty": "medium",
+      "prompt": "Prepared statements prevent:",
+      "options": [
+        "XSS",
+        "SQL injection",
+        "CSRF only",
+        "DDoS always"
+      ],
+      "correctIndex": 1,
+      "explanation": "Separate query structure from data."
+    },
+    {
+      "id": "cs-q94",
+      "difficulty": "medium",
+      "prompt": "Write-through cache:",
+      "options": [
+        "Never writes to memory",
+        "Writes to cache and memory together",
+        "Only writes on eviction",
+        "Is always slower than no cache"
+      ],
+      "correctIndex": 1,
+      "explanation": "Updates cache and backing store."
+    },
+    {
+      "id": "cs-q95",
+      "difficulty": "medium",
+      "prompt": "MESI protocol relates to:",
+      "options": [
+        "HTTP caching",
+        "Multiprocessor cache coherence",
+        "Git branching",
+        "RAID parity"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cache line states for coherence."
+    },
+    {
+      "id": "cs-q96",
+      "difficulty": "hard",
+      "prompt": "Branch predictor reduces:",
+      "options": [
+        "Memory leaks",
+        "Pipeline stalls from mispredicted branches",
+        "Disk latency",
+        "SQL joins"
+      ],
+      "correctIndex": 1,
+      "explanation": "Avoids flush on wrong guess."
+    },
+    {
+      "id": "cs-q97",
+      "difficulty": "hard",
+      "prompt": "Which sorting is stable by default?",
+      "options": [
+        "Heapsort",
+        "Mergesort",
+        "Quicksort in-place",
+        "Selection sort"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mergesort preserves equal-key order."
+    },
+    {
+      "id": "cs-q98",
+      "difficulty": "hard",
+      "prompt": "Union-find with path compression + rank gives nearly:",
+      "options": [
+        "O(1) amortized per op",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverse Ackermann — effectively constant."
+    },
+    {
+      "id": "cs-q99",
+      "difficulty": "hard",
+      "prompt": "IEEE-754 double has how many exponent bits?",
+      "options": [
+        "8",
+        "11",
+        "16",
+        "32"
+      ],
+      "correctIndex": 1,
+      "explanation": "64-bit float: 11 exponent bits."
+    },
+    {
+      "id": "cs-q100",
+      "difficulty": "hard",
+      "prompt": "Which layer is HTTPS on?",
+      "options": [
+        "Physical",
+        "Application (HTTP over TLS)",
+        "Data link only",
+        "Network only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Application layer over TLS."
+    },
+    {
+      "id": "cs-q101",
+      "difficulty": "hard",
+      "prompt": "Each thread has its own stack but shares:",
+      "options": [
+        "Nothing",
+        "Heap and process resources",
+        "Another thread's stack",
+        "Kernel only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Per-thread stacks; shared address space."
+    },
+    {
+      "id": "cs-q102",
+      "difficulty": "hard",
+      "prompt": "Which protocol uses port 53 by default?",
+      "options": [
+        "HTTP",
+        "DNS",
+        "SMTP",
+        "SSH"
+      ],
+      "correctIndex": 1,
+      "explanation": "DNS uses UDP/TCP 53."
+    },
+    {
+      "id": "cs-q103",
+      "difficulty": "hard",
+      "prompt": "Which uses port 443 by default?",
+      "options": [
+        "HTTP",
+        "HTTPS",
+        "FTP",
+        "Telnet"
+      ],
+      "correctIndex": 1,
+      "explanation": "HTTPS default port."
+    },
+    {
+      "id": "cs-q104",
+      "difficulty": "hard",
+      "prompt": "LRU cache eviction removes:",
+      "options": [
+        "Most recently used",
+        "Least recently used",
+        "Random always",
+        "Largest key"
+      ],
+      "correctIndex": 1,
+      "explanation": "Evicts least recently used."
+    },
+    {
+      "id": "cs-q105",
+      "difficulty": "hard",
+      "prompt": "Dirty bit in a page table indicates:",
+      "options": [
+        "Page is invalid",
+        "Page was modified",
+        "Page is read-only always",
+        "Page is shared"
+      ],
+      "correctIndex": 1,
+      "explanation": "Must write back before reuse."
+    },
+    {
+      "id": "cs-q106",
+      "difficulty": "hard",
+      "prompt": "Which data structure for undo in a text editor?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Heap",
+        "Graph"
+      ],
+      "correctIndex": 1,
+      "explanation": "LIFO undo stack."
+    },
+    {
+      "id": "cs-q107",
+      "difficulty": "hard",
+      "prompt": "Spanning tree of connected graph with n vertices has how many edges?",
+      "options": [
+        "n",
+        "n−1",
+        "n+1",
+        "2n"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tree has n−1 edges."
+    },
+    {
+      "id": "cs-q108",
+      "difficulty": "hard",
+      "prompt": "Maximum edges in simple undirected graph with n vertices?",
+      "options": [
+        "n",
+        "n−1",
+        "n(n−1)/2",
+        "n²"
+      ],
+      "correctIndex": 2,
+      "explanation": "Complete graph has n(n−1)/2 edges."
+    },
+    {
+      "id": "cs-q109",
+      "difficulty": "hard",
+      "prompt": "Hamming distance between 1010 and 1111?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two bit positions differ."
+    },
+    {
+      "id": "cs-q110",
+      "difficulty": "hard",
+      "prompt": "Parity bit detects:",
+      "options": [
+        "All double-bit errors",
+        "Single-bit errors (not all multi-bit)",
+        "Any error perfectly",
+        "Nothing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Detects odd number of bit flips."
+    },
+    {
+      "id": "cs-q111",
+      "difficulty": "hard",
+      "prompt": "Which is non-volatile storage?",
+      "options": [
+        "Register",
+        "SRAM cache",
+        "SSD",
+        "CPU L1"
+      ],
+      "correctIndex": 2,
+      "explanation": "SSD retains data without power."
+    },
+    {
+      "id": "cs-q112",
+      "difficulty": "hard",
+      "prompt": "Classic 5-stage pipeline order?",
+      "options": [
+        "Execute, Fetch, Decode, Memory, Writeback",
+        "Fetch, Decode, Execute, Memory, Writeback",
+        "Decode, Fetch, Writeback, Execute, Memory",
+        "Memory, Execute, Fetch, Decode, Writeback"
+      ],
+      "correctIndex": 1,
+      "explanation": "IF, ID, EX, MEM, WB."
+    },
+    {
+      "id": "cs-q113",
+      "difficulty": "hard",
+      "prompt": "Which SQL clause filters groups?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "ORDER BY",
+        "LIMIT"
+      ],
+      "correctIndex": 1,
+      "explanation": "HAVING filters after GROUP BY."
+    },
+    {
+      "id": "cs-q114",
+      "difficulty": "hard",
+      "prompt": "Normal form removing transitive dependency on non-key attrs?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "4NF always same"
+      ],
+      "correctIndex": 2,
+      "explanation": "3NF removes transitive dependencies."
+    },
+    {
+      "id": "cs-q115",
+      "difficulty": "hard",
+      "prompt": "Which graph representation uses O(V+E) space?",
+      "options": [
+        "Adjacency matrix always",
+        "Adjacency list",
+        "Incidence matrix only",
+        "Distance matrix only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Adjacency list is O(V+E)."
+    },
+    {
+      "id": "cs-q116",
+      "difficulty": "hard",
+      "prompt": "Maximum flow problem uses networks with:",
+      "options": [
+        "Only trees",
+        "Capacities on edges",
+        "No source/sink",
+        "Undirected only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitated directed network."
+    },
+    {
+      "id": "cs-q117",
+      "difficulty": "hard",
+      "prompt": "Which problem is NP-complete classic?",
+      "options": [
+        "Sorting",
+        "SAT",
+        "Binary search",
+        "GCD"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boolean satisfiability is NP-complete."
+    },
+    {
+      "id": "cs-q118",
+      "difficulty": "hard",
+      "prompt": "Optimal binary search tree uses:",
+      "options": [
+        "Greedy only",
+        "Dynamic programming",
+        "BFS",
+        "DFS only"
+      ],
+      "correctIndex": 1,
+      "explanation": "DP on subtrees."
+    },
+    {
+      "id": "cs-q119",
+      "difficulty": "hard",
+      "prompt": "Which allocation suffers external fragmentation?",
+      "options": [
+        "Paging",
+        "Contiguous allocation with holes",
+        "Stack allocation",
+        "Segmentation never"
+      ],
+      "correctIndex": 1,
+      "explanation": "Free holes between allocated blocks."
+    },
+    {
+      "id": "cs-q120",
+      "difficulty": "hard",
+      "prompt": "Hypervisor Type 1 runs:",
+      "options": [
+        "Inside a host OS only",
+        "Directly on hardware",
+        "Only in browsers",
+        "Only on GPUs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bare-metal hypervisor."
+    },
+    {
+      "id": "cs-q121",
+      "difficulty": "hard",
+      "prompt": "Fully associative cache mapping means:",
+      "options": [
+        "One block per set",
+        "Any block can go to any line",
+        "Direct mapped only",
+        "No tags"
+      ],
+      "correctIndex": 1,
+      "explanation": "Any block can map to any cache line."
+    },
+    {
+      "id": "cs-q122",
+      "difficulty": "hard",
+      "prompt": "UDP checksum in IPv4 is:",
+      "options": [
+        "Optional",
+        "Mandatory always",
+        "Replaces TCP",
+        "Encrypts payload"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optional for IPv4; mandatory IPv6."
+    },
+    {
+      "id": "cs-q123",
+      "difficulty": "hard",
+      "prompt": "Which sort is O(n) best case on nearly sorted data?",
+      "options": [
+        "Heapsort",
+        "Insertion sort",
+        "Merge sort",
+        "Quick sort worst"
+      ],
+      "correctIndex": 1,
+      "explanation": "Insertion sort is adaptive."
+    },
+    {
+      "id": "cs-q124",
+      "difficulty": "hard",
+      "prompt": "Which protocol delivers mail between servers?",
+      "options": [
+        "POP3",
+        "SMTP",
+        "HTTP always",
+        "FTP"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMTP transfers mail between servers."
+    },
+    {
+      "id": "cs-q125",
+      "difficulty": "hard",
+      "prompt": "Binary heap efficiently implements:",
+      "options": [
+        "FIFO queue only",
+        "Priority queue",
+        "Undo stack only",
+        "Graph BFS only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Binary heap for extract-min/max."
     }
   ]
 }

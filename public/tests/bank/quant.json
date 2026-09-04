@@ -12,12 +12,12 @@
         "40"
       ],
       "correctIndex": 2,
-      "explanation": "0.15 \u00d7 240 = 36."
+      "explanation": "0.15 × 240 = 36."
     },
     {
       "id": "quant-q2",
       "difficulty": "medium",
-      "prompt": "If x + y = 10 and xy = 21, what is x\u00b2 + y\u00b2?",
+      "prompt": "If x + y = 10 and xy = 21, what is x² + y²?",
       "options": [
         "58",
         "79",
@@ -25,7 +25,7 @@
         "121"
       ],
       "correctIndex": 0,
-      "explanation": "x\u00b2 + y\u00b2 = (x + y)\u00b2 \u2212 2xy = 100 \u2212 42 = 58."
+      "explanation": "x² + y² = (x + y)² − 2xy = 100 − 42 = 58."
     },
     {
       "id": "quant-q3",
@@ -64,7 +64,7 @@
         "1/4"
       ],
       "correctIndex": 2,
-      "explanation": "Six outcomes (1,6)\u2026(6,1) out of 36, so 6/36 = 1/6."
+      "explanation": "Six outcomes (1,6)…(6,1) out of 36, so 6/36 = 1/6."
     },
     {
       "id": "quant-q6",
@@ -82,7 +82,7 @@
     {
       "id": "quant-q7",
       "difficulty": "easy",
-      "prompt": "What is log\u2082(8)?",
+      "prompt": "What is log₂(8)?",
       "options": [
         "2",
         "3",
@@ -90,7 +90,7 @@
         "8"
       ],
       "correctIndex": 1,
-      "explanation": "2\u00b3 = 8."
+      "explanation": "2³ = 8."
     },
     {
       "id": "quant-q8",
@@ -103,7 +103,7 @@
         "150%"
       ],
       "correctIndex": 2,
-      "explanation": "(75 \u2212 50)/50 = 50%."
+      "explanation": "(75 − 50)/50 = 50%."
     },
     {
       "id": "quant-q9",
@@ -116,7 +116,7 @@
         "9"
       ],
       "correctIndex": 1,
-      "explanation": "48 = 2\u00d718 + 12, 18 = 1\u00d712 + 6, 12 = 2\u00d76."
+      "explanation": "48 = 2×18 + 12, 18 = 1×12 + 6, 12 = 2×6."
     },
     {
       "id": "quant-q10",
@@ -129,12 +129,12 @@
         "48"
       ],
       "correctIndex": 1,
-      "explanation": "2\u00b3 \u00d7 3 = 24."
+      "explanation": "2³ × 3 = 24."
     },
     {
       "id": "quant-q11",
       "difficulty": "medium",
-      "prompt": "12\u00b2 \u2212 8\u00b2 = ?",
+      "prompt": "12² − 8² = ?",
       "options": [
         "16",
         "40",
@@ -142,7 +142,7 @@
         "208"
       ],
       "correctIndex": 2,
-      "explanation": "Difference of squares: (12 \u2212 8)(12 + 8) = 4 \u00d7 20 = 80."
+      "explanation": "Difference of squares: (12 − 8)(12 + 8) = 4 × 20 = 80."
     },
     {
       "id": "quant-q12",
@@ -160,7 +160,7 @@
     {
       "id": "quant-q13",
       "difficulty": "easy",
-      "prompt": "What is 2\u00b9\u2070 modulo 3?",
+      "prompt": "What is 2¹⁰ modulo 3?",
       "options": [
         "0",
         "1",
@@ -168,7 +168,7 @@
         "1024"
       ],
       "correctIndex": 1,
-      "explanation": "2 \u2261 \u22121 (mod 3), so 2\u00b9\u2070 \u2261 (\u22121)\u00b9\u2070 \u2261 1. Also 1024 = 341\u00d73 + 1."
+      "explanation": "2 ≡ −1 (mod 3), so 2¹⁰ ≡ (−1)¹⁰ ≡ 1. Also 1024 = 341×3 + 1."
     },
     {
       "id": "quant-q14",
@@ -181,7 +181,7 @@
         "320"
       ],
       "correctIndex": 2,
-      "explanation": "1.2 \u00d7 250 = 300."
+      "explanation": "1.2 × 250 = 300."
     },
     {
       "id": "quant-q15",
@@ -194,7 +194,7 @@
         "48"
       ],
       "correctIndex": 2,
-      "explanation": "24/3 \u00d7 5 = 40."
+      "explanation": "24/3 × 5 = 40."
     },
     {
       "id": "quant-q16",
@@ -220,7 +220,7 @@
         "1210"
       ],
       "correctIndex": 1,
-      "explanation": "Amount = 1000 \u00d7 1.1\u00b2 = 1210. Interest = 210."
+      "explanation": "Amount = 1000 × 1.1² = 1210. Interest = 210."
     },
     {
       "id": "quant-q18",
@@ -259,7 +259,1307 @@
         "300"
       ],
       "correctIndex": 3,
-      "explanation": "0.3x = 90 \u21d2 x = 300."
+      "explanation": "0.3x = 90 ⇒ x = 300."
+    },
+    {
+      "id": "quant-q21",
+      "difficulty": "easy",
+      "prompt": "What is the sum of the first 20 natural numbers?",
+      "options": [
+        "190",
+        "200",
+        "210",
+        "220"
+      ],
+      "correctIndex": 2,
+      "explanation": "n(n+1)/2 = 20×21/2 = 210."
+    },
+    {
+      "id": "quant-q22",
+      "difficulty": "easy",
+      "prompt": "What is the HCF of 84 and 126?",
+      "options": [
+        "14",
+        "21",
+        "28",
+        "42"
+      ],
+      "correctIndex": 3,
+      "explanation": "84 = 2²×3×7, 126 = 2×3²×7. HCF = 2×3×7 = 42."
+    },
+    {
+      "id": "quant-q23",
+      "difficulty": "easy",
+      "prompt": "What is the LCM of 15 and 20?",
+      "options": [
+        "30",
+        "60",
+        "90",
+        "120"
+      ],
+      "correctIndex": 1,
+      "explanation": "15 = 3×5, 20 = 2²×5. LCM = 2²×3×5 = 60."
+    },
+    {
+      "id": "quant-q24",
+      "difficulty": "medium",
+      "prompt": "What is the remainder when 7³ is divided by 5?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2,
+      "explanation": "7 ≡ 2 (mod 5), 7³ ≡ 2³ = 8 ≡ 3 (mod 5)."
+    },
+    {
+      "id": "quant-q25",
+      "difficulty": "medium",
+      "prompt": "How many positive divisors does 36 have?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "correctIndex": 2,
+      "explanation": "36 = 2²×3². Divisors = (2+1)(2+1) = 9."
+    },
+    {
+      "id": "quant-q26",
+      "difficulty": "easy",
+      "prompt": "Express 0.125 as a fraction in lowest terms.",
+      "options": [
+        "1/4",
+        "1/6",
+        "1/8",
+        "1/16"
+      ],
+      "correctIndex": 2,
+      "explanation": "0.125 = 125/1000 = 1/8."
+    },
+    {
+      "id": "quant-q27",
+      "difficulty": "medium",
+      "prompt": "What is the smallest 4-digit number divisible by both 6 and 8?",
+      "options": [
+        "1000",
+        "1008",
+        "1016",
+        "1024"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCM(6,8) = 24. 1000 ÷ 24 = 41 R 16, so 1000 + 8 = 1008."
+    },
+    {
+      "id": "quant-q28",
+      "difficulty": "easy",
+      "prompt": "What is (√49 + √16)²?",
+      "options": [
+        "81",
+        "100",
+        "121",
+        "144"
+      ],
+      "correctIndex": 2,
+      "explanation": "(7 + 4)² = 11² = 121."
+    },
+    {
+      "id": "quant-q29",
+      "difficulty": "hard",
+      "prompt": "What is the last digit of 3¹⁰⁰?",
+      "options": [
+        "1",
+        "3",
+        "7",
+        "9"
+      ],
+      "correctIndex": 0,
+      "explanation": "Powers of 3 cycle last digits 3,9,7,1. 100 mod 4 = 0, so last digit is 1."
+    },
+    {
+      "id": "quant-q30",
+      "difficulty": "easy",
+      "prompt": "Evaluate 5/6 − 3/8.",
+      "options": [
+        "7/24",
+        "11/24",
+        "13/24",
+        "19/24"
+      ],
+      "correctIndex": 1,
+      "explanation": "20/24 − 9/24 = 11/24."
+    },
+    {
+      "id": "quant-q31",
+      "difficulty": "medium",
+      "prompt": "How many prime numbers are there between 10 and 30?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "Primes: 11, 13, 17, 19, 23, 29 — six in total."
+    },
+    {
+      "id": "quant-q32",
+      "difficulty": "easy",
+      "prompt": "Evaluate 2⁵ × 3².",
+      "options": [
+        "144",
+        "288",
+        "432",
+        "864"
+      ],
+      "correctIndex": 1,
+      "explanation": "32 × 9 = 288."
+    },
+    {
+      "id": "quant-q33",
+      "difficulty": "medium",
+      "prompt": "Express 0.3̅ (0.333…) as a fraction.",
+      "options": [
+        "1/2",
+        "1/3",
+        "2/5",
+        "3/10"
+      ],
+      "correctIndex": 1,
+      "explanation": "0.3̅ = 3/9 = 1/3."
+    },
+    {
+      "id": "quant-q34",
+      "difficulty": "easy",
+      "prompt": "What is 125^(1/3)?",
+      "options": [
+        "3",
+        "5",
+        "15",
+        "25"
+      ],
+      "correctIndex": 1,
+      "explanation": "5³ = 125."
+    },
+    {
+      "id": "quant-q35",
+      "difficulty": "medium",
+      "prompt": "What is (13 + 19) mod 7?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 2,
+      "explanation": "32 = 4×7 + 4, remainder 4."
+    },
+    {
+      "id": "quant-q36",
+      "difficulty": "easy",
+      "prompt": "If a + b = 7 and a − b = 3, what is ab?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctIndex": 2,
+      "explanation": "Adding: 2a = 10, a = 5, b = 2. ab = 10."
+    },
+    {
+      "id": "quant-q37",
+      "difficulty": "easy",
+      "prompt": "Evaluate 7⁰ + 2⁰.",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "9"
+      ],
+      "correctIndex": 2,
+      "explanation": "Any non-zero number to power 0 is 1. 1 + 1 = 2."
+    },
+    {
+      "id": "quant-q38",
+      "difficulty": "hard",
+      "prompt": "What is the largest power of 2 that divides 48?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "24"
+      ],
+      "correctIndex": 2,
+      "explanation": "48 = 2⁴ × 3, so 2⁴ = 16."
+    },
+    {
+      "id": "quant-q39",
+      "difficulty": "medium",
+      "prompt": "How many even integers are there from 1 to 50 inclusive?",
+      "options": [
+        "24",
+        "25",
+        "26",
+        "50"
+      ],
+      "correctIndex": 1,
+      "explanation": "Even numbers: 2, 4, …, 50. Count = 50/2 = 25."
+    },
+    {
+      "id": "quant-q40",
+      "difficulty": "hard",
+      "prompt": "If n is an odd integer, n² is always —",
+      "options": [
+        "even",
+        "odd",
+        "prime",
+        "a multiple of 4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Odd × odd = odd."
+    },
+    {
+      "id": "quant-q41",
+      "difficulty": "medium",
+      "prompt": "Evaluate (−2)⁴ / 2³.",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "16 / 8 = 2."
+    },
+    {
+      "id": "quant-q42",
+      "difficulty": "easy",
+      "prompt": "What is the digit sum of 999?",
+      "options": [
+        "18",
+        "27",
+        "36",
+        "999"
+      ],
+      "correctIndex": 1,
+      "explanation": "9 + 9 + 9 = 27."
+    },
+    {
+      "id": "quant-q43",
+      "difficulty": "medium",
+      "prompt": "Evaluate (−3/4) × (8/9).",
+      "options": [
+        "−2/3",
+        "−1/2",
+        "2/3",
+        "3/4"
+      ],
+      "correctIndex": 0,
+      "explanation": "−24/36 = −2/3."
+    },
+    {
+      "id": "quant-q44",
+      "difficulty": "hard",
+      "prompt": "What is the HCF of 105 and 140?",
+      "options": [
+        "15",
+        "25",
+        "35",
+        "70"
+      ],
+      "correctIndex": 2,
+      "explanation": "105 = 3×5×7, 140 = 2²×5×7. HCF = 5×7 = 35."
+    },
+    {
+      "id": "quant-q45",
+      "difficulty": "hard",
+      "prompt": "How many trailing zeros does 25! have?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctIndex": 2,
+      "explanation": "Count factors of 5: ⌊25/5⌋ + ⌊25/25⌋ = 5 + 1 = 6."
+    },
+    {
+      "id": "quant-q46",
+      "difficulty": "easy",
+      "prompt": "Solve 2x + 3 = 11. What is x?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correctIndex": 1,
+      "explanation": "2x = 8, x = 4."
+    },
+    {
+      "id": "quant-q47",
+      "difficulty": "easy",
+      "prompt": "What is the sum of the roots of x² − 5x + 6 = 0?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctIndex": 1,
+      "explanation": "Roots are 2 and 3. Sum = 5 (also −b/a)."
+    },
+    {
+      "id": "quant-q48",
+      "difficulty": "medium",
+      "prompt": "In an AP, the 3rd term is 7 and the 7th term is 19. What is the common difference?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 1,
+      "explanation": "a + 2d = 7, a + 6d = 19. Subtract: 4d = 12, d = 3."
+    },
+    {
+      "id": "quant-q49",
+      "difficulty": "medium",
+      "prompt": "In a GP, first term = 2 and common ratio = 3. What is the 4th term?",
+      "options": [
+        "18",
+        "36",
+        "54",
+        "162"
+      ],
+      "correctIndex": 2,
+      "explanation": "a₄ = 2 × 3³ = 2 × 27 = 54."
+    },
+    {
+      "id": "quant-q50",
+      "difficulty": "easy",
+      "prompt": "Solve 3x² = 27. What is the positive value of x?",
+      "options": [
+        "3",
+        "9",
+        "27",
+        "±3"
+      ],
+      "correctIndex": 0,
+      "explanation": "x² = 9, x = ±3. Positive value is 3."
+    },
+    {
+      "id": "quant-q51",
+      "difficulty": "medium",
+      "prompt": "If |x − 3| = 5, what is the sum of all solutions?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "x = 8 or x = −2. Sum = 6."
+    },
+    {
+      "id": "quant-q52",
+      "difficulty": "medium",
+      "prompt": "If x² + y² = 25 and x = 3, what is |y|?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "16"
+      ],
+      "correctIndex": 1,
+      "explanation": "y² = 25 − 9 = 16, |y| = 4."
+    },
+    {
+      "id": "quant-q53",
+      "difficulty": "hard",
+      "prompt": "What is the coefficient of x² in the expansion of (x + 2)³?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "(x+2)³ = x³ + 6x² + 12x + 8. Coefficient of x² is 6."
+    },
+    {
+      "id": "quant-q54",
+      "difficulty": "hard",
+      "prompt": "What is the sum of the infinite GP 1 + 1/2 + 1/4 + 1/8 + …?",
+      "options": [
+        "1",
+        "3/2",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2,
+      "explanation": "S = a/(1−r) = 1/(1−1/2) = 2."
+    },
+    {
+      "id": "quant-q55",
+      "difficulty": "medium",
+      "prompt": "If α + β = 4 and αβ = 3, which quadratic has roots α and β?",
+      "options": [
+        "x² + 4x + 3 = 0",
+        "x² − 4x + 3 = 0",
+        "x² − 4x − 3 = 0",
+        "x² + 4x − 3 = 0"
+      ],
+      "correctIndex": 1,
+      "explanation": "x² − (α+β)x + αβ = x² − 4x + 3 = 0."
+    },
+    {
+      "id": "quant-q56",
+      "difficulty": "easy",
+      "prompt": "If √(x + 5) = 3, what is x?",
+      "options": [
+        "−2",
+        "1",
+        "4",
+        "9"
+      ],
+      "correctIndex": 2,
+      "explanation": "x + 5 = 9, x = 4."
+    },
+    {
+      "id": "quant-q57",
+      "difficulty": "easy",
+      "prompt": "Solve 2ˣ = 32. What is x?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "16"
+      ],
+      "correctIndex": 1,
+      "explanation": "2⁵ = 32, x = 5."
+    },
+    {
+      "id": "quant-q58",
+      "difficulty": "medium",
+      "prompt": "If log₁₀(x) = 2, what is x?",
+      "options": [
+        "10",
+        "20",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "explanation": "x = 10² = 100."
+    },
+    {
+      "id": "quant-q59",
+      "difficulty": "easy",
+      "prompt": "Evaluate ⁵C₂ (5 choose 2).",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correctIndex": 1,
+      "explanation": "5!/(2!×3!) = 10."
+    },
+    {
+      "id": "quant-q60",
+      "difficulty": "medium",
+      "prompt": "What is the sum of the first 10 natural numbers?",
+      "options": [
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "correctIndex": 2,
+      "explanation": "10×11/2 = 55."
+    },
+    {
+      "id": "quant-q61",
+      "difficulty": "easy",
+      "prompt": "If (x − 1)(x + 4) = 0, what is the product of the roots?",
+      "options": [
+        "−4",
+        "−3",
+        "3",
+        "4"
+      ],
+      "correctIndex": 0,
+      "explanation": "Roots are 1 and −4. Product = −4."
+    },
+    {
+      "id": "quant-q62",
+      "difficulty": "medium",
+      "prompt": "If 3^(x−1) = 9, what is x?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 1,
+      "explanation": "3^(x−1) = 3², so x − 1 = 2, x = 3."
+    },
+    {
+      "id": "quant-q63",
+      "difficulty": "hard",
+      "prompt": "What is the discriminant of x² + 2x + 5 = 0?",
+      "options": [
+        "−16",
+        "−12",
+        "4",
+        "16"
+      ],
+      "correctIndex": 0,
+      "explanation": "Δ = b² − 4ac = 4 − 20 = −16."
+    },
+    {
+      "id": "quant-q64",
+      "difficulty": "easy",
+      "prompt": "What is the arithmetic mean of 4 and 10?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "(4 + 10)/2 = 7."
+    },
+    {
+      "id": "quant-q65",
+      "difficulty": "medium",
+      "prompt": "What is log₃(81)?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "27"
+      ],
+      "correctIndex": 2,
+      "explanation": "3⁴ = 81."
+    },
+    {
+      "id": "quant-q66",
+      "difficulty": "hard",
+      "prompt": "If f(x) = 2x + 1, what is f(f(2))?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "13"
+      ],
+      "correctIndex": 2,
+      "explanation": "f(2) = 5, f(5) = 11."
+    },
+    {
+      "id": "quant-q67",
+      "difficulty": "medium",
+      "prompt": "Solve x² − 9 = 0. What is the positive root?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "9"
+      ],
+      "correctIndex": 1,
+      "explanation": "x² = 9, positive root x = 3."
+    },
+    {
+      "id": "quant-q68",
+      "difficulty": "hard",
+      "prompt": "What is the middle term in the expansion of (a + b)⁴?",
+      "options": [
+        "4a³b",
+        "6a²b²",
+        "4ab³",
+        "b⁴"
+      ],
+      "correctIndex": 1,
+      "explanation": "Terms: a⁴, 4a³b, 6a²b², 4ab³, b⁴. Middle term is 6a²b²."
+    },
+    {
+      "id": "quant-q69",
+      "difficulty": "easy",
+      "prompt": "Simplify (x + 3)(x − 3).",
+      "options": [
+        "x² − 3",
+        "x² − 6",
+        "x² − 9",
+        "x² + 9"
+      ],
+      "correctIndex": 2,
+      "explanation": "Difference of squares: x² − 9."
+    },
+    {
+      "id": "quant-q70",
+      "difficulty": "hard",
+      "prompt": "In an AP, a₁ = 3 and d = 4. What is a₁₀?",
+      "options": [
+        "35",
+        "39",
+        "43",
+        "47"
+      ],
+      "correctIndex": 1,
+      "explanation": "a₁₀ = 3 + 9×4 = 39."
+    },
+    {
+      "id": "quant-q71",
+      "difficulty": "easy",
+      "prompt": "A triangle has base 10 and height 6. What is its area?",
+      "options": [
+        "16",
+        "30",
+        "36",
+        "60"
+      ],
+      "correctIndex": 1,
+      "explanation": "Area = ½ × 10 × 6 = 30."
+    },
+    {
+      "id": "quant-q72",
+      "difficulty": "easy",
+      "prompt": "A right triangle has legs 5 and 12. What is the hypotenuse?",
+      "options": [
+        "13",
+        "14",
+        "15",
+        "17"
+      ],
+      "correctIndex": 0,
+      "explanation": "√(5² + 12²) = √169 = 13."
+    },
+    {
+      "id": "quant-q73",
+      "difficulty": "easy",
+      "prompt": "What is each interior angle of a regular hexagon?",
+      "options": [
+        "108°",
+        "120°",
+        "135°",
+        "144°"
+      ],
+      "correctIndex": 1,
+      "explanation": "(6−2)×180°/6 = 120°."
+    },
+    {
+      "id": "quant-q74",
+      "difficulty": "easy",
+      "prompt": "What is the volume of a cube with side 4?",
+      "options": [
+        "16",
+        "48",
+        "64",
+        "96"
+      ],
+      "correctIndex": 2,
+      "explanation": "4³ = 64."
+    },
+    {
+      "id": "quant-q75",
+      "difficulty": "medium",
+      "prompt": "What is the total surface area of a cube with side 3?",
+      "options": [
+        "27",
+        "36",
+        "54",
+        "81"
+      ],
+      "correctIndex": 2,
+      "explanation": "6 × 3² = 6 × 9 = 54."
+    },
+    {
+      "id": "quant-q76",
+      "difficulty": "medium",
+      "prompt": "A circle has radius 7. What is its area? (Use π = 22/7)",
+      "options": [
+        "44",
+        "88",
+        "154",
+        "308"
+      ],
+      "correctIndex": 2,
+      "explanation": "πr² = (22/7) × 49 = 154."
+    },
+    {
+      "id": "quant-q77",
+      "difficulty": "medium",
+      "prompt": "What is the distance between points (1, 2) and (4, 6)?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correctIndex": 2,
+      "explanation": "√((4−1)² + (6−2)²) = √(9+16) = 5."
+    },
+    {
+      "id": "quant-q78",
+      "difficulty": "easy",
+      "prompt": "What is the midpoint of (2, 4) and (8, 10)?",
+      "options": [
+        "(4, 6)",
+        "(5, 7)",
+        "(6, 8)",
+        "(10, 14)"
+      ],
+      "correctIndex": 1,
+      "explanation": "((2+8)/2, (4+10)/2) = (5, 7)."
+    },
+    {
+      "id": "quant-q79",
+      "difficulty": "medium",
+      "prompt": "What is the slope of the line through (1, 1) and (3, 5)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "(5−1)/(3−1) = 4/2 = 2."
+    },
+    {
+      "id": "quant-q80",
+      "difficulty": "easy",
+      "prompt": "A rectangle is 12 cm long and 8 cm wide. What is its area?",
+      "options": [
+        "20",
+        "40",
+        "96",
+        "192"
+      ],
+      "correctIndex": 2,
+      "explanation": "12 × 8 = 96."
+    },
+    {
+      "id": "quant-q81",
+      "difficulty": "easy",
+      "prompt": "What is the perimeter of a square with side 9?",
+      "options": [
+        "18",
+        "27",
+        "36",
+        "81"
+      ],
+      "correctIndex": 2,
+      "explanation": "4 × 9 = 36."
+    },
+    {
+      "id": "quant-q82",
+      "difficulty": "easy",
+      "prompt": "What is the sum of interior angles of a quadrilateral?",
+      "options": [
+        "180°",
+        "270°",
+        "360°",
+        "540°"
+      ],
+      "correctIndex": 2,
+      "explanation": "(n−2)×180° = 2×180° = 360°."
+    },
+    {
+      "id": "quant-q83",
+      "difficulty": "hard",
+      "prompt": "A cylinder has radius 3 and height 7. What is its volume? (Leave answer as multiple of π)",
+      "options": [
+        "21π",
+        "42π",
+        "63π",
+        "147π"
+      ],
+      "correctIndex": 2,
+      "explanation": "πr²h = π × 9 × 7 = 63π."
+    },
+    {
+      "id": "quant-q84",
+      "difficulty": "medium",
+      "prompt": "What is the distance from the origin to the point (3, 4)?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correctIndex": 2,
+      "explanation": "√(3² + 4²) = 5."
+    },
+    {
+      "id": "quant-q85",
+      "difficulty": "hard",
+      "prompt": "An equilateral triangle has side 4. What is its area? (Use √3 ≈ 1.732)",
+      "options": [
+        "4√3",
+        "6√3",
+        "8√3",
+        "16"
+      ],
+      "correctIndex": 0,
+      "explanation": "Area = (√3/4) × 4² = 4√3."
+    },
+    {
+      "id": "quant-q86",
+      "difficulty": "medium",
+      "prompt": "In a 30°-60°-90° triangle, the hypotenuse is 10. What is the shorter leg?",
+      "options": [
+        "5",
+        "5√2",
+        "5√3",
+        "10√3"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shorter leg (opposite 30°) = hypotenuse/2 = 5."
+    },
+    {
+      "id": "quant-q87",
+      "difficulty": "medium",
+      "prompt": "What is the diagonal of a square with side 6?",
+      "options": [
+        "6",
+        "6√2",
+        "12",
+        "12√2"
+      ],
+      "correctIndex": 1,
+      "explanation": "Diagonal = side × √2 = 6√2."
+    },
+    {
+      "id": "quant-q88",
+      "difficulty": "hard",
+      "prompt": "A cone has radius 3 and height 4. What is its slant height?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "explanation": "l = √(r² + h²) = √(9 + 16) = 5."
+    },
+    {
+      "id": "quant-q89",
+      "difficulty": "easy",
+      "prompt": "A parallelogram has base 5 and height 8. What is its area?",
+      "options": [
+        "13",
+        "20",
+        "40",
+        "80"
+      ],
+      "correctIndex": 2,
+      "explanation": "Area = base × height = 40."
+    },
+    {
+      "id": "quant-q90",
+      "difficulty": "medium",
+      "prompt": "What is each exterior angle of a regular pentagon?",
+      "options": [
+        "60°",
+        "72°",
+        "90°",
+        "108°"
+      ],
+      "correctIndex": 1,
+      "explanation": "360°/5 = 72°."
+    },
+    {
+      "id": "quant-q91",
+      "difficulty": "medium",
+      "prompt": "A circle has area 64π. What is its radius?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correctIndex": 2,
+      "explanation": "πr² = 64π, r² = 64, r = 8."
+    },
+    {
+      "id": "quant-q92",
+      "difficulty": "easy",
+      "prompt": "A circle has radius 5. What is its circumference? (Use π = 3.14)",
+      "options": [
+        "15.7",
+        "31.4",
+        "78.5",
+        "157"
+      ],
+      "correctIndex": 1,
+      "explanation": "2πr = 2 × 3.14 × 5 = 31.4."
+    },
+    {
+      "id": "quant-q93",
+      "difficulty": "hard",
+      "prompt": "What is the volume of a sphere with radius 3? (Leave as multiple of π)",
+      "options": [
+        "12π",
+        "27π",
+        "36π",
+        "108π"
+      ],
+      "correctIndex": 2,
+      "explanation": "(4/3)πr³ = (4/3)π × 27 = 36π."
+    },
+    {
+      "id": "quant-q94",
+      "difficulty": "medium",
+      "prompt": "A point lies on the line y = 2x + 1. If x = 3, what is y?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "y = 2(3) + 1 = 7."
+    },
+    {
+      "id": "quant-q95",
+      "difficulty": "hard",
+      "prompt": "Two parallel lines are cut by a transversal. If one acute angle is 55°, what is the co-interior angle on the same side?",
+      "options": [
+        "55°",
+        "90°",
+        "125°",
+        "145°"
+      ],
+      "correctIndex": 2,
+      "explanation": "Co-interior angles are supplementary: 180° − 55° = 125°."
+    },
+    {
+      "id": "quant-q96",
+      "difficulty": "easy",
+      "prompt": "What is sin 30°?",
+      "options": [
+        "1/2",
+        "√2/2",
+        "√3/2",
+        "1"
+      ],
+      "correctIndex": 0,
+      "explanation": "sin 30° = 1/2."
+    },
+    {
+      "id": "quant-q97",
+      "difficulty": "easy",
+      "prompt": "What is cos 60°?",
+      "options": [
+        "0",
+        "1/2",
+        "√3/2",
+        "1"
+      ],
+      "correctIndex": 1,
+      "explanation": "cos 60° = 1/2."
+    },
+    {
+      "id": "quant-q98",
+      "difficulty": "easy",
+      "prompt": "What is tan 45°?",
+      "options": [
+        "0",
+        "1/2",
+        "1",
+        "√3"
+      ],
+      "correctIndex": 2,
+      "explanation": "tan 45° = 1."
+    },
+    {
+      "id": "quant-q99",
+      "difficulty": "easy",
+      "prompt": "What is sin²θ + cos²θ equal to for any angle θ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "sin 2θ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pythagorean identity: sin²θ + cos²θ = 1."
+    },
+    {
+      "id": "quant-q100",
+      "difficulty": "easy",
+      "prompt": "What is tan 60°?",
+      "options": [
+        "1/√3",
+        "1",
+        "√2",
+        "√3"
+      ],
+      "correctIndex": 3,
+      "explanation": "tan 60° = √3."
+    },
+    {
+      "id": "quant-q101",
+      "difficulty": "medium",
+      "prompt": "What is cosec 30°?",
+      "options": [
+        "1/2",
+        "1",
+        "√2",
+        "2"
+      ],
+      "correctIndex": 3,
+      "explanation": "cosec 30° = 1/sin 30° = 1/(1/2) = 2."
+    },
+    {
+      "id": "quant-q102",
+      "difficulty": "medium",
+      "prompt": "What is sec 45°?",
+      "options": [
+        "1",
+        "√2",
+        "√3",
+        "2"
+      ],
+      "correctIndex": 1,
+      "explanation": "sec 45° = 1/cos 45° = 1/(√2/2) = √2."
+    },
+    {
+      "id": "quant-q103",
+      "difficulty": "medium",
+      "prompt": "If sin θ = 3/5 and θ is acute, what is cos θ?",
+      "options": [
+        "3/5",
+        "4/5",
+        "5/4",
+        "5/3"
+      ],
+      "correctIndex": 1,
+      "explanation": "cos θ = √(1 − 9/25) = √(16/25) = 4/5."
+    },
+    {
+      "id": "quant-q104",
+      "difficulty": "medium",
+      "prompt": "What is sin 150°?",
+      "options": [
+        "−1/2",
+        "−√3/2",
+        "1/2",
+        "√3/2"
+      ],
+      "correctIndex": 2,
+      "explanation": "sin 150° = sin(180° − 30°) = sin 30° = 1/2."
+    },
+    {
+      "id": "quant-q105",
+      "difficulty": "medium",
+      "prompt": "What is cos 120°?",
+      "options": [
+        "−1/2",
+        "−√3/2",
+        "1/2",
+        "√3/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "cos 120° = cos(180° − 60°) = −cos 60° = −1/2."
+    },
+    {
+      "id": "quant-q106",
+      "difficulty": "easy",
+      "prompt": "What is tan(−45°)?",
+      "options": [
+        "−1",
+        "0",
+        "1",
+        "−√3"
+      ],
+      "correctIndex": 0,
+      "explanation": "tan is odd: tan(−45°) = −tan 45° = −1."
+    },
+    {
+      "id": "quant-q107",
+      "difficulty": "hard",
+      "prompt": "Evaluate 2 sin 30° cos 30°.",
+      "options": [
+        "1/2",
+        "√2/2",
+        "√3/2",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "2 sin 30° cos 30° = sin 60° = √3/2."
+    },
+    {
+      "id": "quant-q108",
+      "difficulty": "medium",
+      "prompt": "If cos θ = 0 and 0° ≤ θ ≤ 360°, which values can θ take?",
+      "options": [
+        "0° and 180°",
+        "90° and 270°",
+        "45° and 225°",
+        "60° and 300°"
+      ],
+      "correctIndex": 1,
+      "explanation": "cos θ = 0 at θ = 90° and 270°."
+    },
+    {
+      "id": "quant-q109",
+      "difficulty": "easy",
+      "prompt": "What is sin(π/6)?",
+      "options": [
+        "0",
+        "1/2",
+        "√2/2",
+        "√3/2"
+      ],
+      "correctIndex": 1,
+      "explanation": "π/6 = 30°, sin 30° = 1/2."
+    },
+    {
+      "id": "quant-q110",
+      "difficulty": "easy",
+      "prompt": "What is cos(π/3)?",
+      "options": [
+        "0",
+        "1/2",
+        "√2/2",
+        "√3/2"
+      ],
+      "correctIndex": 1,
+      "explanation": "π/3 = 60°, cos 60° = 1/2."
+    },
+    {
+      "id": "quant-q111",
+      "difficulty": "medium",
+      "prompt": "What is sin 210°?",
+      "options": [
+        "−1/2",
+        "−√3/2",
+        "1/2",
+        "√3/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "sin 210° = sin(180° + 30°) = −sin 30° = −1/2."
+    },
+    {
+      "id": "quant-q112",
+      "difficulty": "hard",
+      "prompt": "What is cos 330°?",
+      "options": [
+        "−√3/2",
+        "−1/2",
+        "1/2",
+        "√3/2"
+      ],
+      "correctIndex": 3,
+      "explanation": "cos 330° = cos(360° − 30°) = cos 30° = √3/2."
+    },
+    {
+      "id": "quant-q113",
+      "difficulty": "medium",
+      "prompt": "Simplify sec²θ − tan²θ.",
+      "options": [
+        "0",
+        "1",
+        "cos²θ",
+        "sin²θ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Identity: sec²θ − tan²θ = 1."
+    },
+    {
+      "id": "quant-q114",
+      "difficulty": "medium",
+      "prompt": "What is cot 60°?",
+      "options": [
+        "1/√3",
+        "1",
+        "√2",
+        "√3"
+      ],
+      "correctIndex": 0,
+      "explanation": "cot 60° = 1/tan 60° = 1/√3."
+    },
+    {
+      "id": "quant-q115",
+      "difficulty": "hard",
+      "prompt": "If tan θ = 1 and θ is in the first quadrant, what is θ in degrees?",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correctIndex": 1,
+      "explanation": "tan 45° = 1."
+    },
+    {
+      "id": "quant-q116",
+      "difficulty": "easy",
+      "prompt": "What is sin 90°?",
+      "options": [
+        "0",
+        "1/2",
+        "√3/2",
+        "1"
+      ],
+      "correctIndex": 3,
+      "explanation": "sin 90° = 1."
+    },
+    {
+      "id": "quant-q117",
+      "difficulty": "medium",
+      "prompt": "What is sin(90° − 30°)?",
+      "options": [
+        "1/2",
+        "√2/2",
+        "√3/2",
+        "1"
+      ],
+      "correctIndex": 2,
+      "explanation": "sin(90° − 30°) = cos 30° = √3/2."
+    },
+    {
+      "id": "quant-q118",
+      "difficulty": "hard",
+      "prompt": "Evaluate sin²45° + cos²45°.",
+      "options": [
+        "0",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "correctIndex": 2,
+      "explanation": "sin²45° + cos²45° = 1 (Pythagorean identity)."
+    },
+    {
+      "id": "quant-q119",
+      "difficulty": "hard",
+      "prompt": "What is the value of 1 + tan²45°?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "1 + tan²45° = 1 + 1² = 2 (also sec²45°)."
+    },
+    {
+      "id": "quant-q120",
+      "difficulty": "medium",
+      "prompt": "In a right triangle, if sin A = 4/5, what is tan A?",
+      "options": [
+        "3/4",
+        "4/3",
+        "4/5",
+        "5/4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opposite = 4, hypotenuse = 5, adjacent = 3. tan A = 4/3."
     }
   ]
 }

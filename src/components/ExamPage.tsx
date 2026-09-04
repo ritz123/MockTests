@@ -1,6 +1,10 @@
+"use client";
+
 import { AlertTriangle, ChevronLeft, ChevronRight, Clock3 } from "lucide-react";
+import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { routeParam } from "../lib/route";
 import type { CatalogEntry, Paper } from "../lib/schema";
 import {
   completeSession,
@@ -13,8 +17,8 @@ import { loadCatalog, loadPaper } from "../lib/tests";
 import { formatMmSs, isWarning, optionLabel, remainingMs } from "../lib/time";
 
 export function ExamPage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const id = routeParam(useParams().id);
+  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [paper, setPaper] = useState<Paper | null>(null);
   const [session, setSession] = useState<InProgressSession | null>(null);
@@ -39,9 +43,9 @@ export function ExamPage() {
       submitting.current = true;
       const done = completeSession(open, Date.now(), autoSubmitted);
       saveSession(done);
-      void navigate(`/results/${id}`, { replace: true });
+      router.replace(`/results/${id}`);
     },
-    [id, navigate],
+    [id, router],
   );
 
   useEffect(() => {
@@ -75,14 +79,14 @@ export function ExamPage() {
 
       const existing = loadSession();
       if (existing?.status === "completed" && existing.testId === id) {
-        void navigate(`/results/${id}`, { replace: true });
+        router.replace(`/results/${id}`);
         return;
       }
       if (existing?.status === "in-progress" && existing.testId === id) {
         if (remainingMs(existing.endsAt, Date.now()) === 0) {
           submitting.current = true;
           saveSession(completeSession(existing, Date.now(), true));
-          void navigate(`/results/${id}`, { replace: true });
+          router.replace(`/results/${id}`);
           return;
         }
         persist(existing);
@@ -95,7 +99,7 @@ export function ExamPage() {
     return () => {
       cancelled = true;
     };
-  }, [id, navigate, persist]);
+  }, [id, persist, router]);
 
   useEffect(() => {
     if (!session) return;
@@ -117,7 +121,7 @@ export function ExamPage() {
         <main className="narrow">
           <div className="banner error" role="alert">
             <p>{error}</p>
-            <Link to="/" className="button secondary">
+            <Link href="/" className="button secondary">
               Back to papers
             </Link>
           </div>
@@ -147,18 +151,18 @@ export function ExamPage() {
   const warning = isWarning(remaining);
   const answeredCount = paper.questions.filter((item) => session.answers[item.id] !== undefined).length;
   const selected = session.answers[question.id];
+  const questionCount = paper.questions.length;
+  const openSession = session;
 
   function goTo(index: number) {
-    if (!session) return;
-    const nextIndex = Math.min(Math.max(index, 0), paper.questions.length - 1);
-    persist({ ...session, currentIndex: nextIndex });
+    const nextIndex = Math.min(Math.max(index, 0), questionCount - 1);
+    persist({ ...openSession, currentIndex: nextIndex });
   }
 
   function choose(optionIndex: number) {
-    if (!session || !question) return;
     persist({
-      ...session,
-      answers: { ...session.answers, [question.id]: optionIndex },
+      ...openSession,
+      answers: { ...openSession.answers, [question.id]: optionIndex },
     });
   }
 
@@ -204,7 +208,7 @@ export function ExamPage() {
           <h1 className="prompt">{question.prompt}</h1>
           <div role="radiogroup" aria-label="Answer choices" className="options">
             {question.options.map((option, index) => (
-              <label key={option} className={selected === index ? "option selected" : "option"}>
+              <label key={`${question.id}-${index}`} className={selected === index ? "option selected" : "option"}>
                 <input
                   type="radio"
                   name="answer"

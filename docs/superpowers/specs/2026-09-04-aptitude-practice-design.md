@@ -30,7 +30,7 @@ The author can add a new paper later without changing application code: create o
 
 Single-page app with no backend.
 
-- **Vite + React + TypeScript** serves the UI.
+- **Next.js (App Router) + React + TypeScript** serves the UI.
 - Papers live as static JSON under `public/tests/`. The app fetches them at runtime, so a new file is visible after a refresh (dev server) or after copying files into `public/tests/` and reloading (preview/production).
 - Scoring, timer, and review run entirely in the browser.
 - In-progress session state is stored in `sessionStorage` so a tab refresh does not wipe answers or the remaining time. Closing the tab ends the session.

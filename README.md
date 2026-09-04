@@ -5,15 +5,22 @@ Timed multiple-choice mock tests you can take in the browser. Built for practici
 ## Run locally
 
 ```bash
+./run.sh
+```
+
+Or:
+
+```bash
 npm install
 npm run dev
 ```
 
-Open the URL Vite prints (usually `http://localhost:5173`).
+The server listens on all interfaces (`0.0.0.0:3000`). On this machine use `http://localhost:3000`; from another host use `http://<this-machine-ip>:3000`.
 
 ```bash
 npm test
 npm run build
+npm start
 ```
 
 ## Take a paper
@@ -43,7 +50,7 @@ You do not need to change application code.
 }
 ```
 
-4. Refresh the home page (in production, rebuild or copy the new JSON into the hosted `dist/tests/` folder).
+4. Refresh the home page. Papers live in `public/tests/`, which Next.js serves as static files.
 
 ### Question JSON
 

@@ -1,12 +1,15 @@
+"use client";
+
 import { Clock3, ListChecks } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { loadSession } from "../lib/session";
 import type { Catalog, CatalogEntry } from "../lib/schema";
+import { loadSession } from "../lib/session";
 import { loadCatalog } from "../lib/tests";
 
 export function HomePage() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -35,13 +38,13 @@ export function HomePage() {
       const ok = window.confirm("Start this test? Your current attempt will be discarded.");
       if (!ok) return;
     }
-    void navigate(`/exam/${entry.id}`);
+    router.push(`/exam/${entry.id}`);
   }
 
   return (
     <div className="page">
       <header className="topbar">
-        <Link to="/" className="brand">
+        <Link href="/" className="brand">
           <ListChecks size={22} aria-hidden="true" />
           Aptitude Practice
         </Link>

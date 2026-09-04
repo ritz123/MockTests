@@ -1,6 +1,10 @@
+"use client";
+
 import { ArrowLeft, Check, RotateCcw, X } from "lucide-react";
+import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { routeParam } from "../lib/route";
 import type { Paper } from "../lib/schema";
 import { scoreAttempt } from "../lib/scoring";
 import {
@@ -13,8 +17,8 @@ import { loadCatalog, loadPaper } from "../lib/tests";
 import { formatMmSs, optionLabel } from "../lib/time";
 
 export function ResultsPage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const id = routeParam(useParams().id);
+  const router = useRouter();
   const [paper, setPaper] = useState<Paper | null>(null);
   const [session, setSession] = useState<CompletedSession | null>(null);
   const [missing, setMissing] = useState(false);
@@ -25,6 +29,7 @@ export function ResultsPage() {
     const stored = loadSession();
     if (!stored || stored.status !== "completed" || stored.testId !== id) {
       setMissing(true);
+      router.replace("/");
       return;
     }
     setSession(stored);
@@ -49,10 +54,14 @@ export function ResultsPage() {
     }
 
     void load();
-  }, [id]);
+  }, [id, router]);
 
   if (missing) {
-    return <Navigate to="/" replace />;
+    return (
+      <div className="page">
+        <p className="status">Returning to papers…</p>
+      </div>
+    );
   }
 
   if (error) {
@@ -61,7 +70,7 @@ export function ResultsPage() {
         <main className="narrow">
           <div className="banner error" role="alert">
             <p>{error}</p>
-            <Link to="/" className="button secondary">
+            <Link href="/" className="button secondary">
               Back to papers
             </Link>
           </div>
@@ -84,7 +93,7 @@ export function ResultsPage() {
   function retake() {
     if (!paper) return;
     saveSession(startSession(paper.id, paper.durationMinutes, Date.now()));
-    void navigate(`/exam/${paper.id}`);
+    router.push(`/exam/${paper.id}`);
   }
 
   return (
@@ -101,7 +110,7 @@ export function ResultsPage() {
             {session.autoSubmitted ? " · Submitted automatically when time ran out" : " · Submitted by you"}
           </p>
           <div className="exam-actions">
-            <Link to="/" className="button secondary">
+            <Link href="/" className="button secondary">
               <ArrowLeft size={18} aria-hidden="true" />
               Back to papers
             </Link>
@@ -137,7 +146,7 @@ export function ResultsPage() {
                     const isChosen = chosen === optionIndex;
                     return (
                       <li
-                        key={option}
+                        key={`${question.id}-${optionIndex}`}
                         className={`review-option${isCorrect ? " is-correct" : ""}${isChosen ? " is-chosen" : ""}`}
                       >
                         <span className="letter">{optionLabel(optionIndex)}</span>

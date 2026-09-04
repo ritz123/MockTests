@@ -69,7 +69,7 @@ describe("assemblePaper", () => {
     );
   });
 
-  it("fails when the bank is too small", () => {
+  it("uses whatever is available when a pool is short", () => {
     const result = assemblePaper(
       {
         ...entry,
@@ -83,6 +83,8 @@ describe("assemblePaper", () => {
       bank,
       1,
     );
-    expect(result.ok).toBe(false);
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.value.questions).toHaveLength(3);
   });
 });

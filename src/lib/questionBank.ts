@@ -32,15 +32,9 @@ function shuffle<T>(items: T[], random: () => number): T[] {
   return copy;
 }
 
-function pickQuestions(
-  pool: BankQuestion[],
-  count: number,
-  random: () => number,
-): ParseResult<BankQuestion[]> {
-  if (pool.length < count) {
-    return fail(`Not enough questions in pool (need ${count}, have ${pool.length}).`);
-  }
-  return { ok: true, value: shuffle(pool, random).slice(0, count) };
+function pickQuestions(pool: BankQuestion[], count: number, random: () => number): BankQuestion[] {
+  if (count <= 0 || pool.length === 0) return [];
+  return shuffle(pool, random).slice(0, Math.min(count, pool.length));
 }
 
 function toPaperQuestion(question: BankQuestion): Question {
@@ -77,9 +71,11 @@ export function assemblePaper(
   const selected: BankQuestion[] = [];
   const mix: DifficultyMix = assembly.difficultyMix;
   for (const difficulty of ["easy", "medium", "hard"] as const) {
-    const picked = pickQuestions(pools[difficulty], mix[difficulty], random);
-    if (!picked.ok) return picked;
-    selected.push(...picked.value);
+    selected.push(...pickQuestions(pools[difficulty], mix[difficulty], random));
+  }
+
+  if (selected.length === 0) {
+    return fail("No questions available in this bank.");
   }
 
   const questions = shuffle(selected, random).map(toPaperQuestion);

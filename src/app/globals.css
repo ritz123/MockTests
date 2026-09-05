@@ -1496,6 +1496,19 @@ code {
   border-radius: var(--radius-small);
 }
 
+.exam-document-title {
+  font-family: var(--heading);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: var(--color-on-surface);
+}
+
+.exam-header .exam-document-title {
+  margin: 0;
+}
+
 .exam-header-start {
   display: flex;
   align-items: center;

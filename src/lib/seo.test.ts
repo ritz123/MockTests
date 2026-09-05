@@ -1,12 +1,22 @@
 import { describe, expect, it } from "vitest";
+import { MOCK_TESTS_TITLE } from "./pagesContent";
 import type { CatalogEntry } from "./schema";
 import {
+  HOME_TITLE,
   buildExamJsonLd,
   buildHomeJsonLd,
   buildMockTestsJsonLd,
   examKeywords,
   examMetaDescription,
+  examMetadataTitle,
 } from "./seo";
+import { SITE_NAME } from "./site";
+
+const SERP_TITLE_MAX = 60;
+
+function documentTitle(pageTitle: string): string {
+  return `${pageTitle} | ${SITE_NAME}`;
+}
 
 const sampleEntry: CatalogEntry = {
   id: "hackathon-quant",
@@ -26,6 +36,20 @@ describe("examMetaDescription", () => {
     expect(description).toContain(sampleEntry.title);
     expect(description).toContain("25-minute");
     expect(description).toContain("20 multiple-choice questions");
+  });
+});
+
+describe("examMetadataTitle", () => {
+  it("uses the topic after the dash so the document title stays short", () => {
+    expect(examMetadataTitle(sampleEntry)).toBe("Quantitative Aptitude");
+    expect(documentTitle(examMetadataTitle(sampleEntry)).length).toBeLessThanOrEqual(SERP_TITLE_MAX);
+  });
+});
+
+describe("document titles", () => {
+  it("keeps home and catalog titles within typical SERP length", () => {
+    expect(documentTitle(HOME_TITLE).length).toBeLessThanOrEqual(SERP_TITLE_MAX);
+    expect(documentTitle(MOCK_TESTS_TITLE).length).toBeLessThanOrEqual(SERP_TITLE_MAX);
   });
 });
 

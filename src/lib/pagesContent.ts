@@ -45,8 +45,7 @@ export const FAQ_PAGE_TITLE = "Frequently Asked Questions";
 export const FAQ_PAGE_DESCRIPTION =
   "Answers about free aptitude mock tests online: no-login practice, topics covered, test length, score review, and who these interview prep papers are for.";
 
-export const MOCK_TESTS_TITLE =
-  "Free Aptitude Mock Tests for Interviews, Placements & Hackathons";
+export const MOCK_TESTS_TITLE = "Free Aptitude Mock Tests";
 
 export const MOCK_TESTS_DESCRIPTION =
   "Choose a free timed mock test online — logical reasoning, quantitative aptitude, computer science, algorithms, puzzles, and hackathon practicals. Every paper is free, with a countdown and instant score review. No payment, no account.";

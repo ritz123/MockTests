@@ -19,7 +19,16 @@ import { formatMmSs, isWarning, optionLabel, remainingMs } from "../lib/time";
 import { ThemePicker } from "./ThemePicker";
 import { AdSlot } from "./AdSlot";
 
-export function ExamPage() {
+type ExamPageProps = {
+  title?: string;
+};
+
+function ExamDocumentTitle({ title }: { title?: string }) {
+  if (!title) return null;
+  return <h1 className="exam-document-title">{title}</h1>;
+}
+
+export function ExamPage({ title }: ExamPageProps) {
   const id = routeParam(useParams().id);
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -132,6 +141,7 @@ export function ExamPage() {
     return (
       <div className="page">
         <main className="narrow">
+          <ExamDocumentTitle title={title} />
           <div className="banner error" role="alert">
             <p>{error}</p>
             <Link href="/" className="button secondary">
@@ -146,6 +156,7 @@ export function ExamPage() {
   if (!paper || !session) {
     return (
       <div className="page">
+        <ExamDocumentTitle title={title} />
         <p className="status">Loading exam…</p>
       </div>
     );
@@ -155,6 +166,7 @@ export function ExamPage() {
   if (!question) {
     return (
       <div className="page">
+        <ExamDocumentTitle title={title ?? paper.title} />
         <p className="status">This paper has no questions.</p>
       </div>
     );
@@ -188,7 +200,7 @@ export function ExamPage() {
             Skip test
           </button>
           <div>
-            <p className="eyebrow">{paper.title}</p>
+            <ExamDocumentTitle title={title ?? paper.title} />
             <p className="progress">
               Answered {answeredCount} / {paper.questions.length}
             </p>
@@ -230,7 +242,7 @@ export function ExamPage() {
               <span className={`difficulty-tag ${question.difficulty}`}> · {question.difficulty}</span>
             ) : null}
           </p>
-          <h1 className="prompt">{question.prompt}</h1>
+          <h2 className="prompt">{question.prompt}</h2>
           <div role="radiogroup" aria-label="Answer choices" className="options">
             {question.options.map((option, index) => (
               <label key={`${question.id}-${index}`} className={selected === index ? "option selected" : "option"}>

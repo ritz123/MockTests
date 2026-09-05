@@ -3,8 +3,8 @@ import { ExamPage } from "../../../components/ExamPage";
 import { ExamSeoBlurb } from "../../../components/ExamSeoBlurb";
 import { getCatalogEntry } from "../../../lib/catalog";
 import { listCatalogIds } from "../../../lib/catalogIds";
-import { buildExamJsonLd, examKeywords, examMetaDescription } from "../../../lib/seo";
-import { absoluteUrl } from "../../../lib/site";
+import { buildExamJsonLd, examKeywords, examMetaDescription, examMetadataTitle } from "../../../lib/seo";
+import { SITE_NAME, absoluteUrl } from "../../../lib/site";
 
 type PageProps = {
   params: Promise<{ id: string }>;
@@ -25,14 +25,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const keywords = examKeywords(entry);
 
   return {
-    title: `${entry.title} — Free Mock Test`,
+    title: examMetadataTitle(entry),
     description,
     keywords,
     alternates: {
       canonical: `/exam/${id}/`,
     },
     openGraph: {
-      title: `${entry.title} — Free Mock Test`,
+      title: `${examMetadataTitle(entry)} | ${SITE_NAME}`,
       description,
       url: absoluteUrl(`/exam/${id}/`),
       type: "website",
@@ -58,7 +58,7 @@ export default async function ExamRoute({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
         />
       ) : null}
-      <ExamPage />
+      <ExamPage title={entry?.title} />
       {entry ? (
         <div className="page exam-seo">
           <ExamSeoBlurb entry={entry} />

@@ -30,8 +30,7 @@ export const SITE_KEYWORDS = [
   "problem solving puzzles test",
 ];
 
-export const HOME_TITLE =
-  "Free Aptitude Mock Tests Online – Logical Reasoning, Quant & CS";
+export const HOME_TITLE = "Free Aptitude Mock Tests Online";
 
 export const HOME_TRUST_POINTS = [
   "Free — no sign-up",
@@ -133,6 +132,11 @@ const EXAM_KEYWORDS: Record<string, string[]> = {
     "technical screening mock test",
   ],
 };
+
+export function examMetadataTitle(entry: CatalogEntry): string {
+  const parts = entry.title.split("—").map((part) => part.trim()).filter(Boolean);
+  return parts.at(-1) || entry.title;
+}
 
 export function examMetaDescription(entry: CatalogEntry): string {
   return `Take this free ${entry.title} online — ${entry.durationMinutes}-minute timed mock with ${entry.questionCount} multiple-choice questions. Instant score review for tech interviews and hackathons. Start without sign-up.`;

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { SiteFooter } from "../components/SiteFooter";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
-import { SITE_AUTHOR, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
+import { SITE_AUTHOR, SITE_NAME, GOOGLE_SITE_VERIFICATION, absoluteUrl, getSiteUrl } from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? GOOGLE_SITE_VERIFICATION,
   },
 };
 

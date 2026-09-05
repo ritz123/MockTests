@@ -4,6 +4,8 @@ export const SITE_AUTHOR = "Biplab Sarkar";
 
 export const SITE_EMAIL = "sarkarbiplab@gmail.com";
 
+export const GOOGLE_SITE_VERIFICATION = "L7idfwiSDQIrJ-_bCSbmyFOVscDEEa6vjZNWfPE1FAc";
+
 export function getBasePath(): string {
   return process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 }

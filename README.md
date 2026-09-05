@@ -17,6 +17,30 @@ Book titles and ASINs live in `src/lib/affiliate.ts`. Restart the dev server aft
 
 For GitHub Pages, add `NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG` as a repository secret and wire it in the deploy workflow.
 
+## Google Search Console
+
+Register the **exact** live URL (including the repo path), e.g. `https://<user>.github.io/MockTests/`.
+
+### Recommended: HTML meta tag
+
+1. In Search Console, choose **HTML tag** verification.
+2. Copy the `content` value only (not the full `<meta>` tag).
+3. Add a GitHub secret: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` = that value.
+4. Push to `main` and wait for the deploy to finish.
+5. Click **Verify** in Search Console.
+
+The site injects `<meta name="google-site-verification" content="…" />` on every page at build time.
+
+### Alternative: HTML file upload
+
+1. Download the verification file from Google (e.g. `google1234567890.html`).
+2. Place it in `public/` (not `src/`).
+3. Commit, push, and redeploy.
+4. Confirm it loads at `https://<user>.github.io/MockTests/google1234567890.html` (note the `/MockTests/` prefix for project sites).
+5. Verify in Search Console.
+
+If verification fails, the property URL in Search Console probably does not match the deployed path.
+
 ## Run
 
 ```bash

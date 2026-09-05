@@ -41,6 +41,15 @@ The site injects `<meta name="google-site-verification" content="…" />` on eve
 
 If verification fails, the property URL in Search Console probably does not match the deployed path.
 
+### Submit the sitemap
+
+1. Property must be the **URL prefix** `https://<user>.github.io/MockTests/` (include `/MockTests/` for project sites).
+2. Open **Sitemaps** and submit the **full URL**:
+   `https://<user>.github.io/MockTests/sitemap.xml`
+   Do not use `sitemap.xml/` (trailing slash returns 404).
+3. Confirm it opens in your browser and shows XML with `https://<user>.github.io/MockTests/...` links.
+4. If an old submission shows “Could not be read”, delete it and submit again after deploy.
+
 ## Run
 
 ```bash

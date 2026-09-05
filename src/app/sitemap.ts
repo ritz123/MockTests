@@ -4,52 +4,36 @@ import { absoluteUrl } from "../lib/site";
 
 export const dynamic = "force-static";
 
+const SITEMAP_CHANGE_FREQUENCY = "weekly" as const;
+
+function sitemapLastModified(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function sitemapEntry(
+  path: string,
+  priority: number,
+  lastModified: string,
+): MetadataRoute.Sitemap[number] {
+  return {
+    url: absoluteUrl(path),
+    lastModified,
+    changeFrequency: SITEMAP_CHANGE_FREQUENCY,
+    priority,
+  };
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const catalog = loadCatalogFromDisk();
-  const lastModified = new Date();
+  const lastModified = sitemapLastModified();
 
   return [
-    {
-      url: absoluteUrl("/"),
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: absoluteUrl("/about/"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: absoluteUrl("/how-it-works/"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: absoluteUrl("/mock-tests/"),
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: absoluteUrl("/faq/"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: absoluteUrl("/interview-prep-guide/"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    ...catalog.tests.map((entry) => ({
-      url: absoluteUrl(`/exam/${entry.id}/`),
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
+    sitemapEntry("/", 1, lastModified),
+    sitemapEntry("/about/", 0.8, lastModified),
+    sitemapEntry("/how-it-works/", 0.8, lastModified),
+    sitemapEntry("/mock-tests/", 0.9, lastModified),
+    sitemapEntry("/faq/", 0.8, lastModified),
+    sitemapEntry("/interview-prep-guide/", 0.9, lastModified),
+    ...catalog.tests.map((entry) => sitemapEntry(`/exam/${entry.id}/`, 0.8, lastModified)),
   ];
 }

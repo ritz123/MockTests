@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { HomePage } from "../components/HomePage";
-import { HomeQuickLinks } from "../components/HomeQuickLinks";
 import { HOME_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, buildHomeJsonLd } from "../lib/seo";
 import { SITE_NAME, absoluteUrl } from "../lib/site";
 
@@ -34,9 +33,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <HomePage />
-      <div className="page home-resources">
-        <HomeQuickLinks />
-      </div>
     </>
   );
 }

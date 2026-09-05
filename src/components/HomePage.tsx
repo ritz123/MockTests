@@ -7,8 +7,8 @@ import { useCallback, useEffect, useState } from "react";
 import type { Catalog, CatalogEntry } from "../lib/schema";
 import { clearSession, loadSession, type Session } from "../lib/session";
 import { loadCatalog } from "../lib/tests";
-import { ThemePicker } from "./ThemePicker";
 import { AdSlot } from "./AdSlot";
+import { HomeQuickLinks } from "./HomeQuickLinks";
 
 export function HomePage() {
   const router = useRouter();
@@ -78,13 +78,7 @@ export function HomePage() {
 
   return (
     <div className="page">
-      <header className="topbar">
-        <Link href="/" className="brand">
-          <ListChecks size={22} aria-hidden="true" />
-          Aptitude Practice
-        </Link>
-        <ThemePicker />
-      </header>
+      <HomeQuickLinks />
 
       <main className="home">
         <section className="hero" aria-labelledby="home-hero-title">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import type { ReactNode } from "react";
 import { SiteFooter } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
 import { SITE_AUTHOR, SITE_NAME, getGoogleSiteVerification, absoluteUrl, getSiteUrl } from "../lib/site";
@@ -61,6 +62,7 @@ function RootLayoutContent({ children }: { children: ReactNode }) {
     <ThemeProvider>
       <body className={roboto.variable}>
         <div className="site-shell">
+          <SiteHeader />
           <div className="site-content">{children}</div>
           <SiteFooter />
         </div>

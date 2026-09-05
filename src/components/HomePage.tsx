@@ -55,10 +55,10 @@ export function HomePage() {
       <main className="home">
         <section className="hero">
           <p className="eyebrow">Unofficial interview mocks</p>
-          <h1>Practice timed papers for Google-style and hackathon interviews</h1>
+          <h1>Practice timed papers for tech interviews and hackathons</h1>
           <p className="lede">
             Multiple-choice screens covering logical reasoning, quantitative aptitude, computer
-            science, puzzles, algorithms, and hackathon practicals. Not affiliated with Google.
+            science, puzzles, algorithms, and hackathon practicals.
           </p>
         </section>
 

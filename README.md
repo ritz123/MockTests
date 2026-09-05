@@ -1,6 +1,6 @@
 # Aptitude Practice
 
-A **Next.js** site for timed multiple-choice mocks in the style of Google and hackathon interview screens. Unofficial practice — not affiliated with Google.
+A **Next.js** site for timed multiple-choice mocks in the style of tech interview and hackathon screens. Unofficial practice.
 
 Scoring, the timer, and review run in the browser. Papers are JSON files; you can add more without changing application code.
 

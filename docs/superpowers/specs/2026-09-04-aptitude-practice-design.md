@@ -182,7 +182,7 @@ Visual direction: focused exam tool — light background, strong typography, a s
 3. Add a matching object to `public/tests/index.json`.
 4. Refresh the browser. Papers are served from `public/tests/`; no copy into `dist/` is required.
 
-A README documents this and the schema. Shipped papers are unofficial **Google / hackathon interview-style** MCQ mocks (logical, quantitative, CS fundamentals, puzzles, algorithms, and hackathon practical). They are practice material, not affiliated with Google.
+A README documents this and the schema. Shipped papers are unofficial **tech interview / hackathon interview-style** MCQ mocks (logical, quantitative, CS fundamentals, puzzles, algorithms, and hackathon practical). They are practice material.
 
 ## Error handling
 

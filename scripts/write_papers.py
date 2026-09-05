@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write unofficial Google/hackathon interview MCQ papers into public/tests/."""
+"""Write unofficial tech interview/hackathon MCQ papers into public/tests/."""
 
 from __future__ import annotations
 
@@ -29,8 +29,8 @@ def paper(pid: str, title: str, minutes: int, questions: list[dict]) -> dict:
 
 
 LOGICAL = paper(
-    "google-hackathon-logical",
-    "Google Hackathon Screen — Logical Reasoning",
+    "hackathon-logical",
+    "Hackathon Screen \u2014 Logical Reasoning",
     25,
     [
         q("q1", "Find the next number: 2, 6, 12, 20, 30, ?", ["36", "40", "42", "48"], 2,
@@ -93,8 +93,8 @@ LOGICAL = paper(
 )
 
 QUANT = paper(
-    "google-hackathon-quant",
-    "Google Hackathon Screen — Quantitative Aptitude",
+    "hackathon-quant",
+    "Hackathon Screen \u2014 Quantitative Aptitude",
     25,
     [
         q("q1", "What is 15% of 240?", ["24", "30", "36", "40"], 2, "0.15 × 240 = 36."),
@@ -139,8 +139,8 @@ QUANT = paper(
 )
 
 CS = paper(
-    "google-hackathon-cs",
-    "Google Interview — Computer Science Fundamentals",
+    "hackathon-cs",
+    "Tech Interview \u2014 Computer Science Fundamentals",
     30,
     [
         q("q1", "Worst-case time complexity of binary search on a sorted array of n items?",
@@ -222,8 +222,8 @@ CS = paper(
 )
 
 PUZZLES = paper(
-    "google-hackathon-puzzles",
-    "Google Interview — Problem Solving Puzzles",
+    "hackathon-puzzles",
+    "Tech Interview \u2014 Problem Solving Puzzles",
     20,
     [
         q("q1", "Monty Hall: three doors, one car. You pick one. Host opens a goat door. Switching wins with probability:",
@@ -275,8 +275,8 @@ PUZZLES = paper(
 )
 
 ALGOS = paper(
-    "google-hackathon-algorithms",
-    "Google Interview — Algorithms and Complexity",
+    "hackathon-algorithms",
+    "Tech Interview \u2014 Algorithms and Complexity",
     25,
     [
         q("q1", "Mergesort comparison complexity in the worst case is:",
@@ -343,8 +343,8 @@ ALGOS = paper(
 )
 
 PRACTICAL = paper(
-    "google-hackathon-practical",
-    "Hackathon Practical — Web, Security, and Systems",
+    "hackathon-practical",
+    "Hackathon Practical \u2014 Web, Security, and Systems",
     25,
     [
         q("q1", "Storing a session JWT in localStorage is mainly risky because of:",

@@ -1,8 +1,8 @@
 {
   "tests": [
     {
-      "id": "google-hackathon-logical",
-      "title": "Google Hackathon Screen — Logical Reasoning",
+      "id": "hackathon-logical",
+      "title": "Hackathon Screen — Logical Reasoning",
       "durationMinutes": 25,
       "questionCount": 20,
       "assembly": {
@@ -12,8 +12,8 @@
       }
     },
     {
-      "id": "google-hackathon-quant",
-      "title": "Google Hackathon Screen — Quantitative Aptitude",
+      "id": "hackathon-quant",
+      "title": "Hackathon Screen — Quantitative Aptitude",
       "durationMinutes": 25,
       "questionCount": 20,
       "assembly": {
@@ -23,8 +23,8 @@
       }
     },
     {
-      "id": "google-hackathon-cs",
-      "title": "Google Interview — Computer Science Fundamentals",
+      "id": "hackathon-cs",
+      "title": "Tech Interview — Computer Science Fundamentals",
       "durationMinutes": 30,
       "questionCount": 25,
       "assembly": {
@@ -34,8 +34,8 @@
       }
     },
     {
-      "id": "google-hackathon-puzzles",
-      "title": "Google Interview — Problem Solving Puzzles",
+      "id": "hackathon-puzzles",
+      "title": "Tech Interview — Problem Solving Puzzles",
       "durationMinutes": 20,
       "questionCount": 15,
       "assembly": {
@@ -45,8 +45,8 @@
       }
     },
     {
-      "id": "google-hackathon-algorithms",
-      "title": "Google Interview — Algorithms and Complexity",
+      "id": "hackathon-algorithms",
+      "title": "Tech Interview — Algorithms and Complexity",
       "durationMinutes": 25,
       "questionCount": 20,
       "assembly": {
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "google-hackathon-practical",
+      "id": "hackathon-practical",
       "title": "Hackathon Practical — Web, Security, and Systems",
       "durationMinutes": 25,
       "questionCount": 20,

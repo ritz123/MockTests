@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { SiteFooter } from "../components/SiteFooter";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
-import { SITE_AUTHOR, SITE_NAME, GOOGLE_SITE_VERIFICATION, absoluteUrl, getSiteUrl } from "../lib/site";
+import { SITE_AUTHOR, SITE_NAME, getGoogleSiteVerification, absoluteUrl, getSiteUrl } from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -73,10 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta
-          name="google-site-verification"
-          content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? GOOGLE_SITE_VERIFICATION}
-        />
+        <meta name="google-site-verification" content={getGoogleSiteVerification()} />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,

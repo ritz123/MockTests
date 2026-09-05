@@ -6,6 +6,11 @@ export const SITE_EMAIL = "sarkarbiplab@gmail.com";
 
 export const GOOGLE_SITE_VERIFICATION = "L7idfwiSDQIrJ-_bCSbmyFOVscDEEa6vjZNWfPE1FAc";
 
+export function getGoogleSiteVerification(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+  return fromEnv || GOOGLE_SITE_VERIFICATION;
+}
+
 export function getBasePath(): string {
   return process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 }

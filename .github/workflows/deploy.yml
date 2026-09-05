@@ -44,7 +44,6 @@ jobs:
       - name: Build static site
         env:
           NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG: ${{ secrets.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG }}
-          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
         run: npm run build
 
       - name: Upload Pages artifact

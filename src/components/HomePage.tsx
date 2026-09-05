@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { Catalog, CatalogEntry } from "../lib/schema";
 import { clearSession, loadSession, type Session } from "../lib/session";
 import { loadCatalog } from "../lib/tests";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemePicker } from "./ThemePicker";
 
 export function HomePage() {
   const router = useRouter();
@@ -66,7 +66,7 @@ export function HomePage() {
           <ListChecks size={22} aria-hidden="true" />
           Aptitude Practice
         </Link>
-        <ThemeToggle />
+        <ThemePicker />
       </header>
 
       <main className="home">
@@ -110,23 +110,6 @@ export function HomePage() {
             ))}
           </ul>
         ) : null}
-
-        <section className="howto">
-          <h2>Question bank</h2>
-          <ol>
-            <li>
-              Questions live in <code>public/tests/bank/</code>, grouped by category with easy, medium,
-              and hard levels.
-            </li>
-            <li>
-              Each catalog entry in <code>public/tests/index.json</code> defines how many questions to
-              draw and the difficulty mix.
-            </li>
-            <li>
-              Regenerate banks from static papers with <code>python3 scripts/build_bank.py</code>.
-            </li>
-          </ol>
-        </section>
       </main>
     </div>
   );

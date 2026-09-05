@@ -16,7 +16,7 @@ import {
 } from "../lib/session";
 import { loadCatalog, loadTestPaper } from "../lib/tests";
 import { formatMmSs, isWarning, optionLabel, remainingMs } from "../lib/time";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemePicker } from "./ThemePicker";
 
 export function ExamPage() {
   const id = routeParam(useParams().id);
@@ -199,7 +199,7 @@ export function ExamPage() {
             <span className="timer-value">{formatMmSs(remaining)}</span>
             {warning ? <span className="timer-label">Time running out</span> : <span className="timer-label">Time left</span>}
           </div>
-          <ThemeToggle />
+          <ThemePicker />
         </div>
       </header>
 

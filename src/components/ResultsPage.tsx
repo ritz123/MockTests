@@ -13,7 +13,7 @@ import {
   type CompletedSession,
 } from "../lib/session";
 import { formatMmSs, optionLabel } from "../lib/time";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemePicker } from "./ThemePicker";
 
 export function ResultsPage() {
   const id = routeParam(useParams().id);
@@ -80,7 +80,7 @@ export function ResultsPage() {
               <RotateCcw size={18} aria-hidden="true" />
               New attempt
             </button>
-            <ThemeToggle />
+            <ThemePicker />
           </div>
         </header>
 

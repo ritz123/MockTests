@@ -1,51 +1,43 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-
-type Theme = "light" | "dark";
+import { DEFAULT_THEME, migrateLegacyTheme, themeScheme, type ThemeId } from "../lib/themes";
 
 interface ThemeContextType {
-  theme: Theme;
-  toggleTheme: () => void;
-  setTheme: (theme: Theme) => void;
+  theme: ThemeId;
+  setTheme: (theme: ThemeId) => void;
 }
 
 const defaultContext: ThemeContextType = {
-  theme: "light",
-  toggleTheme: () => {},
+  theme: DEFAULT_THEME,
   setTheme: () => {},
 };
 
 const ThemeContext = createContext<ThemeContextType>(defaultContext);
 
+function applyTheme(theme: ThemeId) {
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.style.colorScheme = themeScheme(theme);
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
+  const [theme, setThemeState] = useState<ThemeId>(DEFAULT_THEME);
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
+    const stored = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = stored ?? (prefersDark ? "dark" : "light");
+    const initial = stored ? migrateLegacyTheme(stored) : prefersDark ? "midnight" : DEFAULT_THEME;
     setThemeState(initial);
-    document.documentElement.setAttribute("data-theme", initial);
+    applyTheme(initial);
   }, []);
 
-  const setTheme = (newTheme: Theme) => {
+  const setTheme = (newTheme: ThemeId) => {
     setThemeState(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+    applyTheme(newTheme);
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
-  const value = { theme, toggleTheme, setTheme };
-
-  return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {

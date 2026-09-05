@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import type { ReactNode } from "react";
+import { SiteFooter } from "../components/SiteFooter";
 import { ThemeProvider } from "../components/ThemeProvider";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -12,22 +14,70 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Aptitude Practice",
-  description: "Timed multiple-choice mock tests for interview practice.",
-  icons: { icon: "/favicon.svg" },
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: absoluteUrl("/"),
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 function RootLayoutContent({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider>
-      <body className={roboto.variable}>{children}</body>
+      <body className={roboto.variable}>
+        <div className="site-shell">
+          <div className="site-content">{children}</div>
+          <SiteFooter />
+        </div>
+      </body>
     </ThemeProvider>
   );
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,
+          }}
+        />
+      </head>
       <RootLayoutContent>{children}</RootLayoutContent>
     </html>
   );

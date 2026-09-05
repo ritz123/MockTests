@@ -2,19 +2,7 @@ export const SITE_NAME = "Aptitude Practice";
 
 export const SITE_AUTHOR = "Biplab Sarkar";
 
-export const SITE_DESCRIPTION =
-  "Free timed multiple-choice mock tests for tech interviews and hackathons. Practice logical reasoning, quantitative aptitude, computer science, puzzles, algorithms, and practical skills.";
-
-export const SITE_KEYWORDS = [
-  "aptitude practice",
-  "mock test",
-  "tech interview",
-  "hackathon",
-  "logical reasoning",
-  "quantitative aptitude",
-  "computer science quiz",
-  "coding interview prep",
-];
+export const SITE_EMAIL = "sarkarbiplab@gmail.com";
 
 export function getBasePath(): string {
   return process.env.NEXT_PUBLIC_BASE_PATH ?? "";

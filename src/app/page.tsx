@@ -1,37 +1,42 @@
 import type { Metadata } from "next";
 import { HomePage } from "../components/HomePage";
-import { SITE_DESCRIPTION, SITE_NAME, absoluteUrl } from "../lib/site";
+import { HomeQuickLinks } from "../components/HomeQuickLinks";
+import { HOME_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, buildHomeJsonLd } from "../lib/seo";
+import { SITE_NAME, absoluteUrl } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Timed Mock Tests for Tech Interviews & Hackathons",
+  title: HOME_TITLE,
   description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: `Timed Mock Tests for Tech Interviews & Hackathons | ${SITE_NAME}`,
+    title: `${HOME_TITLE} | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
     url: absoluteUrl("/"),
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: HOME_TITLE,
+    description: SITE_DESCRIPTION,
   },
 };
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: SITE_NAME,
-  description: SITE_DESCRIPTION,
-  url: absoluteUrl("/"),
-  inLanguage: "en-US",
-};
-
 export default function Home() {
+  const homeJsonLd = buildHomeJsonLd();
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <HomePage />
+      <div className="page home-resources">
+        <HomeQuickLinks />
+      </div>
     </>
   );
 }

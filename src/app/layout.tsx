@@ -3,7 +3,8 @@ import { Roboto } from "next/font/google";
 import type { ReactNode } from "react";
 import { SiteFooter } from "../components/SiteFooter";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
+import { SITE_AUTHOR, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -16,7 +17,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: SITE_NAME,
+    default: `${HOME_TITLE} | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -41,13 +42,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: SITE_NAME,
-    title: SITE_NAME,
+    title: `${HOME_TITLE} | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
     url: absoluteUrl("/"),
   },
   twitter: {
-    card: "summary",
-    title: SITE_NAME,
+    card: "summary_large_image",
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
   },
   alternates: {

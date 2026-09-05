@@ -94,7 +94,8 @@ export function HomePage() {
               <h1 id="home-hero-title">Practice timed papers for tech interviews and hackathons</h1>
               <p className="lede">
                 Multiple-choice screens covering logical reasoning, quantitative aptitude, computer
-                science, puzzles, algorithms, and hackathon practicals.
+                science, puzzles, algorithms, and hackathon practicals. Every new attempt gives you a
+                fresh set of questions.
               </p>
 
               <ul className="hero-topics" aria-label="Topics covered">
@@ -169,7 +170,9 @@ export function HomePage() {
             {catalog.tests.map((entry) => (
               <li key={entry.id}>
                 <article className="paper-card">
-                  <h2>{entry.title}</h2>
+                  <h2>
+                    <Link href={`/exam/${entry.id}/`}>{entry.title}</Link>
+                  </h2>
                   <p className="meta">
                     <span>
                       <Clock3 size={16} aria-hidden="true" />

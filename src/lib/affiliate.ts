@@ -1,6 +1,7 @@
 export interface SponsoredBook {
   asin: string;
   title: string;
+  author: string;
   image: string;
   price?: string;
 }
@@ -117,6 +118,7 @@ export function toSponsoredBook(book: InterviewBook): SponsoredBook {
   return {
     asin: book.asin,
     title: book.title,
+    author: book.author,
     image: bookCoverImage(book),
   };
 }
@@ -126,11 +128,13 @@ export const sponsoredBooks: SponsoredBook[] = [
   {
     asin: "B0HBFN64VB",
     title: "Learn Go Programming in a Day: A Clear Classroom Guide",
+    author: "Biplab Sarkar",
     image: amazonBookImage("B0HBFN64VB"),
   },
   {
     asin: "B0HC389MLN",
     title: "Understanding Software Design: Principles, Patterns, and Techniques",
+    author: "Biplab Sarkar",
     image: amazonBookImage("B0HC389MLN"),
   },
 ];

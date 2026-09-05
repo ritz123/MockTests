@@ -34,8 +34,9 @@ describe("toAdProducts", () => {
     vi.stubEnv("NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG", "");
     const products = toAdProducts([
       {
-        asin: "9352534026",
+        asin: "B0GVSBJQT7",
         title: "Quantitative Aptitude",
+        author: "R.S. Aggarwal",
         image: "https://example.com/book.jpg",
         price: "₹500",
       },
@@ -43,8 +44,9 @@ describe("toAdProducts", () => {
 
     expect(products).toEqual([
       {
-        url: "https://www.amazon.in/dp/9352534026?tag=mocktestq-21",
+        url: "https://www.amazon.in/dp/B0GVSBJQT7?tag=mocktestq-21",
         title: "Quantitative Aptitude",
+        author: "R.S. Aggarwal",
         image: "https://example.com/book.jpg",
         price: "₹500",
       },

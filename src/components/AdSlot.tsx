@@ -6,6 +6,7 @@ import { sponsoredBooks, toAdProducts } from "../lib/affiliate";
 export interface AdProduct {
   url: string;
   title: string;
+  author?: string;
   price?: string;
   image?: string;
 }

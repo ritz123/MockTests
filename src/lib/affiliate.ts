@@ -158,6 +158,7 @@ export function toAdProducts(books: SponsoredBook[]) {
   return books.map((book) => ({
     url: amazonAffiliateUrl(book.asin),
     title: book.title,
+    author: book.author,
     image: book.image,
     price: book.price,
   }));

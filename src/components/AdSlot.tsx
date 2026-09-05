@@ -52,7 +52,10 @@ export function AdSlot({ slotName = "default", className = "", minHeight = 160, 
               aria-label={product.title}
             >
               {product.image && <img src={product.image} alt="" className="ad-product-image" />}
-              <span className="ad-product-title">{product.title}</span>
+              <div className="ad-product-copy">
+                <span className="ad-product-title">{product.title}</span>
+                {product.author && <span className="ad-product-author">{product.author}</span>}
+              </div>
               {product.price && <span className="ad-product-price">{product.price}</span>}
             </a>
           ))}

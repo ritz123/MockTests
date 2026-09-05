@@ -427,12 +427,8 @@ code {
   color: var(--color-primary);
 }
 
-.site-footer-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 6px 14px;
+.site-footer-copy,
+.site-footer-email {
   margin: 0;
   font-size: 0.875rem;
   color: var(--color-on-surface);

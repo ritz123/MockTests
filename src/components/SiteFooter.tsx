@@ -22,8 +22,8 @@ export function SiteFooter() {
         ))}
       </nav>
 
-      <p className="site-footer-meta">
-        <span>© {year} {SITE_AUTHOR}</span>
+      <p className="site-footer-copy">© {year} {SITE_AUTHOR}</p>
+      <p className="site-footer-email">
         <a className="site-footer-link" href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a>
       </p>
 

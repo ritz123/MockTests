@@ -65,8 +65,6 @@ export function HomePage({ catalog }: HomePageProps) {
 
   return (
     <div className="page">
-      <HomeQuickLinks />
-
       <main className="home">
         <section className="hero" aria-labelledby="home-hero-title">
           <div className="hero-panel">
@@ -174,6 +172,8 @@ export function HomePage({ catalog }: HomePageProps) {
         </section>
 
         <p className="content-freshness">{contentUpdatedLabel()} · Every paper is free to start</p>
+
+        <HomeQuickLinks />
 
         <FaqList id="home-faq" />
       </main>

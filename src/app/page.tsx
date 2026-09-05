@@ -5,7 +5,9 @@ import { HOME_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, buildHomeJsonLd } from "..
 import { SITE_NAME, absoluteUrl } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: HOME_TITLE,
+  title: {
+    absolute: `${HOME_TITLE} | ${SITE_NAME}`,
+  },
   description: SITE_DESCRIPTION,
   keywords: SITE_KEYWORDS,
   alternates: {

@@ -1,15 +1,19 @@
-import Link from "next/link";
 import { HOME_FAQ } from "../lib/seo";
 
 type FaqListProps = {
   id?: string;
   title?: string;
+  heading?: boolean;
 };
 
-export function FaqList({ id = "faq", title = "Frequently asked questions" }: FaqListProps) {
+export function FaqList({
+  id = "faq",
+  title = "Frequently asked questions",
+  heading = true,
+}: FaqListProps) {
   return (
-    <section className="seo-faq" aria-labelledby={`${id}-title`}>
-      <h2 id={`${id}-title`}>{title}</h2>
+    <section className="seo-faq" aria-labelledby={heading ? `${id}-title` : undefined} aria-label={heading ? undefined : title}>
+      {heading ? <h2 id={`${id}-title`}>{title}</h2> : null}
       <dl className="faq-list">
         {HOME_FAQ.map((item) => (
           <div key={item.question} className="faq-item">

@@ -1,12 +1,19 @@
 import Link from "next/link";
 import { ABOUT_DESCRIPTION, ABOUT_INTRO, ABOUT_TITLE } from "../lib/pagesContent";
 import { SITE_AUTHOR, SITE_EMAIL } from "../lib/site";
+import { SiteBreadcrumbs } from "./SiteBreadcrumbs";
 import { SitePageShell } from "./SitePageShell";
 
 export function AboutPage() {
   return (
     <SitePageShell>
       <article className="content-article">
+        <SiteBreadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "About" },
+          ]}
+        />
         <p className="eyebrow">About</p>
         <h1>{ABOUT_TITLE}</h1>
         <p className="lede">{ABOUT_DESCRIPTION}</p>

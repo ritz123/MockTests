@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { HOW_IT_WORKS_DESCRIPTION, HOW_IT_WORKS_STEPS, HOW_IT_WORKS_TITLE } from "../lib/pagesContent";
+import { SiteBreadcrumbs } from "./SiteBreadcrumbs";
 import { SitePageShell } from "./SitePageShell";
 
 export function HowItWorksPage() {
   return (
     <SitePageShell>
       <article className="content-article">
+        <SiteBreadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "How it works" },
+          ]}
+        />
         <p className="eyebrow">Getting started</p>
         <h1>{HOW_IT_WORKS_TITLE}</h1>
         <p className="lede">{HOW_IT_WORKS_DESCRIPTION}</p>

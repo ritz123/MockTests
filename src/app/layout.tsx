@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,
           }}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CatalogEntry } from "../lib/schema";
 import { getExamBlurb } from "../lib/examBlurbs";
+import { SiteBreadcrumbs } from "./SiteBreadcrumbs";
 
 type ExamSeoBlurbProps = {
   entry: CatalogEntry;
@@ -11,6 +12,13 @@ export function ExamSeoBlurb({ entry }: ExamSeoBlurbProps) {
 
   return (
     <section className="exam-seo-blurb howto" aria-labelledby={`exam-blurb-${entry.id}`}>
+      <SiteBreadcrumbs
+        items={[
+          { href: "/", label: "Home" },
+          { href: "/mock-tests/", label: "Mock tests" },
+          { label: entry.title },
+        ]}
+      />
       <h2 id={`exam-blurb-${entry.id}`}>About this mock test</h2>
       <p>{blurb.summary}</p>
 

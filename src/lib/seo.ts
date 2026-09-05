@@ -225,8 +225,16 @@ function faqMainEntity() {
 export function buildFaqJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqMainEntity(),
+    "@graph": [
+      buildBreadcrumbList([
+        { name: "Home", path: "/" },
+        { name: "FAQ", path: "/faq/" },
+      ]),
+      {
+        "@type": "FAQPage",
+        mainEntity: faqMainEntity(),
+      },
+    ],
   };
 }
 
@@ -251,9 +259,8 @@ export type BreadcrumbItem = {
   path: string;
 };
 
-export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
+export function buildBreadcrumbList(items: BreadcrumbItem[]) {
   return {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
@@ -261,6 +268,13 @@ export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
       name: item.name,
       item: absoluteUrl(item.path),
     })),
+  };
+}
+
+export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    ...buildBreadcrumbList(items),
   };
 }
 
@@ -314,7 +328,7 @@ export function buildMockTestsJsonLd(tests: CatalogEntry[]) {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      buildBreadcrumbJsonLd([
+      buildBreadcrumbList([
         { name: "Home", path: "/" },
         { name: "Mock tests", path: "/mock-tests/" },
       ]),
@@ -333,7 +347,7 @@ export function buildExamJsonLd(entry: CatalogEntry) {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      buildBreadcrumbJsonLd([
+      buildBreadcrumbList([
         { name: "Home", path: "/" },
         { name: "Mock tests", path: "/mock-tests/" },
         { name: entry.title, path: `/exam/${entry.id}/` },

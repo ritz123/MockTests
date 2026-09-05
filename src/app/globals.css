@@ -1793,6 +1793,101 @@ code {
   }
 }
 
+.interview-books {
+  margin-top: 36px;
+}
+
+.interview-books h2,
+.interview-books-group h3 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--color-on-surface);
+}
+
+.interview-books h2 {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+.interview-books-group {
+  margin-top: 28px;
+}
+
+.interview-books-group h3 {
+  font-size: 1.125rem;
+  margin: 0 0 12px;
+}
+
+.interview-books-lede,
+.interview-books-disclosure {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+}
+
+.interview-books-disclosure {
+  margin-top: 20px;
+  font-size: 0.8125rem;
+}
+
+.interview-books-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.interview-book-card {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-container-low);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.interview-book-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow);
+}
+
+.interview-book-cover {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.interview-book-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.interview-book-title {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--color-on-surface);
+  line-height: 1.35;
+}
+
+.interview-book-author {
+  font-size: 0.8125rem;
+  color: var(--color-primary);
+}
+
+.interview-book-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-on-surface-variant);
+}
+
 .ad-slot {
   width: 100%;
   margin: 24px 0;

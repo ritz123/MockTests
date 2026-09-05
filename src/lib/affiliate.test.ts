@@ -1,5 +1,10 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { amazonAffiliateUrl, toAdProducts } from "./affiliate";
+import {
+  amazonAffiliateUrl,
+  interviewPrepBooks,
+  sponsoredBooks,
+  toAdProducts,
+} from "./affiliate";
 
 describe("amazonAffiliateUrl", () => {
   afterEach(() => {
@@ -42,6 +47,21 @@ describe("toAdProducts", () => {
         image: "https://example.com/book.jpg",
         price: "₹500",
       },
+    ]);
+  });
+});
+
+describe("interviewPrepBooks", () => {
+  it("lists all recommended interview books", () => {
+    expect(interviewPrepBooks).toHaveLength(10);
+  });
+
+  it("picks one sponsored book per category for compact ad slots", () => {
+    expect(sponsoredBooks).toHaveLength(3);
+    expect(sponsoredBooks.map((book) => book.asin)).toEqual([
+      "1440536791",
+      "0984782850",
+      "9352534026",
     ]);
   });
 });

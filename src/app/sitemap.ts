@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     sitemapEntry("/mock-tests/", 0.9, lastModified),
     sitemapEntry("/faq/", 0.8, lastModified),
     sitemapEntry("/interview-prep-guide/", 0.9, lastModified),
+    sitemapEntry("/interview-prep-books/", 0.8, lastModified),
     ...catalog.tests.map((entry) => sitemapEntry(`/exam/${entry.id}/`, 0.8, lastModified)),
   ];
 }

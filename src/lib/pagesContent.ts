@@ -50,6 +50,11 @@ export const MOCK_TESTS_TITLE = "Free Aptitude Mock Tests";
 export const MOCK_TESTS_DESCRIPTION =
   "Choose a free timed mock test online — logical reasoning, quantitative aptitude, computer science, algorithms, puzzles, and hackathon practicals. Every paper is free, with a countdown and instant score review. No payment, no account.";
 
+export const INTERVIEW_PREP_BOOKS_TITLE = "Interview Prep Books";
+
+export const INTERVIEW_PREP_BOOKS_DESCRIPTION =
+  "Recommended books for job interviews, coding screens, and campus aptitude rounds — with Amazon.in affiliate links for readers in India.";
+
 export type QuickLink = {
   href: string;
   title: string;
@@ -81,6 +86,11 @@ export const HOME_QUICK_LINKS: QuickLink[] = [
     href: "/interview-prep-guide/",
     title: "Interview prep guide",
     description: "Week-by-week plan for aptitude and MCQ screening rounds.",
+  },
+  {
+    href: "/interview-prep-books/",
+    title: "Interview prep books",
+    description: "Recommended books for job search, coding interviews, and aptitude exams.",
   },
 ];
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { loadCatalogFromDisk } from "../lib/catalog";
 import { GUIDE_SECTIONS, INTERVIEW_PREP_GUIDE_DESCRIPTION, INTERVIEW_PREP_GUIDE_TITLE } from "../lib/interviewGuide";
 import { SITE_AUTHOR, SITE_EMAIL } from "../lib/site";
+import { InterviewPrepBooks } from "./InterviewPrepBooks";
 import { SitePageShell } from "./SitePageShell";
 
 export function InterviewPrepGuidePage() {
@@ -30,6 +31,8 @@ export function InterviewPrepGuidePage() {
           </section>
         ))}
 
+        <InterviewPrepBooks />
+
         <section className="guide-section" aria-labelledby="guide-mocks">
           <h2 id="guide-mocks">Practice with free timed mocks</h2>
           <p>
@@ -37,7 +40,8 @@ export function InterviewPrepGuidePage() {
             countdown timer and a full answer review when you finish.
           </p>
           <p>
-            <Link href="/mock-tests/">View the full mock test catalog</Link>
+            <Link href="/mock-tests/">View the full mock test catalog</Link> or browse{" "}
+            <Link href="/interview-prep-books/">recommended interview prep books</Link>.
           </p>
           <ul className="seo-paper-links">
             {catalog.tests.map((entry) => (

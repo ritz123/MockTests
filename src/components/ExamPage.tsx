@@ -34,14 +34,10 @@ export function ExamPage() {
     saveSession(next);
   }, []);
 
-  const submit = useCallback(
+  const finishTest = useCallback(
     (autoSubmitted: boolean) => {
       const open = sessionRef.current;
       if (!open || submitting.current || !id) return;
-      if (!autoSubmitted) {
-        const ok = window.confirm("Submit test? You cannot change answers after this.");
-        if (!ok) return;
-      }
       submitting.current = true;
       const done = completeSession(open, Date.now(), autoSubmitted);
       saveSession(done);
@@ -50,9 +46,13 @@ export function ExamPage() {
     [id, router],
   );
 
-  const discardAndLeave = useCallback(() => {
-    const ok = window.confirm("Leave this test? Your progress will be discarded.");
-    if (!ok) return;
+  const skipTest = useCallback(() => {
+    const open = sessionRef.current;
+    const hasAnswers = open && Object.keys(open.answers).length > 0;
+    if (hasAnswers) {
+      const ok = window.confirm("Skip this test? Your answers will be discarded.");
+      if (!ok) return;
+    }
     submitting.current = true;
     sessionRef.current = null;
     clearSession();
@@ -121,11 +121,11 @@ export function ExamPage() {
       const open = sessionRef.current;
       if (!open) return;
       if (remainingMs(open.endsAt, current) === 0) {
-        submit(true);
+        finishTest(true);
       }
     }, 200);
     return () => window.clearInterval(timer);
-  }, [session, submit]);
+  }, [session, finishTest]);
 
   if (error) {
     return (
@@ -182,9 +182,9 @@ export function ExamPage() {
     <div className="page exam-page">
       <header className="exam-header">
         <div className="exam-header-start">
-          <button type="button" className="button secondary" onClick={discardAndLeave}>
+          <button type="button" className="button secondary" onClick={skipTest}>
             <ArrowLeft size={18} aria-hidden="true" />
-            Back to papers
+            Skip test
           </button>
           <div>
             <p className="eyebrow">{paper.title}</p>
@@ -255,18 +255,16 @@ export function ExamPage() {
               <ChevronLeft size={18} aria-hidden="true" />
               Previous
             </button>
-            <button
-              type="button"
-              className="button secondary"
-              disabled={session.currentIndex === paper.questions.length - 1}
-              onClick={() => goTo(session.currentIndex + 1)}
-            >
-              Next
-              <ChevronRight size={18} aria-hidden="true" />
-            </button>
-            <button type="button" className="button danger" onClick={() => submit(false)}>
-              Submit
-            </button>
+            {session.currentIndex === paper.questions.length - 1 ? (
+              <button type="button" className="button" onClick={() => finishTest(false)}>
+                View results
+              </button>
+            ) : (
+              <button type="button" className="button secondary" onClick={() => goTo(session.currentIndex + 1)}>
+                Next
+                <ChevronRight size={18} aria-hidden="true" />
+              </button>
+            )}
           </div>
         </section>
       </div>

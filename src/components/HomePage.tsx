@@ -5,19 +5,21 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import type { Catalog, CatalogEntry } from "../lib/schema";
-import { loadSession } from "../lib/session";
+import { clearSession, loadSession, type Session } from "../lib/session";
 import { loadCatalog } from "../lib/tests";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function HomePage() {
   const router = useRouter();
   const [catalog, setCatalog] = useState<Catalog | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   const refresh = useCallback(() => {
     setLoading(true);
     setError(null);
+    setSession(loadSession());
     void loadCatalog().then((result) => {
       setLoading(false);
       if (!result.ok) {
@@ -35,11 +37,26 @@ export function HomePage() {
 
   function startTest(entry: CatalogEntry) {
     const session = loadSession();
+    if (session?.status === "in-progress" && session.testId === entry.id) {
+      router.push(`/exam/${entry.id}`);
+      return;
+    }
     if (session?.status === "in-progress" && session.testId !== entry.id) {
       const ok = window.confirm("Start this test? Your current attempt will be discarded.");
       if (!ok) return;
     }
+    clearSession();
     router.push(`/exam/${entry.id}`);
+  }
+
+  function actionLabel(entry: CatalogEntry): string {
+    if (session?.status === "in-progress" && session.testId === entry.id) {
+      return "Resume";
+    }
+    if (session?.status === "completed" && session.testId === entry.id) {
+      return "New attempt";
+    }
+    return "Start";
   }
 
   return (
@@ -86,7 +103,7 @@ export function HomePage() {
                     <span>{entry.questionCount} questions</span>
                   </p>
                   <button type="button" className="button" onClick={() => startTest(entry)}>
-                    Start
+                    {actionLabel(entry)}
                   </button>
                 </article>
               </li>

@@ -8,6 +8,7 @@ import { routeParam } from "../lib/route";
 import type { Paper } from "../lib/schema";
 import { scoreAttempt } from "../lib/scoring";
 import {
+  clearSession,
   loadSession,
   type CompletedSession,
 } from "../lib/session";
@@ -52,7 +53,8 @@ export function ResultsPage() {
   const score = scoreAttempt(paper, session.answers);
   const used = Math.max(0, session.submittedAt - session.startedAt);
 
-  function retake() {
+  function newAttempt() {
+    clearSession();
     router.push(`/exam/${id}`);
   }
 
@@ -67,16 +69,16 @@ export function ResultsPage() {
           <p className="percent">{score.percent}%</p>
           <p className="meta-line">
             Time used {formatMmSs(used)}
-            {session.autoSubmitted ? " · Submitted automatically when time ran out" : " · Submitted by you"}
+            {session.autoSubmitted ? " · Time ran out" : null}
           </p>
           <div className="exam-actions">
             <Link href="/" className="button secondary">
               <ArrowLeft size={18} aria-hidden="true" />
               Back to papers
             </Link>
-            <button type="button" className="button" onClick={retake}>
+            <button type="button" className="button" onClick={newAttempt}>
               <RotateCcw size={18} aria-hidden="true" />
-              Retake this paper
+              New attempt
             </button>
             <ThemeToggle />
           </div>

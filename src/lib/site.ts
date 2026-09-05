@@ -11,6 +11,10 @@ export function getGoogleSiteVerification(): string {
   return fromEnv || GOOGLE_SITE_VERIFICATION;
 }
 
+export function getBingSiteVerification(): string {
+  return process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim() ?? "";
+}
+
 export function getBasePath(): string {
   return process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 }

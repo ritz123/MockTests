@@ -4,14 +4,16 @@ import { HOW_IT_WORKS_STEPS } from "./pagesContent";
 import { SITE_AUTHOR, SITE_EMAIL, SITE_NAME, absoluteUrl } from "./site";
 
 export const SITE_DESCRIPTION =
-  "Free timed aptitude mock tests for tech interviews, coding placements, and hackathons. Each new attempt draws a fresh set of questions from the bank. Practice logical reasoning, quantitative aptitude, CS fundamentals, algorithms, and puzzles with instant review.";
+  "Take free aptitude mock tests online for tech interviews, campus placements, and hackathons. Timed logical reasoning, quantitative aptitude, CS fundamentals, algorithms, and puzzle papers with instant review. Start instantly — no sign-up.";
 
 export const SITE_KEYWORDS = [
-  "online",
+  "free mock test",
+  "online mock test",
   "aptitude mock test",
   "free aptitude test online",
   "online aptitude test",
-  "online mock test",
+  "practice exams",
+  "exam preparation",
   "job interview",
   "tech interview mock test",
   "coding interview aptitude",
@@ -28,7 +30,18 @@ export const SITE_KEYWORDS = [
   "problem solving puzzles test",
 ];
 
-export const HOME_TITLE = "Free Aptitude Mock Tests for Tech Interviews & Hackathons";
+export const HOME_TITLE =
+  "Free Aptitude Mock Tests Online – Logical Reasoning, Quant & CS";
+
+export const HOME_TRUST_POINTS = [
+  "Free — no sign-up",
+  "Timed papers with auto-submit",
+  "Score review with explanations",
+];
+
+export function contentUpdatedLabel(date = new Date()): string {
+  return `Updated ${date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`;
+}
 
 export type FaqItem = {
   question: string;
@@ -66,6 +79,26 @@ export const HOME_FAQ: FaqItem[] = [
     answer:
       "Yes. Your in-progress attempt is saved in the browser for the current tab. Closing the tab ends the session and you will need to start again.",
   },
+  {
+    question: "What is a mock test?",
+    answer:
+      "A mock test is a timed simulation of a real screening round — same question style, difficulty mix, and countdown — taken before the interview or hackathon. It shows your score under pressure, highlights weak topics, and trains pacing so the real round feels familiar.",
+  },
+  {
+    question: "How do I take a mock test online without login?",
+    answer:
+      "Open any paper, press Start, and answer before the timer ends. Guest mode needs no account. On submit you get your score, the correct options, and explanations where provided.",
+  },
+  {
+    question: "Will I understand the mistakes I make?",
+    answer:
+      "Yes. After you submit, every question shows the option you picked, the correct answer, and an explanation when one is available, so you can see why an answer is right rather than only that you missed it.",
+  },
+  {
+    question: "Are the questions based on interview and placement patterns?",
+    answer:
+      "Yes. Papers follow common tech-interview and campus-placement aptitude formats: short timed MCQs across reasoning, quant, CS fundamentals, algorithms, puzzles, and hackathon practical topics — not a copy of any company's confidential paper.",
+  },
 ];
 
 const EXAM_KEYWORDS: Record<string, string[]> = {
@@ -102,14 +135,14 @@ const EXAM_KEYWORDS: Record<string, string[]> = {
 };
 
 export function examMetaDescription(entry: CatalogEntry): string {
-  return `Free ${entry.title} — ${entry.durationMinutes}-minute timed mock with ${entry.questionCount} multiple-choice questions. Practice for tech interviews and hackathons with instant score review.`;
+  return `Take this free ${entry.title} online — ${entry.durationMinutes}-minute timed mock with ${entry.questionCount} multiple-choice questions. Instant score review for tech interviews and hackathons. Start without sign-up.`;
 }
 
 export function examKeywords(entry: CatalogEntry): string[] {
   const specific = EXAM_KEYWORDS[entry.id] ?? [];
   return [
     ...specific,
-    "online",
+    "free mock test",
     "job interview",
     "aptitude mock test",
     "free online practice test",
@@ -118,34 +151,146 @@ export function examKeywords(entry: CatalogEntry): string[] {
   ];
 }
 
-export function buildHomeJsonLd() {
+function organizationId(): string {
+  return `${absoluteUrl("/")}#organization`;
+}
+
+export function buildOrganizationJsonLd() {
   return {
-    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": organizationId(),
+    name: SITE_NAME,
+    url: absoluteUrl("/"),
+    description: SITE_DESCRIPTION,
+    founder: {
+      "@type": "Person",
+      name: SITE_AUTHOR,
+      email: SITE_EMAIL,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Support",
+      email: SITE_EMAIL,
+      availableLanguage: ["English"],
+    },
+  };
+}
+
+export function buildWebSiteJsonLd() {
+  return {
     "@type": "WebSite",
     name: SITE_NAME,
     description: SITE_DESCRIPTION,
     url: absoluteUrl("/"),
     inLanguage: "en-US",
-    author: {
-      "@type": "Person",
-      name: SITE_AUTHOR,
-      email: SITE_EMAIL,
-    },
+    publisher: { "@id": organizationId() },
   };
+}
+
+export function buildWebApplicationJsonLd() {
+  return {
+    "@type": "WebApplication",
+    name: SITE_NAME,
+    url: absoluteUrl("/"),
+    operatingSystem: "Any",
+    applicationCategory: "EducationalApplication",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      description: "Free timed aptitude mock tests with no registration",
+    },
+    featureList: [
+      "Timed multiple-choice mock papers",
+      "Fresh questions on every new attempt",
+      "Instant score review with explanations",
+      "No login required",
+    ],
+    isAccessibleForFree: true,
+    provider: { "@id": organizationId() },
+  };
+}
+
+function faqMainEntity() {
+  return HOME_FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  }));
 }
 
 export function buildFaqJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: HOME_FAQ.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
+    mainEntity: faqMainEntity(),
+  };
+}
+
+export function buildHomeJsonLd(tests: CatalogEntry[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      buildWebApplicationJsonLd(),
+      {
+        "@type": "FAQPage",
+        mainEntity: faqMainEntity(),
       },
+      buildMockTestsList(tests),
+    ],
+  };
+}
+
+export type BreadcrumbItem = {
+  name: string;
+  path: string;
+};
+
+export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
     })),
+  };
+}
+
+function quizListItem(entry: CatalogEntry, position: number) {
+  const blurb = getExamBlurb(entry);
+  const url = absoluteUrl(`/exam/${entry.id}/`);
+  return {
+    "@type": "ListItem",
+    position,
+    item: {
+      "@type": "Quiz",
+      "@id": `${url}#quiz`,
+      name: entry.title,
+      description: blurb.summary,
+      url,
+      educationalLevel: "intermediate",
+      numberOfQuestions: entry.questionCount,
+      timeRequired: `PT${entry.durationMinutes}M`,
+      isAccessibleForFree: true,
+    },
+  };
+}
+
+function buildMockTestsList(tests: CatalogEntry[]) {
+  return {
+    "@type": "ItemList",
+    name: "Free aptitude mock tests",
+    numberOfItems: tests.length,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    itemListElement: tests.map((entry, index) => quizListItem(entry, index + 1)),
   };
 }
 
@@ -168,33 +313,44 @@ export function buildHowToJsonLd() {
 export function buildMockTestsJsonLd(tests: CatalogEntry[]) {
   return {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Aptitude mock tests",
-    itemListElement: tests.map((entry, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: entry.title,
-      url: absoluteUrl(`/exam/${entry.id}/`),
-    })),
+    "@graph": [
+      buildBreadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Mock tests", path: "/mock-tests/" },
+      ]),
+      buildMockTestsList(tests),
+      {
+        "@type": "FAQPage",
+        mainEntity: faqMainEntity(),
+      },
+    ],
   };
 }
 
 export function buildExamJsonLd(entry: CatalogEntry) {
   const blurb = getExamBlurb(entry);
+  const url = absoluteUrl(`/exam/${entry.id}/`);
   return {
     "@context": "https://schema.org",
-    "@type": "Quiz",
-    name: entry.title,
-    description: blurb.summary,
-    url: absoluteUrl(`/exam/${entry.id}/`),
-    inLanguage: "en-US",
-    educationalLevel: "intermediate",
-    numberOfQuestions: entry.questionCount,
-    timeRequired: `PT${entry.durationMinutes}M`,
-    isAccessibleForFree: true,
-    provider: {
-      "@type": "Person",
-      name: SITE_AUTHOR,
-    },
+    "@graph": [
+      buildBreadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Mock tests", path: "/mock-tests/" },
+        { name: entry.title, path: `/exam/${entry.id}/` },
+      ]),
+      {
+        "@type": "Quiz",
+        "@id": `${url}#quiz`,
+        name: entry.title,
+        description: blurb.summary,
+        url,
+        inLanguage: "en-US",
+        educationalLevel: "intermediate",
+        numberOfQuestions: entry.questionCount,
+        timeRequired: `PT${entry.durationMinutes}M`,
+        isAccessibleForFree: true,
+        provider: { "@id": organizationId() },
+      },
+    ],
   };
 }

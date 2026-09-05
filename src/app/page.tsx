@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HomePage } from "../components/HomePage";
+import { loadCatalogFromDisk } from "../lib/catalog";
 import { HOME_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, buildHomeJsonLd } from "../lib/seo";
 import { SITE_NAME, absoluteUrl } from "../lib/site";
 
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const homeJsonLd = buildHomeJsonLd();
+  const catalog = loadCatalogFromDisk();
+  const homeJsonLd = buildHomeJsonLd(catalog.tests);
 
   return (
     <>
@@ -32,7 +34,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
-      <HomePage />
+      <HomePage catalog={catalog} />
     </>
   );
 }

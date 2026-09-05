@@ -5,7 +5,14 @@ import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
-import { SITE_AUTHOR, SITE_NAME, getGoogleSiteVerification, absoluteUrl, getSiteUrl } from "../lib/site";
+import {
+  SITE_AUTHOR,
+  SITE_NAME,
+  getBingSiteVerification,
+  getGoogleSiteVerification,
+  absoluteUrl,
+  getSiteUrl,
+} from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -31,17 +38,33 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  category: "education",
+  publisher: SITE_NAME,
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
+  },
+  verification: {
+    google: getGoogleSiteVerification(),
+    other: {
+      ...(getBingSiteVerification()
+        ? { "msvalidate.01": getBingSiteVerification() }
+        : {}),
+    },
+  },
+  other: {
+    classification: "Education & Interview Preparation",
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     siteName: SITE_NAME,
     title: `${HOME_TITLE} | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
@@ -75,8 +98,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-site-verification" content={getGoogleSiteVerification()} />
-        <script
+        <script>
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,
           }}

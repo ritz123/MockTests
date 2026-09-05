@@ -3,7 +3,7 @@ import type { FaqItem } from "./seo";
 export const ABOUT_TITLE = "About Aptitude Practice";
 
 export const ABOUT_DESCRIPTION =
-  "Free timed aptitude mock tests for software engineering interviews, campus placements, and hackathon screening rounds — with instant review and explanations.";
+  "Free online aptitude mock tests for software engineering interviews, campus placements, and hackathon screening rounds — timed MCQs with instant review and explanations.";
 
 export const ABOUT_INTRO = [
   "Aptitude Practice helps you prepare for software engineering interviews, campus placements, and hackathon screening rounds with realistic timed multiple-choice mocks.",
@@ -43,12 +43,13 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
 export const FAQ_PAGE_TITLE = "Frequently Asked Questions";
 
 export const FAQ_PAGE_DESCRIPTION =
-  "Answers about free aptitude mock tests on Aptitude Practice: topics covered, test length, resuming attempts, and who these interview prep papers are for.";
+  "Answers about free aptitude mock tests online: no-login practice, topics covered, test length, score review, and who these interview prep papers are for.";
 
-export const MOCK_TESTS_TITLE = "All Mock Tests";
+export const MOCK_TESTS_TITLE =
+  "Free Aptitude Mock Tests for Interviews, Placements & Hackathons";
 
 export const MOCK_TESTS_DESCRIPTION =
-  "Browse every free timed aptitude mock test: logical reasoning, quantitative aptitude, computer science, algorithms, puzzles, and hackathon practical screening papers. Each new attempt gives you a fresh set of questions.";
+  "Choose a free timed mock test online — logical reasoning, quantitative aptitude, computer science, algorithms, puzzles, and hackathon practicals. Every paper is free, with a countdown and instant score review. No payment, no account.";
 
 export type QuickLink = {
   href: string;

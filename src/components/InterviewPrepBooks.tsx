@@ -1,7 +1,7 @@
 import {
   INTERVIEW_BOOK_CATEGORIES,
   amazonAffiliateUrl,
-  amazonBookImage,
+  bookCoverImage,
   booksByCategory,
   type InterviewBookCategory,
 } from "../lib/affiliate";
@@ -35,7 +35,7 @@ export function InterviewPrepBooks({
                   className="interview-book-card"
                 >
                   <img
-                    src={amazonBookImage(book.asin)}
+                    src={bookCoverImage(book)}
                     alt=""
                     className="interview-book-cover"
                     loading="lazy"

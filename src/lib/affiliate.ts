@@ -8,7 +8,10 @@ export interface SponsoredBook {
 export type InterviewBookCategory = "general" | "tech" | "aptitude";
 
 export interface InterviewBook {
+  /** Amazon.in product ASIN used for affiliate links. */
   asin: string;
+  /** Optional ASIN for cover art when `amazonBookImage(asin)` is a placeholder. */
+  imageAsin?: string;
   title: string;
   author: string;
   category: InterviewBookCategory;
@@ -33,14 +36,14 @@ export const interviewPrepBooks: InterviewBook[] = [
     description: "Answers to tough interview questions, salary negotiation, and how to stand out in HR rounds.",
   },
   {
-    asin: "1984861201",
+    asin: "1984861204",
     title: "What Color Is Your Parachute?",
     author: "Richard N. Bolles",
     category: "general",
     description: "Classic career guide — self-assessment, résumés, networking, and finding work that fits you.",
   },
   {
-    asin: "0143128502",
+    asin: "0143128507",
     title: "60 Seconds and You're Hired!",
     author: "Robin Ryan",
     category: "general",
@@ -55,13 +58,15 @@ export const interviewPrepBooks: InterviewBook[] = [
   },
   {
     asin: "9355424485",
+    imageAsin: "195570600X",
     title: "Beyond Cracking the Coding Interview",
     author: "Gayle Laakmann McDowell et al.",
     category: "tech",
     description: "Updated patterns, 150+ new problems, behavioral prep, and negotiation for today's hiring market.",
   },
   {
-    asin: "9355425133",
+    asin: "9355425139",
+    imageAsin: "1736049135",
     title: "Coding Interview Patterns",
     author: "Alex Xu & Shaun Gunawardane",
     category: "tech",
@@ -69,6 +74,7 @@ export const interviewPrepBooks: InterviewBook[] = [
   },
   {
     asin: "9382359443",
+    imageAsin: "1479274836",
     title: "Elements of Programming Interviews",
     author: "Adnan Aziz, Tsung-Hsien Lee, Amit Prakash",
     category: "tech",
@@ -76,20 +82,22 @@ export const interviewPrepBooks: InterviewBook[] = [
   },
   {
     asin: "9355427190",
+    imageAsin: "B08B3FWYBX",
     title: "System Design Interview — Volume 1",
     author: "Alex Xu",
     category: "tech",
     description: "Framework and 16 worked system design questions for mid-level and senior engineering interviews.",
   },
   {
-    asin: "9352534026",
+    asin: "B0GVSBJQT7",
+    imageAsin: "9352534026",
     title: "Quantitative Aptitude",
     author: "R.S. Aggarwal",
     category: "aptitude",
     description: "Placement and banking staple — arithmetic, data interpretation, and thousands of practice questions.",
   },
   {
-    asin: "9352832167",
+    asin: "B0CVGWMLQL",
     title: "A Modern Approach to Verbal & Non-Verbal Reasoning",
     author: "R.S. Aggarwal",
     category: "aptitude",
@@ -101,22 +109,31 @@ export function amazonBookImage(asin: string): string {
   return `https://m.media-amazon.com/images/P/${asin}.01._SL160_.jpg`;
 }
 
+export function bookCoverImage(book: InterviewBook): string {
+  return amazonBookImage(book.imageAsin ?? book.asin);
+}
+
 export function toSponsoredBook(book: InterviewBook): SponsoredBook {
   return {
     asin: book.asin,
     title: book.title,
-    image: amazonBookImage(book.asin),
+    image: bookCoverImage(book),
   };
 }
 
-/** One book per category for compact AdSlot placements. */
-export const sponsoredBooks: SponsoredBook[] = (["general", "tech", "aptitude"] as const).map((category) => {
-  const book = interviewPrepBooks.find((entry) => entry.category === category);
-  if (!book) {
-    throw new Error(`Missing interview prep book for category: ${category}`);
-  }
-  return toSponsoredBook(book);
-});
+/** Compact AdSlot placements — original sponsored titles. */
+export const sponsoredBooks: SponsoredBook[] = [
+  {
+    asin: "B0HBFN64VB",
+    title: "Learn Go Programming in a Day: A Clear Classroom Guide",
+    image: amazonBookImage("B0HBFN64VB"),
+  },
+  {
+    asin: "B0HC389MLN",
+    title: "Understanding Software Design: Principles, Patterns, and Techniques",
+    image: amazonBookImage("B0HC389MLN"),
+  },
+];
 
 export function booksByCategory(category: InterviewBookCategory): InterviewBook[] {
   return interviewPrepBooks.filter((book) => book.category === category);

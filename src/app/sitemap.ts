@@ -28,12 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = sitemapLastModified();
 
   return [
-    sitemapEntry("/", 1, lastModified),
-    sitemapEntry("/about/", 0.8, lastModified),
-    sitemapEntry("/how-it-works/", 0.8, lastModified),
-    sitemapEntry("/mock-tests/", 0.9, lastModified),
-    sitemapEntry("/faq/", 0.8, lastModified),
-    sitemapEntry("/interview-prep-guide/", 0.9, lastModified),
-    ...catalog.tests.map((entry) => sitemapEntry(`/exam/${entry.id}/`, 0.8, lastModified)),
+    sitemapEntry("/MockTests", 1, lastModified),
+    sitemapEntry("/MockTests /about/", 0.8, lastModified),
+    sitemapEntry("/MockTests/how-it-works/", 0.8, lastModified),
+    sitemapEntry("/MockTests/mock-tests/", 0.9, lastModified),
+    sitemapEntry("/MockTests/faq/", 0.8, lastModified),
+    sitemapEntry("/MockTests/interview-prep-guide/", 0.9, lastModified),
+    ...catalog.tests.map((entry) => sitemapEntry(`/MockTests/exam/${entry.id}/`, 0.8, lastModified)),
   ];
 }

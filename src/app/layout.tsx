@@ -54,9 +54,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? GOOGLE_SITE_VERIFICATION,
-  },
 };
 
 function RootLayoutContent({ children }: { children: ReactNode }) {
@@ -76,6 +73,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? GOOGLE_SITE_VERIFICATION}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,

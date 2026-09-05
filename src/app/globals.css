@@ -843,7 +843,7 @@ code {
 
 .lede {
   max-width: 62ch;
-  margin: 0;
+  margin: 0 0 20px;
   color: var(--color-on-surface-variant);
   font-size: 1.125rem;
   line-height: 1.6;
@@ -967,6 +967,11 @@ code {
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--color-on-surface-variant);
+}
+
+.content-article h1,
+.guide-article h1 {
+  margin: 0 0 24px;
 }
 
 .content-article,

@@ -6,6 +6,7 @@ export const ABOUT_DESCRIPTION =
   "Free online aptitude mock tests for software engineering interviews, campus placements, and hackathon screening rounds — timed MCQs with instant review and explanations.";
 
 export const ABOUT_INTRO = [
+  "Aptitude means a natural ability or talent for a particular skill. On this site it refers to the reasoning, logical, and quantitative skills tested in screening rounds for tech interviews, campus placements, and hackathons.",
   "Aptitude Practice helps you prepare for software engineering interviews, campus placements, and hackathon screening rounds with realistic timed multiple-choice mocks.",
   "Every new attempt pulls a fresh set of questions from the topic bank, so you can practise the same paper many times without memorising fixed answers.",
   "Train logical reasoning, quantitative aptitude, computer science fundamentals, algorithms, and practical problem solving — then review every answer with explanations. No sign-up, no install: open a paper and start the timer.",

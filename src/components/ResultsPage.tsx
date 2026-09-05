@@ -14,6 +14,7 @@ import {
 } from "../lib/session";
 import { formatMmSs, optionLabel } from "../lib/time";
 import { ThemePicker } from "./ThemePicker";
+import { AdSlot } from "./AdSlot";
 
 export function ResultsPage() {
   const id = routeParam(useParams().id);
@@ -83,6 +84,8 @@ export function ResultsPage() {
             <ThemePicker />
           </div>
         </header>
+
+        <AdSlot slotName="results-below-hero" />
 
         <ol className="review-list">
           {paper.questions.map((question, index) => {

@@ -11,6 +11,9 @@ export function SiteFooter() {
       <p className="site-footer-note">
         Unofficial practice mocks for interview preparation. Not affiliated with any employer.
       </p>
+      <p className="site-footer-note">
+        As an Amazon Associate, we earn from qualifying purchases.
+      </p>
     </footer>
   );
 }

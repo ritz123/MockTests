@@ -17,6 +17,7 @@ import {
 import { loadCatalog, loadTestPaper } from "../lib/tests";
 import { formatMmSs, isWarning, optionLabel, remainingMs } from "../lib/time";
 import { ThemePicker } from "./ThemePicker";
+import { AdSlot } from "./AdSlot";
 
 export function ExamPage() {
   const id = routeParam(useParams().id);
@@ -266,6 +267,7 @@ export function ExamPage() {
               </button>
             )}
           </div>
+            <AdSlot slotName="exam-below-question" />
         </section>
       </div>
     </div>

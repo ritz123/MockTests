@@ -4,6 +4,19 @@ A **Next.js** site for timed multiple-choice mocks in the style of tech intervie
 
 Scoring, the timer, and review run in the browser. Papers are JSON files; you can add more without changing application code.
 
+## Amazon book ads (optional)
+
+Sponsored book cards use the `AdSlot` component on the home, exam, and results pages. To earn commission, join [Amazon Associates](https://affiliate-program.amazon.in/) and set your tag:
+
+```bash
+cp .env.example .env.local
+# Edit .env.local — set NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG=yourname-21
+```
+
+Book titles and ASINs live in `src/lib/affiliate.ts`. Restart the dev server after changing `.env.local`.
+
+For GitHub Pages, add `NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG` as a repository secret and wire it in the deploy workflow.
+
 ## Run
 
 ```bash

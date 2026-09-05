@@ -8,6 +8,7 @@ import type { Catalog, CatalogEntry } from "../lib/schema";
 import { clearSession, loadSession, type Session } from "../lib/session";
 import { loadCatalog } from "../lib/tests";
 import { ThemePicker } from "./ThemePicker";
+import { AdSlot } from "./AdSlot";
 
 export function HomePage() {
   const router = useRouter();
@@ -111,6 +112,7 @@ export function HomePage() {
           </ul>
         ) : null}
       </main>
+      <AdSlot slotName="home-bottom" />
     </div>
   );
 }

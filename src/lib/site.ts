@@ -23,6 +23,8 @@ export function getSiteUrl(): string {
 
 function withTrailingSlash(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;
+  if (normalized === "/") return normalized;
+  if (/\.[a-z0-9]+$/i.test(normalized)) return normalized;
   return normalized.endsWith("/") ? normalized : `${normalized}/`;
 }
 

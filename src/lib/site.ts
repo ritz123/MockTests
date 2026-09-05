@@ -1,5 +1,7 @@
 export const SITE_NAME = "Aptitude Practice";
 
+export const SITE_AUTHOR = "Biplab Sarkar";
+
 export const SITE_DESCRIPTION =
   "Free timed multiple-choice mock tests for tech interviews and hackathons. Practice logical reasoning, quantitative aptitude, computer science, puzzles, algorithms, and practical skills.";
 

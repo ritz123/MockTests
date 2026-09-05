@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import type { ReactNode } from "react";
 import { SiteFooter } from "../components/SiteFooter";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_NAME, absoluteUrl, getSiteUrl } from "../lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: SITE_KEYWORDS,
   applicationName: SITE_NAME,
-  authors: [{ name: SITE_NAME }],
-  creator: SITE_NAME,
+  authors: [{ name: SITE_AUTHOR }],
+  creator: SITE_AUTHOR,
   formatDetection: {
     email: false,
     address: false,

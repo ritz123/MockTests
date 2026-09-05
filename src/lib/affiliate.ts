@@ -6,6 +6,8 @@ export interface SponsoredBook {
 }
 
 /** Sponsored books shown in AdSlot placements across the site. */
+export const AMAZON_ASSOCIATE_TAG = "mocktestq-21";
+
 export const sponsoredBooks: SponsoredBook[] = [
   {
     asin: "B0HBFN64VB",
@@ -19,12 +21,14 @@ export const sponsoredBooks: SponsoredBook[] = [
   },
 ];
 
+export function getAmazonAssociateTag(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG?.trim();
+  return fromEnv || AMAZON_ASSOCIATE_TAG;
+}
+
 export function amazonAffiliateUrl(asin: string): string {
   const base = `https://www.amazon.in/dp/${asin}`;
-  const tag = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG?.trim();
-  if (!tag) {
-    return base;
-  }
+  const tag = getAmazonAssociateTag();
   return `${base}?tag=${encodeURIComponent(tag)}`;
 }
 

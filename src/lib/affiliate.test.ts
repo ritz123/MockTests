@@ -6,14 +6,16 @@ describe("amazonAffiliateUrl", () => {
     vi.unstubAllEnvs();
   });
 
-  it("returns a plain product URL when no tag is set", () => {
+  it("uses the default associate tag when env is empty", () => {
     vi.stubEnv("NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG", "");
-    expect(amazonAffiliateUrl("9352534026")).toBe("https://www.amazon.in/dp/9352534026");
+    expect(amazonAffiliateUrl("9352534026")).toBe(
+      "https://www.amazon.in/dp/9352534026?tag=mocktestq-21",
+    );
   });
 
   it("appends the associate tag when configured", () => {
-    vi.stubEnv("NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG", "mocktests-21");
-    expect(amazonAffiliateUrl("9352534026")).toBe("https://www.amazon.in/dp/9352534026?tag=mocktests-21");
+    vi.stubEnv("NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG", "custom-tag-21");
+    expect(amazonAffiliateUrl("9352534026")).toBe("https://www.amazon.in/dp/9352534026?tag=custom-tag-21");
   });
 });
 
@@ -35,7 +37,7 @@ describe("toAdProducts", () => {
 
     expect(products).toEqual([
       {
-        url: "https://www.amazon.in/dp/9352534026",
+        url: "https://www.amazon.in/dp/9352534026?tag=mocktestq-21",
         title: "Quantitative Aptitude",
         image: "https://example.com/book.jpg",
         price: "₹500",

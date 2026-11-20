@@ -137,6 +137,12 @@ export const sponsoredBooks: SponsoredBook[] = [
     author: "Biplab Sarkar",
     image: amazonBookImage("B0HC389MLN"),
   },
+  {
+    asin: "B0GZLZ2VBP",
+    title: "The Rust Bootcamp: Two Intensive Days from First Principles to Fearless Systems Programming",
+    author: "Biplab Sarkar",
+    image: amazonBookImage("B0GZLZ2VBP"),
+  },
 ];
 
 export function booksByCategory(category: InterviewBookCategory): InterviewBook[] {

@@ -8,6 +8,7 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, HOME_TITLE } from "../lib/seo";
 import {
   SITE_AUTHOR,
   SITE_NAME,
+  GTM_CONTAINER_ID,
   getBingSiteVerification,
   getGoogleSiteVerification,
   absoluteUrl,
@@ -84,6 +85,11 @@ function RootLayoutContent({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider>
       <body className={roboto.variable}>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
         <div className="site-shell">
           <SiteHeader />
           <div className="site-content">{children}</div>
@@ -98,6 +104,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Container loader stays the first head script, and the matching
+          noscript iframe stays the first body node (RootLayoutContent).
+          Google counts the hit from this snippet, before hydration. Moving
+          it behind the theme script or into a client effect drops the page
+          view when someone leaves before React loads. Do not add a second
+          gtag.js snippet; GTM_CONTAINER_ID documents why.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"?"ocean":s==="dark"?"midnight":s;var ok=/^(ocean|sand|rose|midnight|forest|plum)$/.test(t);if(!ok){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"midnight":"ocean"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,

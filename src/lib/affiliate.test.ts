@@ -75,7 +75,14 @@ describe("interviewPrepBooks", () => {
   });
 
   it("keeps the original sponsored books for ad slots", () => {
-    expect(sponsoredBooks).toHaveLength(2);
-    expect(sponsoredBooks.map((book) => book.asin)).toEqual(["B0HBFN64VB", "B0HC389MLN"]);
+    expect(sponsoredBooks).toHaveLength(3);
+    expect(sponsoredBooks.map((book) => book.asin)).toEqual([
+      "B0HBFN64VB",
+      "B0HC389MLN",
+      "B0GZLZ2VBP",
+    ]);
+    expect(sponsoredBooks[2]?.image).toBe(
+      "https://m.media-amazon.com/images/P/B0GZLZ2VBP.01._SL160_.jpg",
+    );
   });
 });
